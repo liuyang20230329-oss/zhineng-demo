@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX - 会计师事务所数字化管理平台</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft YaHei', sans-serif; background: #f0f2f5; overflow: hidden; }
+        
+        .app-container { display: flex; height: 100vh; }
+        
+        /* 侧边栏 */
+        .sidebar {
+            width: 240px;
+            background: #001529;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+        
+        .logo {
+            height: 64px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: #002140;
+        }
+        
+        .logo i { margin-right: 10px; font-size: 24px; }
+        
+        .menu-section { padding: 8px 0; }
+        .menu-section-title {
+            padding: 8px 20px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            text-transform: uppercase;
+        }
+        
+        .menu-item {
+            padding: 10px 20px 10px 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            position: relative;
+        }
+        
+        .menu-item:hover { background: rgba(255,255,255,0.08); color: #1890ff; }
+        .menu-item.active { background: #1890ff; color: #fff; }
+        .menu-item.submenu { padding-left: 48px; font-size: 13px; }
+        .menu-item i { font-size: 16px; width: 20px; text-align: center; }
+        
+        .submenu-arrow {
+            margin-left: auto;
+            transition: transform 0.3s;
+            font-size: 12px;
+        }
+        .submenu-arrow.expanded { transform: rotate(90deg); }
+        
+        /* 主内容区 */
+        .main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+        
+        .header {
+            height: 64px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            flex-shrink: 0;
+            z-index: 10;
+        }
+        
+        .breadcrumb { font-size: 14px; color: #666; display: flex; align-items: center; gap: 8px; }
+        .breadcrumb i { color: #999; }
+        
+        .user-info { display: flex; align-items: center; gap: 16px; }
+        .user-info .company-name { font-size: 14px; color: #333; font-weight: 500; }
+        
+        .content-area {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        /* 统计卡片 */
+        .stat-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 20px; }
+        .stat-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: relative;
+            overflow: hidden;
+        }
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+        }
+        .stat-card.blue::before { background: #1890ff; }
+        .stat-card.green::before { background: #52c41a; }
+        .stat-card.orange::before { background: #fa8c16; }
+        .stat-card.red::before { background: #f5222d; }
+        .stat-card .title { font-size: 14px; color: #666; margin-bottom: 8px; }
+        .stat-card .value { font-size: 32px; font-weight: bold; color: #333; }
+        .stat-card .footer { font-size: 12px; color: #999; margin-top: 8px; display: flex; align-items: center; gap: 4px; }
+        .stat-card .footer .up { color: #52c41a; }
+        .stat-card .footer .down { color: #f5222d; }
+        
+        /* 搜索区域 */
+        .search-area {
+            background: #fff;
+            padding: 16px 20px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        /* 表格区域 */
+        .table-area { background: #fff; padding: 20px; border-radius: 4px; }
+        .table-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .table-title { font-size: 16px; font-weight: 600; color: #333; }
+        .table-actions { display: flex; gap: 8px; }
+        
+        /* 状态标签 */
+        .status-tag {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            display: inline-block;
+        }
+        .status-draft { background: #f5f5f5; color: #666; border: 1px solid #d9d9d9; }
+        .status-pending { background: #fff7e6; color: #fa8c16; border: 1px solid #ffd591; }
+        .status-processing { background: #e6f7ff; color: #1890ff; border: 1px solid #91d5ff; }
+        .status-review { background: #f9f0ff; color: #722ed1; border: 1px solid #d3adf7; }
+        .status-completed { background: #f6ffed; color: #52c41a; border: 1px solid #b7eb8f; }
+        .status-rejected { background: #fff1f0; color: #f5222d; border: 1px solid #ffa39e; }
+        .status-archived { background: #e6fffb; color: #13c2c2; border: 1px solid #87e8de; }
+        
+        /* 项目详情页 */
+        .project-detail-container { background: #fff; border-radius: 4px; }
+        .project-detail-header {
+            padding: 24px;
+            border-bottom: 1px solid #e8e8e8;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .project-info { flex: 1; }
+        .project-info h2 { font-size: 20px; margin-bottom: 12px; color: #333; }
+        .project-meta { display: flex; gap: 24px; color: #666; font-size: 13px; flex-wrap: wrap; }
+        .project-meta span { display: flex; align-items: center; gap: 4px; }
+        .project-actions { display: flex; gap: 8px; }
+        
+        .project-steps {
+            padding: 24px;
+            background: #fafafa;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        
+        .project-content { padding: 24px; }
+        .content-tabs { margin-bottom: 20px; }
+        
+        /* 底稿编辑 */
+        .manuscript-editor { display: flex; gap: 16px; height: 500px; }
+        .manuscript-sidebar {
+            width: 260px;
+            border: 1px solid #e8e8e8;
+            border-radius: 4px;
+            overflow-y: auto;
+            background: #fafafa;
+        }
+        .manuscript-sidebar-title {
+            padding: 12px 16px;
+            font-weight: 600;
+            border-bottom: 1px solid #e8e8e8;
+            background: #fff;
+        }
+        .ms-item {
+            padding: 10px 16px;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        .ms-item:hover { background: #e6f7ff; }
+        .ms-item.active { background: #1890ff; color: #fff; }
+        .ms-item .ms-name { display: flex; align-items: center; gap: 6px; }
+        .ms-item .ms-status { font-size: 11px; margin-top: 4px; opacity: 0.8; }
+        .ms-section { padding: 8px 16px; background: #f0f0f0; font-weight: 600; font-size: 13px; }
+        
+        .manuscript-main {
+            flex: 1;
+            border: 1px solid #e8e8e8;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+        }
+        .ms-toolbar {
+            padding: 12px 16px;
+            background: #fafafa;
+            border-bottom: 1px solid #e8e8e8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ms-toolbar-title { font-weight: 600; }
+        .ms-toolbar-actions { display: flex; gap: 8px; }
+        .ms-body {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .ms-body h4 { margin: 16px 0 8px; color: #333; }
+        .ms-body p { line-height: 1.8; color: #666; margin-bottom: 12px; }
+        .ms-body ul { padding-left: 20px; color: #666; line-height: 1.8; }
+        .ms-attachments { margin-top: 20px; padding-top: 16px; border-top: 1px dashed #e8e8e8; }
+        .ms-attachments-title { font-weight: 600; margin-bottom: 12px; }
+        .attachment-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background: #fafafa;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        .attachment-item i { color: #1890ff; }
+        
+        /* 审批时间线 */
+        .approval-timeline { padding: 20px; }
+        .timeline-item { display: flex; gap: 16px; margin-bottom: 24px; position: relative; }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 32px;
+            width: 2px;
+            height: calc(100% + 8px);
+            background: #e8e8e8;
+        }
+        .timeline-dot {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            z-index: 1;
+        }
+        .timeline-dot.success { background: #f6ffed; color: #52c41a; border: 2px solid #b7eb8f; }
+        .timeline-dot.pending { background: #fff7e6; color: #fa8c16; border: 2px solid #ffd591; }
+        .timeline-dot.processing { background: #e6f7ff; color: #1890ff; border: 2px solid #91d5ff; }
+        .timeline-content { flex: 1; }
+        .timeline-title { font-weight: 600; margin-bottom: 4px; }
+        .timeline-desc { color: #666; font-size: 13px; line-height: 1.6; }
+        .timeline-time { color: #999; font-size: 12px; margin-top: 4px; }
+        
+        /* 审批卡片 */
+        .approval-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
+        .approval-card {
+            background: #fff;
+            border-radius: 4px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .approval-card:hover { border-color: #1890ff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .approval-card.active { border-color: #1890ff; background: #e6f7ff; }
+        .approval-card .card-header { display: flex; justify-content: space-between; margin-bottom: 12px; }
+        .approval-card .card-title { font-weight: 600; font-size: 15px; }
+        .approval-card .card-count { font-size: 28px; font-weight: bold; color: #1890ff; }
+        .approval-card .card-desc { color: #999; font-size: 12px; }
+        
+        /* 操作按钮组 */
+        .action-group { display: flex; gap: 8px; margin: 16px 0; }
+        
+        /* 标签页 */
+        .el-tabs__item { font-weight: 500; }
+        
+        /* 空状态 */
+        .empty-state { text-align: center; padding: 60px 20px; color: #999; }
+        .empty-state i { font-size: 64px; margin-bottom: 16px; color: #d9d9d9; }
+        .empty-state p { font-size: 14px; }
+        
+        /* 详情表格 */
+        .detail-table { width: 100%; border-collapse: collapse; }
+        .detail-table td {
+            padding: 12px 16px;
+            border: 1px solid #e8e8e8;
+            font-size: 13px;
+        }
+        .detail-table td.label { background: #fafafa; width: 140px; font-weight: 500; color: #666; }
+        .detail-table td.value { color: #333; }
+        
+        /* 流程步骤 */
+        .flow-container { display: flex; align-items: center; justify-content: center; padding: 24px; background: #fafafa; border-radius: 4px; margin-bottom: 20px; }
+        .flow-step { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+        .flow-step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .flow-step-circle.pending { background: #fff; border: 2px solid #d9d9d9; color: #999; }
+        .flow-step-circle.active { background: #1890ff; color: #fff; border: 2px solid #1890ff; }
+        .flow-step-circle.completed { background: #52c41a; color: #fff; border: 2px solid #52c41a; }
+        .flow-step-label { font-size: 12px; color: #666; }
+        .flow-arrow { width: 60px; height: 2px; background: #e8e8e8; position: relative; margin: 0 8px; margin-bottom: 20px; }
+        .flow-arrow.active { background: #1890ff; }
+        .flow-arrow.completed { background: #52c41a; }
+        .flow-arrow::after {
+            content: '';
+            position: absolute;
+            right: -4px;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 6px solid #e8e8e8;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+        .flow-arrow.active::after { border-left-color: #1890ff; }
+        .flow-arrow.completed::after { border-left-color: #52c41a; }
+        
+        /* 日志表格 */
+        .log-table { width: 100%; }
+        .log-table th, .log-table td { padding: 12px; text-align: left; border-bottom: 1px solid #e8e8e8; font-size: 13px; }
+        .log-table th { background: #fafafa; font-weight: 600; color: #666; }
+        .log-table td { color: #333; }
+        .log-table tr:hover { background: #fafafa; }
+        
+        /* 审批表单 */
+        .approval-form { background: #fafafa; padding: 20px; border-radius: 4px; margin-top: 20px; }
+        .approval-form-title { font-weight: 600; margin-bottom: 16px; font-size: 15px; }
+        
+        .el-dialog__body { padding: 20px 24px; }
+        .el-dialog__header { border-bottom: 1px solid #e8e8e8; padding: 16px 24px; }
+        .el-dialog__footer { border-top: 1px solid #e8e8e8; padding: 12px 24px; }
+        
+        /* 滚动条美化 */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #999; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="app-container">
+            <!-- 侧边栏 -->
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="el-icon-s-platform"></i>
+                    SpaceX
+                </div>
+                
+                <!-- 首页 -->
+                <div class="menu-section">
+                    <div class="menu-item" :class="{ active: currentMenu === 'home' }" @click="goHome">
+                        <i class="el-icon-s-home"></i>
+                        <span>首页</span>
+                    </div>
+                </div>
+                
+                <!-- 核算中心 -->
+                <div class="menu-section">
+                    <div class="menu-item" @click="toggleMenu('accounting')">
+                        <i class="el-icon-s-finance"></i>
+                        <span>核算中心</span>
+                        <i class="el-icon-arrow-right submenu-arrow" :class="{ expanded: expandedMenus.accounting }"></i>
+                    </div>
+                    <div v-show="expandedMenus.accounting">
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'accounting-general' }">总账</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'accounting-detail' }">明细账</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'accounting-report' }">财务报表</div>
+                    </div>
+                </div>
+                
+                <!-- 管理中心 -->
+                <div class="menu-section">
+                    <div class="menu-item" @click="toggleMenu('manage')">
+                        <i class="el-icon-s-management"></i>
+                        <span>管理中心</span>
+                        <i class="el-icon-arrow-right submenu-arrow" :class="{ expanded: expandedMenus.manage }"></i>
+                    </div>
+                    <div v-show="expandedMenus.manage">
+                        <div class="menu-item submenu" @click="toggleSubMenu('todo')">
+                            <span>工作待办</span>
+                            <i class="el-icon-arrow-right submenu-arrow" :class="{ expanded: expandedMenus.todo }"></i>
+                        </div>
+                        <div v-show="expandedMenus.todo">
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'my-task' }" @click="goPage('my-task', '管理中心 / 工作待办 / 我的任务')">
+                                我的任务 <el-tag v-if="taskCount > 0" size="mini" type="danger">{{ taskCount }}</el-tag>
+                            </div>
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'my-approval' }" @click="goPage('my-approval', '管理中心 / 工作待办 / 我的审核')">
+                                我的审核 <el-tag v-if="approvalCount > 0" size="mini" type="danger">{{ approvalCount }}</el-tag>
+                            </div>
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'my-project' }" @click="goPage('my-project', '管理中心 / 工作待办 / 我的项目')">
+                                我的项目 <el-tag v-if="myProjects.length > 0" size="mini" type="primary">{{ myProjects.length }}</el-tag>
+                            </div>
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'my-initiated' }" @click="goPage('my-initiated', '管理中心 / 工作待办 / 我发起的')">我发起的</div>
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'my-cc' }" @click="goPage('my-cc', '管理中心 / 工作待办 / 抄送我的')">抄送我的</div>
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'my-sign' }" @click="goPage('my-sign', '管理中心 / 工作待办 / 我的签署')">我的签署</div>
+                        </div>
+                        
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'dispatch' }">业务派工</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'customer' }">客户管理</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'contract' }">合同管理</div>
+                        
+                        <div class="menu-item submenu" @click="toggleSubMenu('project')">
+                            <span>项目管理</span>
+                            <i class="el-icon-arrow-right submenu-arrow" :class="{ expanded: expandedMenus.project }"></i>
+                        </div>
+                        <div v-show="expandedMenus.project">
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'project-operation' }" @click="goPage('project-operation', '管理中心 / 项目管理 / 项目运营')">项目运营</div>
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'report-info' }" @click="goPage('report-info', '管理中心 / 项目管理 / 报告信息管理')">报告信息管理</div>
+                        </div>
+                        
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'finance' }">财务管理</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'performance' }">业绩管理</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'admin' }">行政管理</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'independence' }">独立性管理</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'manage-setting' }">设置</div>
+                    </div>
+                </div>
+                
+                <!-- 作业中心 -->
+                <div class="menu-section">
+                    <div class="menu-item" @click="toggleMenu('work')">
+                        <i class="el-icon-s-tools"></i>
+                        <span>作业中心</span>
+                        <i class="el-icon-arrow-right submenu-arrow" :class="{ expanded: expandedMenus.work }"></i>
+                    </div>
+                    <div v-show="expandedMenus.work">
+                        <div class="menu-item submenu" @click="toggleSubMenu('data-prep')">
+                            <span>数据准备</span>
+                            <i class="el-icon-arrow-right submenu-arrow" :class="{ expanded: expandedMenus['data-prep'] }"></i>
+                        </div>
+                        <div v-show="expandedMenus['data-prep']">
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'data-collect' }">数据采集</div>
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'data-init' }">数据初始化</div>
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'data-verify' }">数据校验</div>
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'account-info' }">账套信息</div>
+                        </div>
+                        
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'risk-assess' }">风险评估</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'work-tools' }">作业工具</div>
+                        
+                        <div class="menu-item submenu" @click="toggleSubMenu('ms-manage')">
+                            <span>底稿管理</span>
+                            <i class="el-icon-arrow-right submenu-arrow" :class="{ expanded: expandedMenus['ms-manage'] }"></i>
+                        </div>
+                        <div v-show="expandedMenus['ms-manage']">
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'ms-init' }">底稿初始化</div>
+                            <div class="menu-item submenu" style="padding-left: 64px;" :class="{ active: currentMenu === 'ms-edit' }">底稿编制</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 档案中心 -->
+                <div class="menu-section">
+                    <div class="menu-item" @click="toggleMenu('archive')">
+                        <i class="el-icon-s-fold"></i>
+                        <span>档案中心</span>
+                        <i class="el-icon-arrow-right submenu-arrow" :class="{ expanded: expandedMenus.archive }"></i>
+                    </div>
+                    <div v-show="expandedMenus.archive">
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'archive-todo' }">工作待办</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'archive-manage' }">档案管理</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'archive-record' }">档案记录</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'archive-log' }">日志管理</div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'archive-setting' }">设置</div>
+                    </div>
+                </div>
+                
+                <!-- 函证中心 -->
+                <div class="menu-section">
+                    <div class="menu-item" :class="{ active: currentMenu === 'confirmation' }">
+                        <i class="el-icon-document-checked"></i>
+                        <span>函证中心</span>
+                    </div>
+                </div>
+                
+                <!-- 单据中心 -->
+                <div class="menu-section">
+                    <div class="menu-item" :class="{ active: currentMenu === 'document' }">
+                        <i class="el-icon-document"></i>
+                        <span>单据中心</span>
+                    </div>
+                </div>
+                
+                <!-- 知识库 -->
+                <div class="menu-section">
+                    <div class="menu-item" :class="{ active: currentMenu === 'knowledge' }">
+                        <i class="el-icon-collection"></i>
+                        <span>知识库</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 主内容区 -->
+            <div class="main-content">
+                <!-- 头部 -->
+                <div class="header">
+                    <div class="breadcrumb">
+                        <i class="el-icon-s-unfold"></i>
+                        <span>{{ breadcrumb }}</span>
+                    </div>
+                    <div class="user-info">
+                        <span class="company-name">SpaceX Technologies Corp.</span>
+                        <el-divider direction="vertical"></el-divider>
+                        <el-badge :value="totalPending" class="item">
+                            <el-button icon="el-icon-bell" circle size="small"></el-button>
+                        </el-badge>
+                        <el-avatar size="small" icon="el-icon-user-solid"></el-avatar>
+                        <span>小刘洋</span>
+                        <el-dropdown>
+                            <span class="el-dropdown-link">
+                                <i class="el-icon-arrow-down el-icon--right"></i>
+                            </span>
+                            <el-dropdown-menu slot="dropdown">
+                                <el-dropdown-item>个人中心</el-dropdown-item>
+                                <el-dropdown-item>账号设置</el-dropdown-item>
+                                <el-dropdown-item divided>退出登录</el-dropdown-item>
+                            </el-dropdown-menu>
+                        </el-dropdown>
+                    </div>
+                </div>
+
+                <!-- 内容区 -->
+                <div class="content-area">
+                    
+                    <!-- 首页 -->
+                    <div v-if="currentMenu === 'home'">
+                        <div class="stat-cards">
+                            <div class="stat-card blue">
+                                <div class="title">我的项目</div>
+                                <div class="value">{{ myProjects.length }}</div>
+                                <div class="footer"><span class="up">↑ 进行中 {{ projectStats.processing }}</span></div>
+                            </div>
+                            <div class="stat-card orange">
+                                <div class="title">待审核</div>
+                                <div class="value">{{ approvalCount }}</div>
+                                <div class="footer"><span class="up">↑ 待处理</span></div>
+                            </div>
+                            <div class="stat-card green">
+                                <div class="title">已完成项目</div>
+                                <div class="value">{{ projectStats.completed }}</div>
+                                <div class="footer"><span class="up">↑ 本月 {{ monthlyCompleted }}</span></div>
+                            </div>
+                            <div class="stat-card red">
+                                <div class="title">待归档</div>
+                                <div class="value">{{ pendingArchiveCount }}</div>
+                                <div class="footer"><span class="down">需尽快处理</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="table-area">
+                            <div class="table-header">
+                                <div class="table-title">最近项目</div>
+                                <el-button type="primary" size="small" icon="el-icon-plus" @click="showAddProject">新增项目</el-button>
+                            </div>
+                            <el-table :data="recentProjects" border stripe size="small">
+                                <el-table-column prop="name" label="项目名称" min-width="180" show-overflow-tooltip></el-table-column>
+                                <el-table-column prop="client" label="委托方" width="130"></el-table-column>
+                                <el-table-column prop="status" label="状态" width="100" align="center">
+                                    <template slot-scope="scope">
+                                        <span :class="'status-tag status-' + scope.row.status">{{ scope.row.statusText }}</span>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="progress" label="进度" width="120">
+                                    <template slot-scope="scope">
+                                        <el-progress :percentage="scope.row.progressPercent" :status="scope.row.progressStatus"></el-progress>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="manager" label="项目经理" width="90"></el-table-column>
+                                <el-table-column label="操作" width="100" align="center">
+                                    <template slot-scope="scope">
+                                        <el-button type="text" @click="openProjectDetail(scope.row)">查看</el-button>
+                                    </template>
+                                </el-table-column>
+                            </el-table>
+                        </div>
+                    </div>
+
+                    
+                    <!-- 我的项目列表 -->
+                    <div v-if="currentMenu === 'my-project'">
+                        <div class="approval-cards">
+                            <div class="approval-card" :class="{ active: projectFilter === 'all' }" @click="projectFilter = 'all'">
+                                <div class="card-header">
+                                    <span class="card-title">全部项目</span>
+                                </div>
+                                <div class="card-count">{{ myProjects.length }}</div>
+                                <div class="card-desc">点击查看所有项目</div>
+                            </div>
+                            <div class="approval-card" :class="{ active: projectFilter === 'processing' }" @click="projectFilter = 'processing'">
+                                <div class="card-header">
+                                    <span class="card-title">进行中</span>
+                                </div>
+                                <div class="card-count">{{ processingProjects.length }}</div>
+                                <div class="card-desc">正在执行的项目</div>
+                            </div>
+                            <div class="approval-card" :class="{ active: projectFilter === 'completed' }" @click="projectFilter = 'completed'">
+                                <div class="card-header">
+                                    <span class="card-title">已完成</span>
+                                </div>
+                                <div class="card-count">{{ completedProjects.length }}</div>
+                                <div class="card-desc">已出具报告的项目</div>
+                            </div>
+                        </div>
+                        
+                        <div class="search-area">
+                            <el-input v-model="projectSearch.keyword" placeholder="项目名称/编号/委托方" prefix-icon="el-icon-search" style="width: 260px"></el-input>
+                            <el-select v-model="projectSearch.type" placeholder="业务类型" clearable style="width: 120px">
+                                <el-option label="报表审计" value="报表审计"></el-option>
+                                <el-option label="税务审计" value="税务审计"></el-option>
+                                <el-option label="专项审计" value="专项审计"></el-option>
+                            </el-select>
+                            <el-date-picker v-model="projectSearch.dateRange" type="daterange" range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期" style="width: 240px"></el-date-picker>
+                            <el-button type="primary" icon="el-icon-search" @click="searchProject">查询</el-button>
+                            <el-button icon="el-icon-refresh" @click="resetProjectSearch">重置</el-button>
+                            <el-button type="success" icon="el-icon-plus" @click="showAddProject">新增项目</el-button>
+                        </div>
+                        
+                        <div class="table-area">
+                            <el-table :data="filteredMyProjects" border stripe size="small">
+                                <el-table-column type="index" label="序号" width="50" align="center"></el-table-column>
+                                <el-table-column prop="code" label="项目编号" width="130"></el-table-column>
+                                <el-table-column prop="name" label="项目名称" min-width="180" show-overflow-tooltip></el-table-column>
+                                <el-table-column prop="client" label="委托方" width="140"></el-table-column>
+                                <el-table-column prop="type" label="业务类型" width="100">
+                                    <template slot-scope="scope">
+                                        <el-tag size="mini">{{ scope.row.type }}</el-tag>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="manager" label="项目经理" width="90"></el-table-column>
+                                <el-table-column prop="startDate" label="开始日期" width="100"></el-table-column>
+                                <el-table-column prop="endDate" label="结束日期" width="100"></el-table-column>
+                                <el-table-column prop="status" label="状态" width="100" align="center">
+                                    <template slot-scope="scope">
+                                        <span :class="'status-tag status-' + scope.row.status">{{ scope.row.statusText }}</span>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="progressPercent" label="进度" width="120">
+                                    <template slot-scope="scope">
+                                        <el-progress :percentage="scope.row.progressPercent" :status="scope.row.progressStatus"></el-progress>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column label="操作" width="200" align="center" fixed="right">
+                                    <template slot-scope="scope">
+                                        <el-button type="text" @click="openProjectDetail(scope.row)">查看</el-button>
+                                        <el-button type="text" v-if="scope.row.status === 'draft' || scope.row.status === 'pending'" @click="editProject(scope.row)">编辑</el-button>
+                                        <el-button type="text" style="color: #52c41a" v-if="scope.row.status === 'draft'" @click="startProject(scope.row)">启动</el-button>
+                                        <el-button type="text" style="color: #1890ff" v-if="scope.row.status === 'processing'" @click="continueProject(scope.row)">继续</el-button>
+                                        <el-button type="text" style="color: #f5222d" v-if="scope.row.status === 'draft'" @click="deleteProject(scope.row)">删除</el-button>
+                                    </template>
+                                </el-table-column>
+                            </el-table>
+                        </div>
+                    </div>
+
+                    
+                    <!-- 项目详情页 -->
+                    <div v-if="currentMenu === 'project-detail' && currentProject">
+                        <div class="project-detail-container">
+                            <!-- 项目头部信息 -->
+                            <div class="project-detail-header">
+                                <div class="project-info">
+                                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                        <h2>{{ currentProject.name }}</h2>
+                                        <span :class="'status-tag status-' + currentProject.status">{{ currentProject.statusText }}</span>
+                                    </div>
+                                    <div class="project-meta">
+                                        <span><i class="el-icon-document"></i> 编号：{{ currentProject.code }}</span>
+                                        <span><i class="el-icon-office-building"></i> 委托方：{{ currentProject.client }}</span>
+                                        <span><i class="el-icon-s-custom"></i> 项目经理：{{ currentProject.manager }}</span>
+                                        <span><i class="el-icon-date"></i> 周期：{{ currentProject.startDate }} 至 {{ currentProject.endDate }}</span>
+                                        <span><i class="el-icon-coin"></i> 金额：{{ currentProject.amount || '待定' }}</span>
+                                    </div>
+                                </div>
+                                <div class="project-actions">
+                                    <el-button v-if="currentProject.status === 'draft'" type="primary" icon="el-icon-video-play" @click="startProject(currentProject)">启动项目</el-button>
+                                    <el-button v-if="currentProject.status === 'processing'" type="primary" icon="el-icon-edit" @click="activeTab = 'manuscript'">编制底稿</el-button>
+                                    <el-button v-if="currentProject.status === 'review'" type="success" icon="el-icon-check" @click="approveProject(currentProject)">审核通过</el-button>
+                                    <el-button v-if="currentProject.status === 'completed'" type="primary" icon="el-icon-folder-opened" @click="archiveProject(currentProject)">归档</el-button>
+                                    <el-button icon="el-icon-back" @click="backToList">返回列表</el-button>
+                                </div>
+                            </div>
+                            
+                            <!-- 项目流程 -->
+                            <div class="project-steps">
+                                <div class="flow-container" style="margin-bottom: 0;">
+                                    <div class="flow-step" v-for="(step, index) in projectFlowSteps" :key="index">
+                                        <div class="flow-step-circle" :class="getStepClass(index)">
+                                            <i v-if="getStepClass(index) === 'completed'" class="el-icon-check"></i>
+                                            <span v-else>{{ index + 1 }}</span>
+                                        </div>
+                                        <div class="flow-step-label">{{ step }}</div>
+                                        <div v-if="index < projectFlowSteps.length - 1" class="flow-arrow" :class="getArrowClass(index)"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 项目内容Tab -->
+                            <div class="project-content">
+                                <el-tabs v-model="activeTab" type="border-card">
+                                    
+                                    <!-- 基本信息 -->
+                                    <el-tab-pane label="基本信息" name="basic">
+                                        <table class="detail-table">
+                                            <tr>
+                                                <td class="label">项目名称</td>
+                                                <td class="value">{{ currentProject.name }}</td>
+                                                <td class="label">项目编号</td>
+                                                <td class="value">{{ currentProject.code }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">委托方</td>
+                                                <td class="value">{{ currentProject.client }}</td>
+                                                <td class="label">业务类型</td>
+                                                <td class="value">{{ currentProject.type }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">项目经理</td>
+                                                <td class="value">{{ currentProject.manager }}</td>
+                                                <td class="label">项目成员</td>
+                                                <td class="value">{{ currentProject.members || '小刘洋、刘洋' }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">开始日期</td>
+                                                <td class="value">{{ currentProject.startDate }}</td>
+                                                <td class="label">结束日期</td>
+                                                <td class="value">{{ currentProject.endDate }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">项目状态</td>
+                                                <td class="value">
+                                                    <span :class="'status-tag status-' + currentProject.status">{{ currentProject.statusText }}</span>
+                                                </td>
+                                                <td class="label">当前进度</td>
+                                                <td class="value">{{ currentProject.progressPercent }}%</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">合同金额</td>
+                                                <td class="value">{{ currentProject.amount || '待定' }}</td>
+                                                <td class="label">风险等级</td>
+                                                <td class="value">{{ currentProject.riskLevel || '中' }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">项目说明</td>
+                                                <td class="value" colspan="3">{{ currentProject.description || '暂无说明' }}</td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <!-- 操作日志 -->
+                                        <div style="margin-top: 24px;">
+                                            <h4 style="margin-bottom: 16px;">操作日志</h4>
+                                            <table class="log-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>时间</th>
+                                                        <th>操作人</th>
+                                                        <th>操作内容</th>
+                                                        <th>结果</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr v-for="log in currentProject.logs" :key="log.id">
+                                                        <td>{{ log.time }}</td>
+                                                        <td>{{ log.operator }}</td>
+                                                        <td>{{ log.content }}</td>
+                                                        <td>
+                                                            <span :class="'status-tag status-' + log.result">{{ log.resultText }}</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr v-if="!currentProject.logs || currentProject.logs.length === 0">
+                                                        <td colspan="4" style="text-align: center; color: #999;">暂无操作记录</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </el-tab-pane>
+                                    
+                                    <!-- 底稿编制 -->
+                                    <el-tab-pane label="底稿编制" name="manuscript">
+                                        <div v-if="currentProject.status === 'draft' || currentProject.status === 'pending'">
+                                            <div class="empty-state">
+                                                <i class="el-icon-document"></i>
+                                                <p>项目尚未启动，请先启动项目</p>
+                                                <el-button type="primary" icon="el-icon-video-play" @click="startProject(currentProject)" style="margin-top: 16px;">启动项目</el-button>
+                                            </div>
+                                        </div>
+                                        <div v-else>
+                                            <div class="manuscript-editor">
+                                                <div class="manuscript-sidebar">
+                                                    <div class="manuscript-sidebar-title">底稿目录</div>
+                                                    <div v-for="section in manuscriptSections" :key="section.name">
+                                                        <div class="ms-section">{{ section.name }}</div>
+                                                        <div 
+                                                            v-for="item in section.items" 
+                                                            :key="item.id"
+                                                            class="ms-item"
+                                                            :class="{ active: currentManuscript && currentManuscript.id === item.id }"
+                                                            @click="selectManuscript(item)"
+                                                        >
+                                                            <div class="ms-name">
+                                                                <i :class="item.status === 'completed' ? 'el-icon-check' : 'el-icon-document'"></i>
+                                                                {{ item.name }}
+                                                            </div>
+                                                            <div class="ms-status">
+                                                                状态：{{ item.statusText }} | 编制人：{{ item.author }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="manuscript-main">
+                                                    <div v-if="currentManuscript">
+                                                        <div class="ms-toolbar">
+                                                            <div class="ms-toolbar-title">{{ currentManuscript.name }}</div>
+                                                            <div class="ms-toolbar-actions">
+                                                                <el-button type="primary" size="small" icon="el-icon-document-checked" @click="saveManuscript">保存</el-button>
+                                                                <el-button type="success" size="small" icon="el-icon-check" @click="submitManuscriptReview">提交复核</el-button>
+                                                                <el-button size="small" icon="el-icon-download">导出</el-button>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="ms-body">
+                                                            <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 13px;">
+                                                                <span style="margin-right: 24px;"><strong>编制人：</strong>{{ currentManuscript.author }}</span>
+                                                                <span style="margin-right: 24px;"><strong>复核人：</strong>{{ currentManuscript.reviewer || '待分配' }}</span>
+                                                                <span><strong>状态：</strong>{{ currentManuscript.statusText }}</span>
+                                                            </div>
+                                                            
+                                                            <div v-html="currentManuscript.content"></div>
+                                                            
+                                                            <div class="ms-attachments" v-if="currentManuscript.attachments && currentManuscript.attachments.length > 0">
+                                                                <div class="ms-attachments-title">附件列表</div>
+                                                                <div v-for="(file, idx) in currentManuscript.attachments" :key="idx" class="attachment-item">
+                                                                    <i class="el-icon-document"></i>
+                                                                    <span>{{ file.name }}</span>
+                                                                    <el-button type="text" size="mini">下载</el-button>
+                                                                    <el-button type="text" size="mini" style="color: #f5222d;">删除</el-button>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div style="margin-top: 16px;">
+                                                                <el-upload action="#" :auto-upload="false" :show-file-list="false">
+                                                                    <el-button size="small" icon="el-icon-upload">上传附件</el-button>
+                                                                </el-upload>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div v-else class="empty-state">
+                                                        <i class="el-icon-document"></i>
+                                                        <p>请在左侧选择底稿进行查看或编辑</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </el-tab-pane>
+                                    
+                                    <!-- 流程审批 -->
+                                    <el-tab-pane label="流程审批" name="approval">
+                                        <div class="approval-timeline">
+                                            <div v-for="(item, index) in currentProject.approvalFlow" :key="index" class="timeline-item">
+                                                <div class="timeline-dot" :class="item.status">
+                                                    <i :class="item.icon"></i>
+                                                </div>
+                                                <div class="timeline-content">
+                                                    <div class="timeline-title">{{ item.title }}</div>
+                                                    <div class="timeline-desc">{{ item.desc }}</div>
+                                                    <div class="timeline-time">{{ item.time }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- 审批操作区 -->
+                                        <div v-if="currentProject.status === 'review'" class="approval-form">
+                                            <div class="approval-form-title">审批操作</div>
+                                            <el-form label-width="80px">
+                                                <el-form-item label="审批意见">
+                                                    <el-input type="textarea" v-model="approvalForm.comment" :rows="3" placeholder="请输入审批意见"></el-input>
+                                                </el-form-item>
+                                                <el-form-item>
+                                                    <el-button type="success" icon="el-icon-check" @click="approveProject(currentProject)">审核通过</el-button>
+                                                    <el-button type="danger" icon="el-icon-close" @click="rejectProject(currentProject)">退回修改</el-button>
+                                                    <el-button icon="el-icon-view">查看底稿</el-button>
+                                                </el-form-item>
+                                            </el-form>
+                                        </div>
+                                    </el-tab-pane>
+                                    
+                                    <!-- 报告信息 -->
+                                    <el-tab-pane label="报告信息" name="report">
+                                        <div v-if="currentProject.status !== 'completed' && currentProject.status !== 'archived'">
+                                            <div class="empty-state">
+                                                <i class="el-icon-document"></i>
+                                                <p>项目尚未完成，暂无报告信息</p>
+                                            </div>
+                                        </div>
+                                        <div v-else>
+                                            <table class="detail-table">
+                                                <tr>
+                                                    <td class="label">报告文号</td>
+                                                    <td class="value">{{ currentProject.reportNo || '示例字[2026]' + String(currentProject.id).padStart(4, '0') + '号' }}</td>
+                                                    <td class="label">业务类型</td>
+                                                    <td class="value">{{ currentProject.type }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">项目名称</td>
+                                                    <td class="value">{{ currentProject.name }}</td>
+                                                    <td class="label">报告状态</td>
+                                                    <td class="value">
+                                                        <span class="status-tag status-completed">已出具</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">项目经理</td>
+                                                    <td class="value">{{ currentProject.manager }}</td>
+                                                    <td class="label">报告日期</td>
+                                                    <td class="value">{{ currentProject.reportDate || '2026-05-20' }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">签字人1</td>
+                                                    <td class="value">{{ currentProject.signer1 || '小刘洋' }}</td>
+                                                    <td class="label">签字人2</td>
+                                                    <td class="value">{{ currentProject.signer2 || '刘洋' }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">报告意见类型</td>
+                                                    <td class="value">{{ currentProject.opinionType || '无保留意见' }}</td>
+                                                    <td class="label">提交客户日期</td>
+                                                    <td class="value">{{ currentProject.submitDate || '2026-05-21' }}</td>
+                                                </tr>
+                                            </table>
+                                            
+                                            <div class="action-group" style="margin-top: 20px;">
+                                                <el-button type="primary" icon="el-icon-view">查看报告</el-button>
+                                                <el-button icon="el-icon-download">下载报告</el-button>
+                                                <el-button icon="el-icon-printer">打印报告</el-button>
+                                                <el-button v-if="currentProject.status === 'completed'" type="success" icon="el-icon-folder-opened" @click="archiveProject(currentProject)">提交归档</el-button>
+                                            </div>
+                                        </div>
+                                    </el-tab-pane>
+                                    
+                                    <!-- 归档信息 -->
+                                    <el-tab-pane label="归档信息" name="archive">
+                                        <div v-if="currentProject.status !== 'archived'">
+                                            <div class="empty-state">
+                                                <i class="el-icon-folder-opened"></i>
+                                                <p>项目尚未归档</p>
+                                                <el-button 
+                                                    v-if="currentProject.status === 'completed'" 
+                                                    type="primary" 
+                                                    icon="el-icon-folder-opened" 
+                                                    @click="archiveProject(currentProject)"
+                                                    style="margin-top: 16px;"
+                                                >
+                                                    提交归档
+                                                </el-button>
+                                            </div>
+                                        </div>
+                                        <div v-else>
+                                            <table class="detail-table">
+                                                <tr>
+                                                    <td class="label">档号</td>
+                                                    <td class="value">{{ currentProject.archiveNo || 'DA-2026-' + String(currentProject.id).padStart(4, '0') }}</td>
+                                                    <td class="label">档案名称</td>
+                                                    <td class="value">{{ currentProject.name }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">归档日期</td>
+                                                    <td class="value">{{ currentProject.archiveDate || '2026-05-22' }}</td>
+                                                    <td class="label">项目经理</td>
+                                                    <td class="value">{{ currentProject.manager }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">存放位置</td>
+                                                    <td class="value">{{ currentProject.archiveLocation || 'A-01-' + currentProject.id }}</td>
+                                                    <td class="label">档案类型</td>
+                                                    <td class="value">审计档案</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">保管期限</td>
+                                                    <td class="value">{{ currentProject.archivePeriod || '长期' }}</td>
+                                                    <td class="label">状态</td>
+                                                    <td class="value">
+                                                        <span class="status-tag status-archived">已归档</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            
+                                            <div class="action-group" style="margin-top: 20px;">
+                                                <el-button icon="el-icon-view">查看档案</el-button>
+                                                <el-button icon="el-icon-download">下载档案</el-button>
+                                                <el-button type="primary" icon="el-icon-reading">借阅申请</el-button>
+                                            </div>
+                                        </div>
+                                    </el-tab-pane>
+                                </el-tabs>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新增项目对话框 -->
+        <el-dialog title="新增项目" :visible.sync="addProjectVisible" width="700px">
+            <el-form :model="newProject" label-width="100px">
+                <el-row :gutter="20">
+                    <el-col :span="12">
+                        <el-form-item label="项目名称" required>
+                            <el-input v-model="newProject.name" placeholder="请输入项目名称"></el-input>
+                        </el-form-item>
+                    </el-col>
+                    <el-col :span="12">
+                        <el-form-item label="项目编号">
+                            <el-input v-model="newProject.code" disabled></el-input>
+                        </el-form-item>
+                    </el-col>
+                </el-row>
+                <el-row :gutter="20">
+                    <el-col :span="12">
+                        <el-form-item label="委托方" required>
+                            <el-input v-model="newProject.client" placeholder="请输入委托方"></el-input>
+                        </el-form-item>
+                    </el-col>
+                    <el-col :span="12">
+                        <el-form-item label="业务类型" required>
+                            <el-select v-model="newProject.type" placeholder="请选择" style="width: 100%">
+                                <el-option label="报表审计" value="报表审计"></el-option>
+                                <el-option label="税务审计" value="税务审计"></el-option>
+                                <el-option label="专项审计" value="专项审计"></el-option>
+                            </el-select>
+                        </el-form-item>
+                    </el-col>
+                </el-row>
+                <el-row :gutter="20">
+                    <el-col :span="12">
+                        <el-form-item label="项目经理" required>
+                            <el-input v-model="newProject.manager" placeholder="请输入项目经理"></el-input>
+                        </el-form-item>
+                    </el-col>
+                    <el-col :span="12">
+                        <el-form-item label="合同金额">
+                            <el-input v-model="newProject.amount" placeholder="请输入合同金额"></el-input>
+                        </el-form-item>
+                    </el-col>
+                </el-row>
+                <el-row :gutter="20">
+                    <el-col :span="12">
+                        <el-form-item label="开始日期" required>
+                            <el-date-picker v-model="newProject.startDate" type="date" placeholder="选择日期" style="width: 100%"></el-date-picker>
+                        </el-form-item>
+                    </el-col>
+                    <el-col :span="12">
+                        <el-form-item label="结束日期" required>
+                            <el-date-picker v-model="newProject.endDate" type="date" placeholder="选择日期" style="width: 100%"></el-date-picker>
+                        </el-form-item>
+                    </el-col>
+                </el-row>
+                <el-form-item label="项目说明">
+                    <el-input type="textarea" v-model="newProject.description" :rows="3" placeholder="请输入项目说明"></el-input>
+                </el-form-item>
+            </el-form>
+            <div slot="footer">
+                <el-button @click="addProjectVisible = false">取消</el-button>
+                <el-button type="primary" @click="createProject">创建项目</el-button>
+            </div>
+        </el-dialog>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                currentMenu: 'home',
+                breadcrumb: '首页',
+                expandedMenus: {
+                    accounting: false,
+                    manage: true,
+                    todo: true,
+                    project: false,
+                    work: false,
+                    'data-prep': false,
+                    'ms-manage': false,
+                    archive: false
+                },
+                
+                // 项目筛选
+                projectFilter: 'all',
+                projectSearch: { keyword: '', type: '', dateRange: [] },
+                
+                // 新增项目
+                addProjectVisible: false,
+                newProject: {
+                    name: '', code: '', client: '', type: '', manager: '小刘洋',
+                    amount: '', startDate: '', endDate: '', description: ''
+                },
+                
+                // 当前项目
+                currentProject: null,
+                activeTab: 'basic',
+                
+                // 当前底稿
+                currentManuscript: null,
+                
+                // 审批表单
+                approvalForm: { comment: '' },
+                
+                // 项目列表
+                myProjects: [
+                    {
+                        id: 1, name: '杭州知能装饰有限公司报表审计', code: 'XM-2026-001', client: '杭州知能装饰',
+                        type: '报表审计', manager: '小刘洋', members: '小刘洋、刘洋',
+                        startDate: '2026-01-01', endDate: '2026-03-31',
+                        status: 'processing', statusText: '进行中', progress: 3,
+                        progressPercent: 60, progressStatus: null,
+                        amount: '50,000', riskLevel: '中',
+                        description: '2025年度财务报表审计',
+                        logs: [
+                            { id: 1, time: '2026-01-01 09:00:00', operator: '小刘洋', content: '创建项目', result: 'completed', resultText: '成功' },
+                            { id: 2, time: '2026-01-01 09:30:00', operator: '小刘洋', content: '启动项目', result: 'completed', resultText: '成功' },
+                            { id: 3, time: '2026-01-15 14:20:00', operator: '小刘洋', content: '提交数据采集', result: 'completed', resultText: '成功' },
+                            { id: 4, time: '2026-02-01 10:00:00', operator: '小刘洋', content: '提交底稿复核', result: 'pending', resultText: '待审核' }
+                        ],
+                        approvalFlow: [
+                            { title: '项目创建', desc: '小刘洋 创建了项目', time: '2026-01-01 09:00:00', status: 'success', icon: 'el-icon-plus' },
+                            { title: '项目启动', desc: '小刘洋 启动了项目，开始执行', time: '2026-01-01 09:30:00', status: 'success', icon: 'el-icon-video-play' },
+                            { title: '数据采集', desc: '小刘洋 完成了数据采集工作', time: '2026-01-15 14:20:00', status: 'success', icon: 'el-icon-upload' },
+                            { title: '底稿编制', desc: '小刘洋 正在编制审计底稿，进度 60%', time: '2026-02-01 10:00:00', status: 'processing', icon: 'el-icon-edit' },
+                            { title: '底稿复核', desc: '等待复核人审核', time: '-', status: 'pending', icon: 'el-icon-check' },
+                            { title: '报告出具', desc: '等待底稿复核通过后出具报告', time: '-', status: 'pending', icon: 'el-icon-document' },
+                            { title: '项目归档', desc: '等待报告出具后归档', time: '-', status: 'pending', icon: 'el-icon-folder-opened' }
+                        ]
+                    },
+                    {
+                        id: 2, name: '易斯特新能源报表审计', code: 'XM-2026-002', client: '易斯特新能源',
+                        type: '报表审计', manager: '小刘洋', members: '小刘洋、刘洋、王五',
+                        startDate: '2026-02-01', endDate: '2026-04-30',
+                        status: 'draft', statusText: '草稿', progress: 0,
+                        progressPercent: 0, progressStatus: null,
+                        amount: '80,000', riskLevel: '高',
+                        description: '2025年度财务报表审计，新能源行业',
+                        logs: [
+                            { id: 1, time: '2026-02-01 10:00:00', operator: '小刘洋', content: '创建项目', result: 'completed', resultText: '成功' }
+                        ],
+                        approvalFlow: [
+                            { title: '项目创建', desc: '小刘洋 创建了项目', time: '2026-02-01 10:00:00', status: 'success', icon: 'el-icon-plus' },
+                            { title: '项目启动', desc: '等待启动项目', time: '-', status: 'pending', icon: 'el-icon-video-play' },
+                            { title: '数据采集', desc: '等待项目启动', time: '-', status: 'pending', icon: 'el-icon-upload' },
+                            { title: '底稿编制', desc: '等待数据采集完成', time: '-', status: 'pending', icon: 'el-icon-edit' },
+                            { title: '底稿复核', desc: '等待底稿编制完成', time: '-', status: 'pending', icon: 'el-icon-check' },
+                            { title: '报告出具', desc: '等待复核通过', time: '-', status: 'pending', icon: 'el-icon-document' },
+                            { title: '项目归档', desc: '等待报告出具', time: '-', status: 'pending', icon: 'el-icon-folder-opened' }
+                        ]
+                    },
+                    {
+                        id: 3, name: '浙江云澎科技有限公司报表审计', code: 'XM-2026-003', client: '浙江云澎科技',
+                        type: '报表审计', manager: '小刘洋', members: '小刘洋',
+                        startDate: '2026-01-15', endDate: '2026-03-15',
+                        status: 'completed', statusText: '已完成', progress: 5,
+                        progressPercent: 100, progressStatus: 'success',
+                        amount: '35,000', riskLevel: '低',
+                        description: '2025年度财务报表审计',
+                        reportNo: '示例字[2026]0003号', reportDate: '2026-03-15',
+                        signer1: '小刘洋', signer2: '刘洋', opinionType: '无保留意见',
+                        submitDate: '2026-03-16',
+                        logs: [
+                            { id: 1, time: '2026-01-15 09:00:00', operator: '小刘洋', content: '创建项目', result: 'completed', resultText: '成功' },
+                            { id: 2, time: '2026-01-15 09:30:00', operator: '小刘洋', content: '启动项目', result: 'completed', resultText: '成功' },
+                            { id: 3, time: '2026-01-20 14:00:00', operator: '小刘洋', content: '完成数据采集', result: 'completed', resultText: '成功' },
+                            { id: 4, time: '2026-02-01 10:00:00', operator: '小刘洋', content: '提交底稿复核', result: 'completed', resultText: '成功' },
+                            { id: 5, time: '2026-02-05 16:30:00', operator: '刘洋', content: '审核通过底稿', result: 'completed', resultText: '成功' },
+                            { id: 6, time: '2026-03-15 11:00:00', operator: '小刘洋', content: '出具审计报告', result: 'completed', resultText: '成功' }
+                        ],
+                        approvalFlow: [
+                            { title: '项目创建', desc: '小刘洋 创建了项目', time: '2026-01-15 09:00:00', status: 'success', icon: 'el-icon-plus' },
+                            { title: '项目启动', desc: '小刘洋 启动了项目', time: '2026-01-15 09:30:00', status: 'success', icon: 'el-icon-video-play' },
+                            { title: '数据采集', desc: '小刘洋 完成了数据采集', time: '2026-01-20 14:00:00', status: 'success', icon: 'el-icon-upload' },
+                            { title: '底稿编制', desc: '小刘洋 完成了底稿编制', time: '2026-02-01 10:00:00', status: 'success', icon: 'el-icon-edit' },
+                            { title: '底稿复核', desc: '刘洋 审核通过了底稿', time: '2026-02-05 16:30:00', status: 'success', icon: 'el-icon-check' },
+                            { title: '报告出具', desc: '小刘洋 出具了审计报告', time: '2026-03-15 11:00:00', status: 'success', icon: 'el-icon-document' },
+                            { title: '项目归档', desc: '等待归档', time: '-', status: 'pending', icon: 'el-icon-folder-opened' }
+                        ]
+                    },
+                    {
+                        id: 4, name: '浙江启超电缆股份有限公司税务审计', code: 'XM-2026-004', client: '浙江启超电缆',
+                        type: '税务审计', manager: '小刘洋', members: '小刘洋、刘洋',
+                        startDate: '2026-03-01', endDate: '2026-05-31',
+                        status: 'review', statusText: '待复核', progress: 4,
+                        progressPercent: 85, progressStatus: null,
+                        amount: '60,000', riskLevel: '中',
+                        description: '2025年度税务审计',
+                        logs: [
+                            { id: 1, time: '2026-03-01 09:00:00', operator: '小刘洋', content: '创建项目', result: 'completed', resultText: '成功' },
+                            { id: 2, time: '2026-03-01 10:00:00', operator: '小刘洋', content: '启动项目', result: 'completed', resultText: '成功' },
+                            { id: 3, time: '2026-03-10 15:30:00', operator: '小刘洋', content: '完成底稿编制', result: 'completed', resultText: '成功' },
+                            { id: 4, time: '2026-03-12 09:00:00', operator: '小刘洋', content: '提交底稿复核', result: 'pending', resultText: '待审核' }
+                        ],
+                        approvalFlow: [
+                            { title: '项目创建', desc: '小刘洋 创建了项目', time: '2026-03-01 09:00:00', status: 'success', icon: 'el-icon-plus' },
+                            { title: '项目启动', desc: '小刘洋 启动了项目', time: '2026-03-01 10:00:00', status: 'success', icon: 'el-icon-video-play' },
+                            { title: '数据采集', desc: '小刘洋 完成了数据采集', time: '2026-03-08 14:00:00', status: 'success', icon: 'el-icon-upload' },
+                            { title: '底稿编制', desc: '小刘洋 完成了底稿编制', time: '2026-03-10 15:30:00', status: 'success', icon: 'el-icon-edit' },
+                            { title: '底稿复核', desc: '等待复核人审核', time: '2026-03-12 09:00:00', status: 'processing', icon: 'el-icon-check' },
+                            { title: '报告出具', desc: '等待复核通过', time: '-', status: 'pending', icon: 'el-icon-document' },
+                            { title: '项目归档', desc: '等待报告出具', time: '-', status: 'pending', icon: 'el-icon-folder-opened' }
+                        ]
+                    },
+                    {
+                        id: 5, name: '航中天启微电子股份有限公司报表审计', code: 'XM-2026-007', client: '航中天启微电子',
+                        type: '报表审计', manager: '小刘洋', members: '小刘洋、刘洋、张三',
+                        startDate: '2026-03-01', endDate: '2026-06-30',
+                        status: 'archived', statusText: '已归档', progress: 6,
+                        progressPercent: 100, progressStatus: 'success',
+                        amount: '120,000', riskLevel: '高',
+                        description: '2025年度财务报表审计，合并报表',
+                        reportNo: '示例字[2026]0007号', reportDate: '2026-05-20',
+                        signer1: '小刘洋', signer2: '刘洋', opinionType: '无保留意见',
+                        submitDate: '2026-05-21',
+                        archiveNo: 'DA-2026-0007', archiveDate: '2026-05-22',
+                        archiveLocation: 'A-01-007', archivePeriod: '永久',
+                        logs: [
+                            { id: 1, time: '2026-03-01 09:00:00', operator: '小刘洋', content: '创建项目', result: 'completed', resultText: '成功' },
+                            { id: 2, time: '2026-03-01 10:00:00', operator: '小刘洋', content: '启动项目', result: 'completed', resultText: '成功' },
+                            { id: 3, time: '2026-04-15 16:00:00', operator: '小刘洋', content: '完成底稿编制', result: 'completed', resultText: '成功' },
+                            { id: 4, time: '2026-04-18 10:30:00', operator: '刘洋', content: '审核通过底稿', result: 'completed', resultText: '成功' },
+                            { id: 5, time: '2026-05-20 14:00:00', operator: '小刘洋', content: '出具审计报告', result: 'completed', resultText: '成功' },
+                            { id: 6, time: '2026-05-22 09:00:00', operator: '小刘洋', content: '项目归档', result: 'completed', resultText: '成功' }
+                        ],
+                        approvalFlow: [
+                            { title: '项目创建', desc: '小刘洋 创建了项目', time: '2026-03-01 09:00:00', status: 'success', icon: 'el-icon-plus' },
+                            { title: '项目启动', desc: '小刘洋 启动了项目', time: '2026-03-01 10:00:00', status: 'success', icon: 'el-icon-video-play' },
+                            { title: '数据采集', desc: '小刘洋 完成了数据采集', time: '2026-03-15 14:00:00', status: 'success', icon: 'el-icon-upload' },
+                            { title: '底稿编制', desc: '小刘洋 完成了底稿编制', time: '2026-04-15 16:00:00', status: 'success', icon: 'el-icon-edit' },
+                            { title: '底稿复核', desc: '刘洋 审核通过了底稿', time: '2026-04-18 10:30:00', status: 'success', icon: 'el-icon-check' },
+                            { title: '报告出具', desc: '小刘洋 出具了审计报告', time: '2026-05-20 14:00:00', status: 'success', icon: 'el-icon-document' },
+                            { title: '项目归档', desc: '小刘洋 完成了项目归档', time: '2026-05-22 09:00:00', status: 'success', icon: 'el-icon-folder-opened' }
+                        ]
+                    }
+                ],
+                
+                // 底稿目录
+                manuscriptSections: [
+                    {
+                        name: '初步业务活动',
+                        items: [
+                            { id: 'ms-1', name: '业务承接评价表', author: '小刘洋', reviewer: '刘洋', status: 'completed', statusText: '已完成', content: '<h4>一、审计目标</h4><p>评价客户诚信度和业务风险，确定是否承接该业务。</p><h4>二、审计程序</h4><p>1. 调查客户背景<br>2. 评价管理层诚信<br>3. 评估项目组专业胜任能力</p><h4>三、审计结论</h4><p>经评估，该客户诚信度良好，业务风险可控，建议承接。</p>' },
+                            { id: 'ms-2', name: '独立性声明书', author: '小刘洋', reviewer: '刘洋', status: 'completed', statusText: '已完成', content: '<h4>独立性声明</h4><p>本人声明在执行该项目审计业务期间，保持形式上和实质上的独立性。</p>' }
+                        ]
+                    },
+                    {
+                        name: '风险评估',
+                        items: [
+                            { id: 'ms-3', name: '了解被审计单位及其环境', author: '小刘洋', reviewer: '', status: 'completed', statusText: '已完成', content: '<h4>一、行业状况</h4><p>该公司所属行业为建筑装饰行业，市场竞争激烈。</p><h4>二、法律环境</h4><p>受建筑法规、环保法规约束。</p>' },
+                            { id: 'ms-4', name: '重大错报风险评估', author: '小刘洋', reviewer: '', status: 'completed', statusText: '已完成', content: '<h4>风险评估结果</h4><p>经评估，收入确认存在重大错报风险。</p>' }
+                        ]
+                    },
+                    {
+                        name: '实质性程序',
+                        items: [
+                            { id: 'ms-5', name: '货币资金底稿', author: '小刘洋', reviewer: '', status: 'processing', statusText: '编制中', content: '<h4>货币资金审计底稿</h4><p><strong>审计目标：</strong>验证货币资金的存在性和准确性。</p><p><strong>审计程序：</strong></p><p>1. 获取银行对账单<br>2. 函证银行存款余额<br>3. 检查银行存款余额调节表</p><p><strong>审计结论：</strong></p><p>经审计，货币资金余额可以确认。</p>', attachments: [{name: '银行对账单.pdf'}, {name: '函证回函.pdf'}] },
+                            { id: 'ms-6', name: '应收账款底稿', author: '小刘洋', reviewer: '', status: 'pending', statusText: '未开始', content: '' },
+                            { id: 'ms-7', name: '存货底稿', author: '小刘洋', reviewer: '', status: 'pending', statusText: '未开始', content: '' },
+                            { id: 'ms-8', name: '固定资产底稿', author: '小刘洋', reviewer: '', status: 'pending', statusText: '未开始', content: '' },
+                            { id: 'ms-9', name: '应付账款底稿', author: '小刘洋', reviewer: '', status: 'pending', statusText: '未开始', content: '' },
+                            { id: 'ms-10', name: '应交税费底稿', author: '小刘洋', reviewer: '', status: 'pending', statusText: '未开始', content: '' },
+                            { id: 'ms-11', name: '营业收入底稿', author: '小刘洋', reviewer: '', status: 'pending', statusText: '未开始', content: '' },
+                            { id: 'ms-12', name: '营业成本底稿', author: '小刘洋', reviewer: '', status: 'pending', statusText: '未开始', content: '' }
+                        ]
+                    },
+                    {
+                        name: '完成阶段',
+                        items: [
+                            { id: 'ms-13', name: '审计差异汇总表', author: '小刘洋', reviewer: '', status: 'pending', statusText: '未开始', content: '' },
+                            { id: 'ms-14', name: '管理层声明书', author: '小刘洋', reviewer: '', status: 'pending', statusText: '未开始', content: '' },
+                            { id: 'ms-15', name: '审计总结', author: '小刘洋', reviewer: '', status: 'pending', statusText: '未开始', content: '' }
+                        ]
+                    }
+                ]
+            },
+            
+            computed: {
+                // 统计
+                projectStats() {
+                    return {
+                        total: this.myProjects.length,
+                        processing: this.myProjects.filter(p => p.status === 'processing').length,
+                        completed: this.myProjects.filter(p => p.status === 'completed' || p.status === 'archived').length
+                    };
+                },
+                monthlyCompleted() {
+                    return this.myProjects.filter(p => p.status === 'completed').length;
+                },
+                pendingArchiveCount() {
+                    return this.myProjects.filter(p => p.status === 'completed').length;
+                },
+                taskCount() {
+                    return this.myProjects.filter(p => p.status === 'processing').length;
+                },
+                approvalCount() {
+                    return this.myProjects.filter(p => p.status === 'review').length;
+                },
+                totalPending() {
+                    return this.taskCount + this.approvalCount;
+                },
+                
+                // 最近项目
+                recentProjects() {
+                    return this.myProjects.slice(0, 5);
+                },
+                
+                // 筛选后的项目
+                processingProjects() {
+                    return this.myProjects.filter(p => p.status === 'processing');
+                },
+                completedProjects() {
+                    return this.myProjects.filter(p => p.status === 'completed' || p.status === 'archived');
+                },
+                filteredMyProjects() {
+                    let result = this.myProjects;
+                    
+                    if (this.projectFilter !== 'all') {
+                        if (this.projectFilter === 'processing') {
+                            result = result.filter(p => p.status === 'processing' || p.status === 'draft' || p.status === 'pending' || p.status === 'review');
+                        } else if (this.projectFilter === 'completed') {
+                            result = result.filter(p => p.status === 'completed' || p.status === 'archived');
+                        }
+                    }
+                    
+                    if (this.projectSearch.keyword) {
+                        result = result.filter(p => 
+                            p.name.includes(this.projectSearch.keyword) || 
+                            p.code.includes(this.projectSearch.keyword) ||
+                            p.client.includes(this.projectSearch.keyword)
+                        );
+                    }
+                    
+                    if (this.projectSearch.type) {
+                        result = result.filter(p => p.type === this.projectSearch.type);
+                    }
+                    
+                    return result;
+                },
+                
+                // 流程步骤
+                projectFlowSteps() {
+                    return ['项目创建', '项目启动', '数据采集', '底稿编制', '底稿复核', '报告出具', '项目归档'];
+                }
+            },
+            
+            methods: {
+                toggleMenu(menu) {
+                    this.$set(this.expandedMenus, menu, !this.expandedMenus[menu]);
+                },
+                
+                toggleSubMenu(menu) {
+                    this.$set(this.expandedMenus, menu, !this.expandedMenus[menu]);
+                },
+                
+                goHome() {
+                    this.currentMenu = 'home';
+                    this.breadcrumb = '首页';
+                },
+                
+                goPage(menu, breadcrumb) {
+                    this.currentMenu = menu;
+                    this.breadcrumb = breadcrumb;
+                },
+                
+                // 打开项目详情
+                openProjectDetail(project) {
+                    this.currentProject = JSON.parse(JSON.stringify(project));
+                    this.currentMenu = 'project-detail';
+                    this.breadcrumb = '管理中心 / 工作待办 / 我的项目 / ' + project.name;
+                    this.activeTab = 'basic';
+                },
+                
+                // 返回列表
+                backToList() {
+                    this.currentMenu = 'my-project';
+                    this.breadcrumb = '管理中心 / 工作待办 / 我的项目';
+                    this.currentProject = null;
+                },
+                
+                // 获取步骤样式
+                getStepClass(index) {
+                    if (!this.currentProject) return 'pending';
+                    const progress = this.currentProject.progress;
+                    if (index < progress) return 'completed';
+                    if (index === progress) return 'active';
+                    return 'pending';
+                },
+                
+                // 获取箭头样式
+                getArrowClass(index) {
+                    if (!this.currentProject) return '';
+                    const progress = this.currentProject.progress;
+                    if (index < progress) return 'completed';
+                    if (index === progress) return 'active';
+                    return '';
+                },
+                
+                // 显示新增项目
+                showAddProject() {
+                    const nextId = Math.max(...this.myProjects.map(p => p.id)) + 1;
+                    this.newProject = {
+                        name: '',
+                        code: 'XM-2026-' + String(nextId).padStart(3, '0'),
+                        client: '',
+                        type: '',
+                        manager: '小刘洋',
+                        amount: '',
+                        startDate: '',
+                        endDate: '',
+                        description: ''
+                    };
+                    this.addProjectVisible = true;
+                },
+                
+                // 创建项目
+                createProject() {
+                    if (!this.newProject.name || !this.newProject.client || !this.newProject.type) {
+                        this.$message.warning('请填写必填项');
+                        return;
+                    }
+                    
+                    const nextId = Math.max(...this.myProjects.map(p => p.id)) + 1;
+                    const project = {
+                        id: nextId,
+                        ...this.newProject,
+                        status: 'draft',
+                        statusText: '草稿',
+                        progress: 0,
+                        progressPercent: 0,
+                        progressStatus: null,
+                        members: '小刘洋',
+                        riskLevel: '中',
+                        logs: [
+                            { 
+                                id: 1, 
+                                time: new Date().toLocaleString(), 
+                                operator: '小刘洋', 
+                                content: '创建项目', 
+                                result: 'completed', 
+                                resultText: '成功' 
+                            }
+                        ],
+                        approvalFlow: [
+                            { title: '项目创建', desc: '小刘洋 创建了项目', time: new Date().toLocaleString(), status: 'success', icon: 'el-icon-plus' },
+                            { title: '项目启动', desc: '等待启动项目', time: '-', status: 'pending', icon: 'el-icon-video-play' },
+                            { title: '数据采集', desc: '等待项目启动', time: '-', status: 'pending', icon: 'el-icon-upload' },
+                            { title: '底稿编制', desc: '等待数据采集完成', time: '-', status: 'pending', icon: 'el-icon-edit' },
+                            { title: '底稿复核', desc: '等待底稿编制完成', time: '-', status: 'pending', icon: 'el-icon-check' },
+                            { title: '报告出具', desc: '等待复核通过', time: '-', status: 'pending', icon: 'el-icon-document' },
+                            { title: '项目归档', desc: '等待报告出具', time: '-', status: 'pending', icon: 'el-icon-folder-opened' }
+                        ]
+                    };
+                    
+                    this.myProjects.unshift(project);
+                    this.addProjectVisible = false;
+                    this.$message.success('项目创建成功');
+                },
+                
+                // 编辑项目
+                editProject(project) {
+                    this.newProject = { ...project };
+                    this.addProjectVisible = true;
+                },
+                
+                // 启动项目
+                startProject(project) {
+                    this.$confirm('确定要启动该项目吗？', '提示', {
+                        confirmButtonText: '确定',
+                        cancelButtonText: '取消',
+                        type: 'info'
+                    }).then(() => {
+                        project.status = 'processing';
+                        project.statusText = '进行中';
+                        project.progress = 1;
+                        project.progressPercent = 15;
+                        
+                        // 添加日志
+                        project.logs.push({
+                            id: project.logs.length + 1,
+                            time: new Date().toLocaleString(),
+                            operator: '小刘洋',
+                            content: '启动项目',
+                            result: 'completed',
+                            resultText: '成功'
+                        });
+                        
+                        // 更新流程
+                        project.approvalFlow[1] = { 
+                            title: '项目启动', 
+                            desc: '小刘洋 启动了项目，开始执行', 
+                            time: new Date().toLocaleString(), 
+                            status: 'success', 
+                            icon: 'el-icon-video-play' 
+                        };
+                        
+                        this.$message.success('项目已启动');
+                        
+                        // 如果当前在项目详情页，更新数据
+                        if (this.currentProject && this.currentProject.id === project.id) {
+                            this.currentProject = JSON.parse(JSON.stringify(project));
+                        }
+                    });
+                },
+                
+                // 继续项目（从列表）
+                continueProject(project) {
+                    this.openProjectDetail(project);
+                    this.activeTab = 'manuscript';
+                },
+                
+                // 删除项目
+                deleteProject(project) {
+                    this.$confirm('确定要删除该项目吗？', '警告', {
+                        confirmButtonText: '确定',
+                        cancelButtonText: '取消',
+                        type: 'warning'
+                    }).then(() => {
+                        this.myProjects = this.myProjects.filter(p => p.id !== project.id);
+                        this.$message.success('项目已删除');
+                    });
+                },
+                
+                // 搜索项目
+                searchProject() {
+                    this.$message.success('查询成功');
+                },
+                
+                // 重置搜索
+                resetProjectSearch() {
+                    this.projectSearch = { keyword: '', type: '', dateRange: [] };
+                    this.projectFilter = 'all';
+                },
+                
+                // 选择底稿
+                selectManuscript(item) {
+                    this.currentManuscript = item;
+                },
+                
+                // 保存底稿
+                saveManuscript() {
+                    if (this.currentManuscript) {
+                        this.currentManuscript.status = 'processing';
+                        this.currentManuscript.statusText = '编制中';
+                        this.$message.success('底稿保存成功');
+                    }
+                },
+                
+                // 提交底稿复核
+                submitManuscriptReview() {
+                    if (!this.currentManuscript) {
+                        this.$message.warning('请先选择底稿');
+                        return;
+                    }
+                    
+                    this.$confirm('确定要提交该底稿进行复核吗？', '提示', {
+                        confirmButtonText: '确定',
+                        cancelButtonText: '取消'
+                    }).then(() => {
+                        this.currentManuscript.status = 'review';
+                        this.currentManuscript.statusText = '待复核';
+                        
+                        // 更新项目状态
+                        if (this.currentProject) {
+                            this.currentProject.status = 'review';
+                            this.currentProject.statusText = '待复核';
+                            this.currentProject.progress = 4;
+                            this.currentProject.progressPercent = 85;
+                            
+                            // 添加日志
+                            this.currentProject.logs.push({
+                                id: this.currentProject.logs.length + 1,
+                                time: new Date().toLocaleString(),
+                                operator: '小刘洋',
+                                content: '提交底稿复核',
+                                result: 'pending',
+                                resultText: '待审核'
+                            });
+                            
+                            // 更新流程
+                            this.currentProject.approvalFlow[4] = {
+                                title: '底稿复核',
+                                desc: '等待复核人审核',
+                                time: new Date().toLocaleString(),
+                                status: 'processing',
+                                icon: 'el-icon-check'
+                            };
+                            
+                            // 更新原数据
+                            const idx = this.myProjects.findIndex(p => p.id === this.currentProject.id);
+                            if (idx > -1) {
+                                this.$set(this.myProjects, idx, JSON.parse(JSON.stringify(this.currentProject)));
+                            }
+                        }
+                        
+                        this.$message.success('底稿已提交复核');
+                    });
+                },
+                
+                // 审核通过项目
+                approveProject(project) {
+                    this.$confirm('确定要审核通过该项目吗？', '审批确认', {
+                        confirmButtonText: '通过',
+                        cancelButtonText: '取消',
+                        type: 'success'
+                    }).then(() => {
+                        project.status = 'completed';
+                        project.statusText = '已完成';
+                        project.progress = 5;
+                        project.progressPercent = 100;
+                        project.progressStatus = 'success';
+                        project.reportNo = '示例字[2026]' + String(project.id).padStart(4, '0') + '号';
+                        project.reportDate = new Date().toISOString().split('T')[0];
+                        project.signer1 = '小刘洋';
+                        project.signer2 = '刘洋';
+                        project.opinionType = '无保留意见';
+                        project.submitDate = new Date().toISOString().split('T')[0];
+                        
+                        // 添加日志
+                        project.logs.push({
+                            id: project.logs.length + 1,
+                            time: new Date().toLocaleString(),
+                            operator: '刘洋',
+                            content: '审核通过底稿' + (this.approvalForm.comment ? '，意见：' + this.approvalForm.comment : ''),
+                            result: 'completed',
+                            resultText: '成功'
+                        });
+                        
+                        project.logs.push({
+                            id: project.logs.length + 1,
+                            time: new Date().toLocaleString(),
+                            operator: '小刘洋',
+                            content: '出具审计报告',
+                            result: 'completed',
+                            resultText: '成功'
+                        });
+                        
+                        // 更新流程
+                        project.approvalFlow[4] = {
+                            title: '底稿复核',
+                            desc: '刘洋 审核通过了底稿',
+                            time: new Date().toLocaleString(),
+                            status: 'success',
+                            icon: 'el-icon-check'
+                        };
+                        
+                        project.approvalFlow[5] = {
+                            title: '报告出具',
+                            desc: '小刘洋 出具了审计报告',
+                            time: new Date().toLocaleString(),
+                            status: 'success',
+                            icon: 'el-icon-document'
+                        };
+                        
+                        // 更新原数据
+                        const idx = this.myProjects.findIndex(p => p.id === project.id);
+                        if (idx > -1) {
+                            this.$set(this.myProjects, idx, JSON.parse(JSON.stringify(project)));
+                        }
+                        
+                        // 更新当前项目
+                        this.currentProject = JSON.parse(JSON.stringify(project));
+                        this.approvalForm.comment = '';
+                        
+                        this.$message.success('审核通过，报告已出具');
+                    });
+                },
+                
+                // 退回项目
+                rejectProject(project) {
+                    this.$prompt('请输入退回原因', '退回修改', {
+                        confirmButtonText: '确定',
+                        cancelButtonText: '取消',
+                        inputPattern: /.+/,
+                        inputErrorMessage: '请输入退回原因'
+                    }).then(({ value }) => {
+                        project.status = 'processing';
+                        project.statusText = '进行中';
+                        project.progress = 3;
+                        project.progressPercent = 60;
+                        
+                        // 添加日志
+                        project.logs.push({
+                            id: project.logs.length + 1,
+                            time: new Date().toLocaleString(),
+                            operator: '刘洋',
+                            content: '退回底稿修改，原因：' + value,
+                            result: 'rejected',
+                            resultText: '已退回'
+                        });
+                        
+                        // 更新流程
+                        project.approvalFlow[4] = {
+                            title: '底稿复核',
+                            desc: '刘洋 退回了底稿，原因：' + value,
+                            time: new Date().toLocaleString(),
+                            status: 'pending',
+                            icon: 'el-icon-check'
+                        };
+                        
+                        // 更新原数据
+                        const idx = this.myProjects.findIndex(p => p.id === project.id);
+                        if (idx > -1) {
+                            this.$set(this.myProjects, idx, JSON.parse(JSON.stringify(project)));
+                        }
+                        
+                        // 更新当前项目
+                        this.currentProject = JSON.parse(JSON.stringify(project));
+                        this.approvalForm.comment = '';
+                        
+                        this.$message.warning('已退回修改');
+                    });
+                },
+                
+                // 归档项目
+                archiveProject(project) {
+                    this.$confirm('确定要将该项目归档吗？', '归档确认', {
+                        confirmButtonText: '确定',
+                        cancelButtonText: '取消',
+                        type: 'info'
+                    }).then(() => {
+                        project.status = 'archived';
+                        project.statusText = '已归档';
+                        project.progress = 6;
+                        project.archiveNo = 'DA-2026-' + String(project.id).padStart(4, '0');
+                        project.archiveDate = new Date().toISOString().split('T')[0];
+                        project.archiveLocation = 'A-01-' + project.id;
+                        project.archivePeriod = '长期';
+                        
+                        // 添加日志
+                        project.logs.push({
+                            id: project.logs.length + 1,
+                            time: new Date().toLocaleString(),
+                            operator: '小刘洋',
+                            content: '项目归档',
+                            result: 'completed',
+                            resultText: '成功'
+                        });
+                        
+                        // 更新流程
+                        project.approvalFlow[6] = {
+                            title: '项目归档',
+                            desc: '小刘洋 完成了项目归档',
+                            time: new Date().toLocaleString(),
+                            status: 'success',
+                            icon: 'el-icon-folder-opened'
+                        };
+                        
+                        // 更新原数据
+                        const idx = this.myProjects.findIndex(p => p.id === project.id);
+                        if (idx > -1) {
+                            this.$set(this.myProjects, idx, JSON.parse(JSON.stringify(project)));
+                        }
+                        
+                        // 更新当前项目
+                        this.currentProject = JSON.parse(JSON.stringify(project));
+                        
+                        this.$message.success('项目已归档');
+                    });
+                }
+            },
+            
+            mounted() {
+                this.$message.success('欢迎使用SpaceX平台！当前登录：小刘洋');
+            }
+        });
+    </script>
+</body>
+</html>

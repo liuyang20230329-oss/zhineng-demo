@@ -1,0 +1,60 @@
+- generic [ref=e1]:
+  - img:
+    - generic "编组 24备份"
+    - generic "编组 24"
+    - generic "bg-关于我们"
+    - generic "功能icon/已认证"
+    - generic "编组 3":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 创建人
+    - generic "编组 2"
+    - generic "编组 31":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 暂无 数据
+    - generic "编组 8"
+    - generic "icon-核算中心"
+    - generic "icon-管理中心"
+    - generic "icon-menufold-32-0"
+    - generic "icon-menufold-32-1"
+    - generic "编组 46":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 暂无权限
+    - generic "功能icon/-认证"
+    - generic "编组"
+    - generic "icon-menuunfold-32-0"
+    - generic "icon-menuunfold-32-1"
+    - generic "输入框/icon-搜索"
+    - generic "icon-sorting-16-0"
+    - generic "编组"
+    - generic "编组备份 3"
+    - generic "Icon/Warning"
+    - generic "Icon/Warning"
+  - generic [ref=e216]:
+    - generic [ref=e221]:
+      - tablist [ref=e225]:
+        - tab "账号登录" [selected] [ref=e227]
+        - tab "手机登录" [ref=e228]
+      - tabpanel "账号登录" [ref=e230]:
+        - generic [ref=e231]:
+          - generic [ref=e232]:
+            - textbox "账号/手机号/邮箱" [ref=e238]: "13477090964"
+            - textbox "密码" [ref=e244]: mm.123456
+            - paragraph [ref=e248]:
+              - text: 免费注册
+              - text: 忘记密码
+          - generic [ref=e250]:
+            - button "登 录" [ref=e253] [cursor=pointer]
+            - paragraph [ref=e256]:
+              - generic [ref=e258] [cursor=pointer]:
+                - checkbox [checked] [active]
+              - text: 我已阅读并同意 《用户协议》 和 《隐私政策》
+            - generic [ref=e266]: 其他登录方式
+    - generic [ref=e268]: © 2022 杭州知能财务管理咨询有限公司 浙ICP备浙ICP备15006498号-1

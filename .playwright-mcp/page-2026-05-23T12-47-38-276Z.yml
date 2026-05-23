@@ -1,0 +1,132 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e9]:
+        - button "Toggle navigation" [ref=e11] [cursor=pointer]
+        - link "Homepage" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img [ref=e18]
+        - generic [ref=e20]:
+          - link "Sign in" [ref=e21] [cursor=pointer]:
+            - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fliuyang20230329-oss%2Fzhineng-demo%2Fupload
+          - button "Appearance settings" [ref=e24] [cursor=pointer]:
+            - img
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e32]:
+          - img [ref=e33]
+          - link "liuyang20230329-oss" [ref=e36] [cursor=pointer]:
+            - /url: /liuyang20230329-oss
+          - generic [ref=e37]: /
+          - strong [ref=e38]:
+            - link "zhineng-demo" [ref=e39] [cursor=pointer]:
+              - /url: /liuyang20230329-oss/zhineng-demo
+          - generic [ref=e40]: Public
+        - generic [ref=e41]:
+          - list:
+            - listitem [ref=e42]:
+              - link "You must be signed in to change notification settings" [ref=e43] [cursor=pointer]:
+                - /url: /login?return_to=%2Fliuyang20230329-oss%2Fzhineng-demo
+                - img [ref=e44]
+                - text: Notifications
+            - listitem [ref=e46]:
+              - link "Fork 0" [ref=e47] [cursor=pointer]:
+                - /url: /login?return_to=%2Fliuyang20230329-oss%2Fzhineng-demo
+                - img [ref=e48]
+                - text: Fork
+                - generic "0" [ref=e50]
+            - listitem [ref=e51]:
+              - link "You must be signed in to star a repository" [ref=e53] [cursor=pointer]:
+                - /url: /login?return_to=%2Fliuyang20230329-oss%2Fzhineng-demo
+                - img [ref=e54]
+                - text: Star
+                - generic "0 users starred this repository" [ref=e56]: "0"
+      - navigation "Repository" [ref=e57]:
+        - list [ref=e58]:
+          - listitem [ref=e59]:
+            - link "Code" [ref=e60] [cursor=pointer]:
+              - /url: /liuyang20230329-oss/zhineng-demo
+              - img [ref=e61]
+              - generic [ref=e63]: Code
+          - listitem [ref=e64]:
+            - link "Issues" [ref=e65] [cursor=pointer]:
+              - /url: /liuyang20230329-oss/zhineng-demo/issues
+              - img [ref=e66]
+              - generic [ref=e69]: Issues
+          - listitem [ref=e70]:
+            - link "Pull requests" [ref=e71] [cursor=pointer]:
+              - /url: /liuyang20230329-oss/zhineng-demo/pulls
+              - img [ref=e72]
+              - generic [ref=e74]: Pull requests
+          - listitem [ref=e75]:
+            - link "Actions" [ref=e76] [cursor=pointer]:
+              - /url: /liuyang20230329-oss/zhineng-demo/actions
+              - img [ref=e77]
+              - generic [ref=e79]: Actions
+          - listitem [ref=e80]:
+            - link "Projects" [ref=e81] [cursor=pointer]:
+              - /url: /liuyang20230329-oss/zhineng-demo/projects
+              - img [ref=e82]
+              - generic [ref=e84]: Projects
+          - listitem [ref=e85]:
+            - link "Security and quality" [ref=e86] [cursor=pointer]:
+              - /url: /liuyang20230329-oss/zhineng-demo/security
+              - img [ref=e87]
+              - generic [ref=e89]: Security and quality
+          - listitem [ref=e90]:
+            - link "Insights" [ref=e91] [cursor=pointer]:
+              - /url: /liuyang20230329-oss/zhineng-demo/pulse
+              - img [ref=e92]
+              - generic [ref=e94]: Insights
+    - generic [ref=e97]:
+      - heading "Uploading files to zhineng-demo" [level=1] [ref=e98]
+      - generic [ref=e99]:
+        - heading "Breadcrumbs" [level=2] [ref=e100]
+        - generic [ref=e101]:
+          - link "zhineng-demo" [ref=e104] [cursor=pointer]:
+            - /url: /liuyang20230329-oss/zhineng-demo/upload/main
+          - text: /
+      - generic [ref=e106]:
+        - img [ref=e107]
+        - heading "Uploads are disabled." [level=2] [ref=e109]
+        - paragraph [ref=e110]: File uploads require push access to this repository.
+  - contentinfo [ref=e111]:
+    - heading "Footer" [level=2] [ref=e112]
+    - generic [ref=e113]:
+      - generic [ref=e114]:
+        - link "GitHub Homepage" [ref=e115] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e116]
+        - generic [ref=e118]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e119]:
+        - heading "Footer navigation" [level=3] [ref=e120]
+        - list "Footer navigation" [ref=e121]:
+          - listitem [ref=e122]:
+            - link "Terms" [ref=e123] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e124]:
+            - link "Privacy" [ref=e125] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e126]:
+            - link "Security" [ref=e127] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e128]:
+            - link "Status" [ref=e129] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e130]:
+            - link "Community" [ref=e131] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e132]:
+            - link "Docs" [ref=e133] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e134]:
+            - link "Contact" [ref=e135] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e136]:
+            - button "Manage cookies" [ref=e138] [cursor=pointer]
+          - listitem [ref=e139]:
+            - button "Do not share my personal information" [ref=e141] [cursor=pointer]

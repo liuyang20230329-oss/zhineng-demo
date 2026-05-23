@@ -1,0 +1,23 @@
+[      44ms] [INFO] Download the Vue Devtools extension for a better development experience:
+https://github.com/vuejs/vue-devtools @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:9098
+[      44ms] [INFO] You are running Vue in development mode.
+Make sure to turn on production mode when deploying for production.
+See more tips at https://vuejs.org/guide/deployment.html @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:9107
+[    1154ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/favicon.ico:0
+[   35251ms] [ERROR] [Vue warn]: Property or method "item" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+
+(found in <Root>) @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[   35251ms] [ERROR] [Vue warn]: Error in render: "TypeError: Cannot read properties of undefined (reading 'type')"
+
+(found in <Root>) @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[   35251ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'type')
+    at eval (eval at createFunction (https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:11698:14), <anonymous>:3:207742)
+    at Proxy.renderList (https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:2653:18)
+    at Proxy.eval (eval at createFunction (https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:11698:14), <anonymous>:3:205546)
+    at Vue._render (https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:3572:24)
+    at Vue.updateComponent (https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:4082:23)
+    at Watcher.get (https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:4494:27)
+    at Watcher.run (https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:4569:24)
+    at flushSchedulerQueue (https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:4327:15)
+    at Array.<anonymous> (https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:1998:14)
+    at flushCallbacks (https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:1924:16) @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:1905

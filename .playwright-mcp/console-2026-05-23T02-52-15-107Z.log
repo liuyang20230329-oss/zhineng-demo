@@ -1,0 +1,30 @@
+[     319ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'label')
+    at Object.p0iK (https://www.zndata.cn/fqtaxcompany/static/js/chunk-77ed.e30a367b.js:1357:3)
+    at __webpack_require__ (https://www.zndata.cn/fqtaxcompany/:316:30)
+    at Module.m3Yl (https://www.zndata.cn/fqtaxcompany/static/js/chunk-77ed.e30a367b.js:333:20)
+    at __webpack_require__ (https://www.zndata.cn/fqtaxcompany/:316:30) @ https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:81628
+[    3352ms] [ERROR] 解密失败: Error: Malformed UTF-8 data
+    at Object.stringify (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:38911:24)
+    at WordArray.init.toString (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:38666:38)
+    at decryptAES (https://www.zndata.cn/fqtaxcompany/static/js/app.9d567fe2.js:2294:34)
+    at https://www.zndata.cn/fqtaxcompany/static/js/app.9d567fe2.js:2264:17
+    at https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:79378:18
+    at Generator.<anonymous> (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:68261:51)
+    at Generator.next (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:32062:21)
+    at asyncGeneratorStep (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:105326:17)
+    at _next (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:105340:9) @ https://www.zndata.cn/fqtaxcompany/static/js/app.9d567fe2.js:2300
+[    3352ms] [ERROR] 解密失败: Error: Malformed UTF-8 data
+    at Object.stringify (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:38911:24)
+    at WordArray.init.toString (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:38666:38)
+    at decryptAES (https://www.zndata.cn/fqtaxcompany/static/js/app.9d567fe2.js:2294:34)
+    at https://www.zndata.cn/fqtaxcompany/static/js/app.9d567fe2.js:2265:17
+    at https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:79378:18
+    at Generator.<anonymous> (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:68261:51)
+    at Generator.next (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:32062:21)
+    at asyncGeneratorStep (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:105326:17)
+    at _next (https://www.zndata.cn/fqtaxcompany/static/js/chunk-libs.9c4ddc50.js:105340:9) @ https://www.zndata.cn/fqtaxcompany/static/js/app.9d567fe2.js:2300
+[   18968ms] [LOG] 23e99cc7-8866-4e67-99cd-a6396e609969 token @ https://www.zndata.cn/fqtaxcompany/static/js/app.9d567fe2.js:10543
+[   19039ms] [LOG] 数据上报成功 @ https://www.zndata.cn/fqtaxcompany/static/js/app.9d567fe2.js:10557
+[   20067ms] [LOG] SSE 连接建立 @ https://www.zndata.cn/fqtaxcompany/static/js/app.9d567fe2.js:9766
+[   48978ms] [LOG] 23e99cc7-8866-4e67-99cd-a6396e609969 token @ https://www.zndata.cn/fqtaxcompany/static/js/app.9d567fe2.js:10543
+[   48998ms] [LOG] 数据上报成功 @ https://www.zndata.cn/fqtaxcompany/static/js/app.9d567fe2.js:10557

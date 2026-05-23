@@ -1,0 +1,2 @@
+[   17932ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://ai.zndata.cn/embed.min.js:0
+[   80528ms] [WARNING] [vxe table v3.19.39] 参数 "resizable" 已废弃，请使用 "column-config.resizable" @ https://www.zndata.cn/fqtaxsaas/static/js/chunk-libs.e4e3ffb4.js:1514

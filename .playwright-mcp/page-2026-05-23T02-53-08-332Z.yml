@@ -1,0 +1,48 @@
+- generic [active] [ref=e1]:
+  - img:
+    - generic "编组 24备份"
+    - generic "编组 24"
+    - generic "bg-关于我们"
+    - generic "功能icon/已认证"
+    - generic "编组 3":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 创建人
+    - generic "编组 2"
+    - generic "编组 31":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 暂无 数据
+    - generic "编组 8"
+    - generic "icon-核算中心"
+    - generic "icon-管理中心"
+    - generic "icon-menufold-32-0"
+    - generic "icon-menufold-32-1"
+    - generic "编组 46":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 暂无权限
+    - generic "功能icon/-认证"
+    - generic "编组"
+    - generic "icon-menuunfold-32-0"
+    - generic "icon-menuunfold-32-1"
+    - generic "输入框/icon-搜索"
+    - generic "icon-sorting-16-0"
+    - generic "编组"
+    - generic "编组备份 3"
+    - generic "Icon/Warning"
+    - generic "Icon/Warning"
+  - menubar [ref=e228]:
+    - generic [ref=e231] [cursor=pointer]: 管理后台
+    - generic [ref=e232] [cursor=pointer]:
+      - generic [ref=e233]:
+        - img [ref=e234]
+        - text: SpaceX
+      - generic [ref=e236]:
+        - text: 
+        - generic [ref=e240]: 洋

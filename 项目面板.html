@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目面板 - SpaceX</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft YaHei', sans-serif; background: #f0f2f5; overflow: hidden; }
+        
+        .app-container { display: flex; height: 100vh; }
+        
+        /* 侧边栏 */
+        .sidebar {
+            width: 220px;
+            background: #fff;
+            border-right: 1px solid #e8e8e8;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+        
+        .logo { 
+            height: 64px; 
+            display: flex; 
+            align-items: center; 
+            padding: 0 20px; 
+            font-size: 16px; 
+            font-weight: bold; 
+            border-bottom: 1px solid #e8e8e8;
+            color: #333;
+        }
+        .logo img { width: 32px; height: 32px; margin-right: 10px; }
+        
+        .menu-section { padding: 8px 0; }
+        
+        .menu-item {
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #333;
+            position: relative;
+        }
+        
+        .menu-item:hover { background: #f5f5f5; color: #1890ff; }
+        .menu-item.active { background: #e6f7ff; color: #1890ff; border-right: 3px solid #1890ff; }
+        .menu-item i { font-size: 16px; width: 20px; text-align: center; }
+        
+        .submenu-arrow {
+            margin-left: auto;
+            transition: transform 0.3s;
+            font-size: 12px;
+            color: #999;
+        }
+        .submenu-arrow.expanded { transform: rotate(90deg); }
+        
+        /* 主内容区 */
+        .main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+        
+        .header { 
+            height: 64px; 
+            background: #fff; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 0 24px; 
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08); 
+            flex-shrink: 0;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        
+        .header-left { display: flex; align-items: center; gap: 16px; }
+        .header-right { display: flex; align-items: center; gap: 16px; }
+        
+        .company-info { display: flex; align-items: center; gap: 8px; }
+        .company-name { font-size: 16px; color: #333; font-weight: 600; }
+        .company-tag { 
+            padding: 2px 8px; 
+            border: 1px solid #1890ff; 
+            color: #1890ff; 
+            font-size: 12px; 
+            border-radius: 2px;
+        }
+        .company-tag.secondary {
+            border-color: #fa8c16;
+            color: #fa8c16;
+        }
+        
+        .user-actions { display: flex; align-items: center; gap: 16px; }
+        .user-actions i { font-size: 18px; color: #666; cursor: pointer; }
+        .user-actions i:hover { color: #1890ff; }
+        
+        .content-area { 
+            flex: 1; 
+            padding: 0; 
+            overflow-y: auto; 
+            background: #f5f7fa;
+        }
+        
+        /* 面包屑 */
+        .breadcrumb-bar {
+            background: #fff;
+            padding: 12px 24px;
+            border-bottom: 1px solid #e8e8e8;
+            font-size: 14px;
+            color: #666;
+        }
+        .breadcrumb-bar span { cursor: pointer; }
+        .breadcrumb-bar span:hover { color: #1890ff; }
+        .breadcrumb-bar .separator { margin: 0 8px; color: #999; }
+        
+        /* 项目面板头部 */
+        .project-panel-header {
+            background: #fff;
+            padding: 20px 24px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        
+        .panel-header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .panel-header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #666;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .back-btn:hover { color: #1890ff; }
+        
+        .project-title-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .project-icon {
+            width: 40px;
+            height: 40px;
+            background: #fff2f0;
+            border: 1px solid #ffccc7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff4d4f;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .project-name-info h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .project-name-info .project-code {
+            font-size: 13px;
+            color: #999;
+        }
+        
+        .status-tag {
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .status-review {
+            background: #fff7e6;
+            color: #fa8c16;
+            border: 1px solid #ffd591;
+        }
+        
+        .panel-header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #666;
+            background: #fff;
+        }
+        .icon-btn:hover {
+            border-color: #1890ff;
+            color: #1890ff;
+        }
+        
+        /* 流程步骤 */
+        .flow-steps {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        
+        .flow-step {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .step-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .step-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .step-circle.completed {
+            background: #f6ffed;
+            border: 1px solid #b7eb8f;
+            color: #52c41a;
+        }
+        
+        .step-circle.active {
+            background: #1890ff;
+            color: #fff;
+            box-shadow: 0 0 0 4px rgba(24,144,255,0.2);
+        }
+        
+        .step-circle.pending {
+            background: #f5f5f5;
+            border: 1px solid #d9d9d9;
+            color: #999;
+        }
+        
+        .step-label {
+            font-size: 13px;
+            color: #666;
+            white-space: nowrap;
+        }
+        
+        .step-label.active {
+            color: #1890ff;
+            font-weight: 600;
+        }
+        
+        .step-connector {
+            width: 60px;
+            height: 2px;
+            margin: 0 8px;
+            margin-bottom: 24px;
+        }
+        
+        .step-connector.completed {
+            background: #b7eb8f;
+        }
+        
+        .step-connector.pending {
+            background: #e8e8e8;
+            border-top: 1px dashed #d9d9d9;
+            background: transparent;
+        }
+        
+        /* 标签页 */
+        .panel-tabs {
+            background: #fff;
+            border-bottom: 1px solid #e8e8e8;
+            padding: 0 24px;
+        }
+        
+        .panel-tabs .el-tabs__header {
+            margin: 0;
+        }
+        
+        .panel-tabs .el-tabs__nav-wrap::after {
+            height: 1px;
+            background-color: #e8e8e8;
+        }
+        
+        .panel-tabs .el-tabs__item {
+            font-size: 14px;
+            height: 48px;
+            line-height: 48px;
+        }
+        
+        .panel-tabs .el-tabs__item.is-active {
+            color: #1890ff;
+            font-weight: 600;
+        }
+        
+        .panel-tabs .el-tabs__active-bar {
+            background-color: #1890ff;
+            height: 3px;
+        }
+        
+        /* 标签页内容 */
+        .tab-content {
+            padding: 20px 24px;
+            min-height: 400px;
+        }
+        
+        /* 团队管理 */
+        .team-member-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .team-member-card:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+            border-color: #1890ff;
+        }
+        
+        .member-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            flex: 1;
+        }
+        
+        .member-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .member-role {
+            font-size: 13px;
+            color: #999;
+        }
+        
+        .member-expand {
+            color: #999;
+            font-size: 12px;
+        }
+        
+        /* 知识库 */
+        .knowledge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        
+        .knowledge-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .knowledge-card:hover {
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            border-color: #1890ff;
+        }
+        
+        .knowledge-icon {
+            width: 48px;
+            height: 48px;
+            background: #e6f7ff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1890ff;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        
+        .knowledge-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .knowledge-desc {
+            font-size: 13px;
+            color: #999;
+            line-height: 1.5;
+        }
+        
+        /* 任务管理 */
+        .task-list {
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #e8e8e8;
+        }
+        
+        .task-item {
+            padding: 16px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .task-item:last-child {
+            border-bottom: none;
+        }
+        
+        .task-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #d9d9d9;
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .task-checkbox.checked {
+            background: #52c41a;
+            border-color: #52c41a;
+            color: #fff;
+        }
+        
+        .task-content {
+            flex: 1;
+        }
+        
+        .task-title {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .task-title.completed {
+            text-decoration: line-through;
+            color: #999;
+        }
+        
+        .task-meta {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .task-status {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        /* 操作日志 */
+        .timeline {
+            position: relative;
+            padding-left: 24px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e8e8e8;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -20px;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid #1890ff;
+        }
+        
+        .timeline-dot.success {
+            border-color: #52c41a;
+            background: #52c41a;
+        }
+        
+        .timeline-content {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        
+        .timeline-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-desc {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-time {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        /* 空状态 */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+        
+        .empty-state i {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: #d9d9d9;
+        }
+        
+        .empty-state p {
+            font-size: 14px;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 1200px) {
+            .flow-steps {
+                overflow-x: auto;
+                padding: 20px;
+            }
+            
+            .step-connector {
+                width: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="app-container">
+            <!-- 侧边栏 -->
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiMxODkwZmYiLz4KPHBhdGggZD0iTTEwIDE2TDE0IDIwTDIyIDEyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K" alt="logo">
+                    SpaceX Technologies Corp.
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-item" :class="{ active: currentMenu === 'dashboard' }" @click="currentMenu = 'dashboard'">
+                        <i class="el-icon-s-home"></i>
+                        <span>首页</span>
+                    </div>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-item" @click="toggleSubmenu('work')">
+                        <i class="el-icon-s-order"></i>
+                        <span>工作待办</span>
+                        <i class="el-icon-arrow-right submenu-arrow" :class="{ expanded: submenuExpanded.work }"></i>
+                    </div>
+                    <template v-if="submenuExpanded.work">
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'my-tasks' }" @click="currentMenu = 'my-tasks'">
+                            <span>我的任务</span>
+                        </div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'my-audit' }" @click="currentMenu = 'my-audit'">
+                            <span>我的审核</span>
+                        </div>
+                        <div class="menu-item submenu active" :class="{ active: currentMenu === 'my-projects' }" @click="currentMenu = 'my-projects'">
+                            <span>我的项目</span>
+                        </div>
+                    </template>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-item" @click="toggleSubmenu('management')">
+                        <i class="el-icon-s-tools"></i>
+                        <span>管理中心</span>
+                        <i class="el-icon-arrow-right submenu-arrow" :class="{ expanded: submenuExpanded.management }"></i>
+                    </div>
+                    <template v-if="submenuExpanded.management">
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'customer' }" @click="currentMenu = 'customer'">
+                            <span>客户管理</span>
+                        </div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'contract' }" @click="currentMenu = 'contract'">
+                            <span>合同管理</span>
+                        </div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'project-mgmt' }" @click="currentMenu = 'project-mgmt'">
+                            <span>项目管理</span>
+                        </div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'finance' }" @click="currentMenu = 'finance'">
+                            <span>财务管理</span>
+                        </div>
+                        <div class="menu-item submenu" :class="{ active: currentMenu === 'performance' }" @click="currentMenu = 'performance'">
+                            <span>业绩管理</span>
+                        </div>
+                    </template>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-item" :class="{ active: currentMenu === 'knowledge' }" @click="currentMenu = 'knowledge'">
+                        <i class="el-icon-collection"></i>
+                        <span>知识库</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 主内容区 -->
+            <div class="main-content">
+                <!-- 顶部导航 -->
+                <div class="header">
+                    <div class="header-left">
+                        <div class="company-info">
+                            <span class="company-name">SpaceX Technologies Corp.</span>
+                            <span class="company-tag">正式企业</span>
+                            <span class="company-tag secondary">会计师事务所</span>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="user-actions">
+                            <i class="el-icon-full-screen"></i>
+                            <i class="el-icon-microphone"></i>
+                            <i class="el-icon-bell"></i>
+                            <i class="el-icon-message"></i>
+                            <i class="el-icon-question"></i>
+                            <i class="el-icon-s-operation"></i>
+                            <span style="font-size: 14px; color: #666;">管理后台</span>
+                            <i class="el-icon-user-solid" style="font-size: 24px;"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 内容区域 -->
+                <div class="content-area">
+                    <!-- 面包屑 -->
+                    <div class="breadcrumb-bar">
+                        <span @click="goBack">工作中心</span>
+                        <span class="separator">&gt;</span>
+                        <span @click="goBack">我的项目</span>
+                        <span class="separator">&gt;</span>
+                        <span style="color: #333; font-weight: 500;">详情</span>
+                    </div>
+                    
+                    <!-- 项目面板头部 -->
+                    <div class="project-panel-header">
+                        <div class="panel-header-top">
+                            <div class="panel-header-left">
+                                <div class="back-btn" @click="goBack">
+                                    <i class="el-icon-back"></i>
+                                    <span>返回</span>
+                                </div>
+                                
+                                <div class="project-title-section">
+                                    <div class="project-icon">华</div>
+                                    <div class="project-name-info">
+                                        <h2>
+                                            华辰制造有限公司报表审计
+                                            <i class="el-icon-arrow-down" style="font-size: 14px; color: #999; cursor: pointer;"></i>
+                                        </h2>
+                                        <div class="project-code">编号：HT-HCZZ49-2026-01</div>
+                                    </div>
+                                </div>
+                                
+                                <span class="status-tag status-review">质控复核-复核中</span>
+                            </div>
+                            
+                            <div class="panel-header-right">
+                                <div class="icon-btn">
+                                    <i class="el-icon-document"></i>
+                                </div>
+                                <div class="icon-btn">
+                                    <i class="el-icon-refresh-right"></i>
+                                </div>
+                                <el-dropdown size="small">
+                                    <el-button size="small">
+                                        更多<i class="el-icon-arrow-down el-icon--right"></i>
+                                    </el-button>
+                                    <el-dropdown-menu slot="dropdown">
+                                        <el-dropdown-item>项目设置</el-dropdown-item>
+                                        <el-dropdown-item>导出数据</el-dropdown-item>
+                                        <el-dropdown-item>打印报告</el-dropdown-item>
+                                    </el-dropdown-menu>
+                                </el-dropdown>
+                                <el-button type="primary" size="small">查看底稿</el-button>
+                            </div>
+                        </div>
+                        
+                        <!-- 流程步骤 -->
+                        <div class="flow-steps">
+                            <div v-for="(step, index) in flowSteps" :key="index" class="flow-step">
+                                <div class="step-content">
+                                    <div class="step-circle" :class="getStepClass(index)">
+                                        <i v-if="getStepClass(index) === 'completed'" class="el-icon-check"></i>
+                                        <span v-else>{{ index + 1 }}</span>
+                                    </div>
+                                    <div class="step-label" :class="{ active: getStepClass(index) === 'active' }">{{ step }}</div>
+                                </div>
+                                <div v-if="index < flowSteps.length - 1" class="step-connector" :class="getConnectorClass(index)"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 标签页 -->
+                    <div class="panel-tabs">
+                        <el-tabs v-model="activeTab">
+                            <el-tab-pane label="团队管理" name="team">
+                                <div class="tab-content">
+                                    <div v-for="member in teamMembers" :key="member.id" class="team-member-card" @click="expandMember(member)">
+                                        <img :src="member.avatar" :alt="member.name" class="member-avatar">
+                                        <div class="member-info">
+                                            <div class="member-name">{{ member.name }}</div>
+                                            <div class="member-role">{{ member.role }}</div>
+                                        </div>
+                                        <i class="el-icon-arrow-right member-expand"></i>
+                                    </div>
+                                </div>
+                            </el-tab-pane>
+                            
+                            <el-tab-pane label="知识库" name="knowledge">
+                                <div class="tab-content">
+                                    <div class="knowledge-grid">
+                                        <div v-for="item in knowledgeItems" :key="item.id" class="knowledge-card" @click="openKnowledge(item)">
+                                            <div class="knowledge-icon">
+                                                <i :class="item.icon"></i>
+                                            </div>
+                                            <div class="knowledge-title">{{ item.title }}</div>
+                                            <div class="knowledge-desc">{{ item.description }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </el-tab-pane>
+                            
+                            <el-tab-pane label="任务管理" name="tasks">
+                                <div class="tab-content">
+                                    <div class="task-list">
+                                        <div v-for="task in tasks" :key="task.id" class="task-item">
+                                            <div class="task-checkbox" :class="{ checked: task.completed }" @click="toggleTask(task)">
+                                                <i v-if="task.completed" class="el-icon-check"></i>
+                                            </div>
+                                            <div class="task-content">
+                                                <div class="task-title" :class="{ completed: task.completed }">{{ task.title }}</div>
+                                                <div class="task-meta">{{ task.assignee }} · {{ task.dueDate }}</div>
+                                            </div>
+                                            <span class="task-status" :style="getTaskStatusStyle(task.status)">{{ task.statusText }}</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div v-if="tasks.length === 0" class="empty-state">
+                                        <i class="el-icon-document"></i>
+                                        <p>暂无任务</p>
+                                    </div>
+                                </div>
+                            </el-tab-pane>
+                            
+                            <el-tab-pane label="操作日志" name="logs">
+                                <div class="tab-content">
+                                    <div class="timeline">
+                                        <div v-for="(log, index) in operationLogs" :key="index" class="timeline-item">
+                                            <div class="timeline-dot" :class="log.type"></div>
+                                            <div class="timeline-content">
+                                                <div class="timeline-title">{{ log.title }}</div>
+                                                <div class="timeline-desc">{{ log.description }}</div>
+                                                <div class="timeline-time">{{ log.time }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div v-if="operationLogs.length === 0" class="empty-state">
+                                        <i class="el-icon-time"></i>
+                                        <p>暂无操作日志</p>
+                                    </div>
+                                </div>
+                            </el-tab-pane>
+                        </el-tabs>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    currentMenu: 'my-projects',
+                    submenuExpanded: {
+                        work: true,
+                        management: false
+                    },
+                    activeTab: 'team',
+                    
+                    // 流程步骤
+                    flowSteps: [
+                        '项目创建',
+                        '编辑底稿',
+                        '质控复核',
+                        '报告签发',
+                        '报告领号',
+                        '报告盖章',
+                        '报告报备',
+                        '项目归档'
+                    ],
+                    currentStep: 2, // 当前在第3步（质控复核）
+                    
+                    // 团队成员
+                    teamMembers: [
+                        {
+                            id: 1,
+                            name: '刘洋',
+                            role: '项目经理',
+                            avatar: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiMxODkwZmYiLz4KPHBhdGggZD0iTTE4IDMwQzE4IDI2LjY4NjMgMjAuNjg2MyAyNCAyNCAyNEMyNy4zMTM3IDI0IDMwIDI2LjY4NjMgMzAgMzAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxjaXJjbGUgY3g9IjI0IiBjeT0iMTgiIHI9IjQiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo='
+                        }
+                    ],
+                    
+                    // 知识库
+                    knowledgeItems: [
+                        {
+                            id: 1,
+                            title: '审计准则',
+                            description: '中国注册会计师审计准则及应用指南',
+                            icon: 'el-icon-document'
+                        },
+                        {
+                            id: 2,
+                            title: '底稿模板',
+                            description: '标准审计工作底稿模板库',
+                            icon: 'el-icon-folder-opened'
+                        },
+                        {
+                            id: 3,
+                            title: '法规库',
+                            description: '财税法规及政策文件汇编',
+                            icon: 'el-icon-collection'
+                        },
+                        {
+                            id: 4,
+                            title: '案例库',
+                            description: '典型审计案例及处理方案',
+                            icon: 'el-icon-data-analysis'
+                        }
+                    ],
+                    
+                    // 任务列表
+                    tasks: [
+                        {
+                            id: 1,
+                            title: '完成应收账款函证',
+                            assignee: '刘洋',
+                            dueDate: '2026-05-25',
+                            status: 'pending',
+                            statusText: '进行中',
+                            completed: false
+                        },
+                        {
+                            id: 2,
+                            title: '编制现金流量表',
+                            assignee: '刘洋',
+                            dueDate: '2026-05-26',
+                            status: 'pending',
+                            statusText: '进行中',
+                            completed: false
+                        },
+                        {
+                            id: 3,
+                            title: '完成存货盘点',
+                            assignee: '刘洋',
+                            dueDate: '2026-05-20',
+                            status: 'completed',
+                            statusText: '已完成',
+                            completed: true
+                        }
+                    ],
+                    
+                    // 操作日志
+                    operationLogs: [
+                        {
+                            title: '项目创建',
+                            description: '刘洋 创建了项目 华辰制造有限公司报表审计',
+                            time: '2026-01-15 09:00:00',
+                            type: 'success'
+                        },
+                        {
+                            title: '提交复核',
+                            description: '刘洋 提交了质控复核申请',
+                            time: '2026-05-20 14:30:00',
+                            type: 'success'
+                        },
+                        {
+                            title: '复核开始',
+                            description: '质控部 开始复核项目底稿',
+                            time: '2026-05-21 09:00:00',
+                            type: ''
+                        }
+                    ]
+                };
+            },
+            methods: {
+                toggleSubmenu(menu) {
+                    this.$set(this.submenuExpanded, menu, !this.submenuExpanded[menu]);
+                },
+                
+                goBack() {
+                    this.$message.info('返回我的项目列表');
+                },
+                
+                getStepClass(index) {
+                    if (index < this.currentStep) {
+                        return 'completed';
+                    } else if (index === this.currentStep) {
+                        return 'active';
+                    } else {
+                        return 'pending';
+                    }
+                },
+                
+                getConnectorClass(index) {
+                    if (index < this.currentStep) {
+                        return 'completed';
+                    } else {
+                        return 'pending';
+                    }
+                },
+                
+                expandMember(member) {
+                    this.$message.info(`查看成员详情: ${member.name}`);
+                },
+                
+                openKnowledge(item) {
+                    this.$message.info(`打开知识库: ${item.title}`);
+                },
+                
+                toggleTask(task) {
+                    task.completed = !task.completed;
+                    task.status = task.completed ? 'completed' : 'pending';
+                    task.statusText = task.completed ? '已完成' : '进行中';
+                    
+                    if (task.completed) {
+                        this.$message.success(`任务已完成: ${task.title}`);
+                    }
+                },
+                
+                getTaskStatusStyle(status) {
+                    const styles = {
+                        pending: { background: '#fff7e6', color: '#fa8c16' },
+                        completed: { background: '#f6ffed', color: '#52c41a' },
+                        overdue: { background: '#fff1f0', color: '#f5222d' }
+                    };
+                    return styles[status] || styles.pending;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

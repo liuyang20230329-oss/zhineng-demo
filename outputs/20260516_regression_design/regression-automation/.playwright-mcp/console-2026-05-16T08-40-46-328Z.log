@@ -1,0 +1,4 @@
+[     425ms] [LOG] hashwasm脚本加载成功！ @ http://192.168.1.88/fqtaxsaas/:102
+[   24319ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://ai.zndata.cn/embed.min.js:0
+[  476780ms] [ERROR] Failed to load resource: net::ERR_INCOMPLETE_CHUNKED_ENCODING @ http://192.168.1.88/sfqtaxconvert/sse/stream/1702:0
+[  476781ms] [ERROR] SSE 异常: TypeError: network error @ http://192.168.1.88/fqtaxsaas/static/js/app.d2512586.js:0

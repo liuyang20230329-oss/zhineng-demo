@@ -1,0 +1,434 @@
+- generic [ref=e1]:
+  - img:
+    - generic "编组 19备份":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 签发单
+    - generic "Tab":
+      - generic:
+        - generic:
+          - generic: Tab
+    - generic "编组 7"
+    - generic "12px/线性/通用/双箭头_左"
+    - generic "12px/线性/通用/双箭头_左备份"
+    - generic "回到顶部/圆"
+    - generic "xiaogongju_icon"
+    - generic "功能icon/已认证"
+    - generic "编组备份 3"
+    - generic "警告提示/icon-关闭"
+    - generic "点击上传/icon-关闭"
+    - generic "编组 6"
+    - generic "编组 3"
+    - generic "编组 3"
+    - generic "16px/面性/提示/icon-warning-color"
+    - generic "编组 2":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 暂无数据
+    - generic "编组 2"
+    - generic "icon/删除"
+    - generic "删除"
+    - generic "16px/面性/提示/icon-warning-color"
+    - generic "编组 2"
+    - generic "16px/面性/通用/icon-drag-dot"
+    - generic "编组 42"
+    - generic "编组 31":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 暂无 数据
+    - generic "编组 2"
+    - generic "编组 8"
+    - generic "编组"
+    - generic "编组 8"
+    - generic "16px/线性/Input/icon-eye"
+    - generic "Icon/Close备份"
+    - generic "编组 3":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 反馈表
+    - generic "编组 3备份":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 反馈表
+    - generic "编组 19":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 复核表
+    - generic "点击上传/icon-附件"
+    - generic "点击上传/icon-附件"
+    - generic "advanced filtering_icon"
+    - generic "icon/文件夹"
+    - generic "icon/文件夹备份"
+    - generic "icon_suspension_guding"
+    - generic "Icon/Close"
+    - generic "16px/线性/通用/icon-download"
+    - generic "16px/线性/通用/icon-download备份"
+    - generic "文件类型/icon-pdf"
+    - generic "知能SAAS/菜单icon-首页"
+    - generic "知能SAAS/菜单icon-核算中心-default"
+    - generic "知能SAAS/菜单icon-票据中心-default"
+    - generic "知能SAAS/菜单icon-进销存"
+    - generic "知能SAAS/菜单icon-作业中心-default"
+    - generic "知能SAAS/菜单icon-档案中心-default"
+    - generic "知能SAAS/菜单icon-管理中心-default"
+    - generic "编组 3":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 您的收件箱空空如也，没有新消息哦～
+    - generic "编组"
+    - generic "编组 14"
+    - generic "icon-menufold-32-0"
+    - generic "icon-menufold-32-1"
+    - generic "12px/面性/提示/Success_强"
+    - generic "01_Common_Btn/1_Common/common_talk_on"
+    - generic "编组 9"
+    - generic "编组 18"
+    - generic "编组 46":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 暂无权限
+    - generic:
+      - generic:
+        - generic: 当前没有审核要处理，放松一下吧～
+    - generic "功能icon/-认证"
+    - generic "编组 5"
+    - generic "icon/笔"
+    - generic "编组 4":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 您当前没有审核要处理了，开心享受这一天叭～
+    - generic "编组 4":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 您当前没有审核要处理了，开心享受这一天叭～
+    - generic "步骤条/icon-完成"
+    - generic "question-circle"
+    - generic "icon/问号提示"
+    - generic "icon_suspension_quxiao"
+    - generic "刷新备份"
+    - generic "报告盖章信息"
+    - generic "icon-menuunfold-32-0"
+    - generic "icon-menuunfold-32-1"
+    - generic "编组"
+    - generic "编组"
+    - generic "编组 13"
+    - generic "icon-sorting-16-0"
+    - generic "start_icon"
+    - generic "编组"
+    - generic "Icon/Steps-Finished"
+    - generic "stop_icon"
+    - generic "编组"
+    - generic "suji_icon"
+    - generic "Icon/Close备份"
+    - generic "编组 13"
+    - generic "icon-pic-emptu-128"
+    - generic "Icon/Fill/Check-Circle-Fill"
+    - generic "历史"
+    - generic "穿梭框/向右备份"
+    - generic "穿梭框/向右"
+    - generic "16px/面性/通用/icon-plus-color"
+    - generic "16px/面性/通用/icon-minus-color"
+    - generic "选择器/icon-向下"
+    - generic "编组 4"
+    - generic "编组 31备份 2"
+    - generic "编组 2备份"
+    - generic "点击上传/icon-上传"
+    - generic "编组 3"
+    - generic "Icon/Warning"
+    - generic "Icon/Warning"
+    - generic "icon-无权限"
+    - generic "编组 2"
+    - generic "编组 19":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 系 统
+    - generic "编组 19":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 自定义
+    - generic "编组 35"
+    - generic "编组 44"
+    - generic "01_Common_Btn/1_Common/common_export"
+    - generic "01_Common_Btn/1_Common/common_search"
+    - generic "01_Common_Btn/2_Infrequently/common_permit"
+    - generic "编组 47"
+    - generic "编组 31"
+    - generic "编组 32"
+    - generic "编组 29"
+    - generic "编组 39"
+    - generic "编组 36"
+    - generic "编组 43"
+    - generic "审计中心-当前"
+    - generic "审计中心"
+    - generic "01_Common_Btn/1_Common/common_users"
+    - generic "编组 34"
+    - generic "编组 45"
+    - generic "01_Common_Btn/1_Common/common_done"
+    - generic "开票中心-当前"
+    - generic "开票中心"
+    - generic "01_Common_Btn/2_Infrequently/common_subscribed_events"
+    - generic "01_Common_Btn/2_Infrequently/common_record_search"
+    - generic "编组 30"
+    - generic "编组 37"
+    - generic "编组 42"
+    - generic "核算中心-当前"
+    - generic "核算中心"
+    - generic "01_Common_Btn/2_Infrequently/common_event_history"
+    - generic "档案中心-当前"
+    - generic "档案中心"
+    - generic "01_Common_Btn/1_Common/common_folder"
+    - generic "01_Common_Btn/1_Common/common_search_list"
+    - generic "01_Common_Btn/2_Infrequently/common_subscribed_events 2"
+    - generic "01_Common_Btn/1_Common/common_setting"
+    - generic "编组 33"
+    - generic "编组 38"
+    - generic "编组 41"
+    - generic "编组 46"
+    - generic "编组 40"
+    - generic "编组 48"
+    - generic "编组 49"
+    - generic "首页-当前"
+    - generic "首页"
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - menubar [ref=e5]:
+        - generic [ref=e6]:
+          - generic [ref=e8] [cursor=pointer]: SpaceX Technologies Corp.
+          - generic [ref=e9]:
+            - generic [ref=e10]: 正式企业
+            - generic [ref=e11]: 会计师事务所
+            - text: 
+        - generic [ref=e17]:
+          - button "中 " [ref=e19] [cursor=pointer]:
+            - text: 中
+            - generic [ref=e20]: 
+          - generic [ref=e21] [cursor=pointer]: 
+          - generic [ref=e22]:
+            - img [ref=e24] [cursor=pointer]
+            - text:    
+          - generic [ref=e26]:
+            - generic [ref=e28] [cursor=pointer]: 
+            - generic:
+              - text: 
+              - generic: 
+              - text: 
+            - text:  
+            - generic:
+              - text: 
+              - generic: 
+            - generic: 
+            - text:            
+          - generic [ref=e30]:
+            - text:   
+            - generic [ref=e33] [cursor=pointer]: 
+          - generic [ref=e36] [cursor=pointer]: 
+          - generic [ref=e38] [cursor=pointer]: 
+          - generic [ref=e39]:
+            - text: 
+            - generic [ref=e42]: 洋
+      - generic:   
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - menubar [ref=e698]:
+            - menuitem "首页" [ref=e699] [cursor=pointer]:
+              - generic [ref=e701]:
+                - img [ref=e703]
+                - generic [ref=e705]: 首页
+            - menuitem "核算中心" [ref=e706] [cursor=pointer]:
+              - generic [ref=e708]:
+                - img [ref=e710]
+                - generic [ref=e712]: 核算中心
+            - menuitem "仓储中心" [ref=e713] [cursor=pointer]:
+              - generic [ref=e715]:
+                - img [ref=e717]
+                - generic [ref=e719]: 仓储中心
+            - menuitem "管理中心" [ref=e720] [cursor=pointer]:
+              - generic [ref=e722]:
+                - img [ref=e724]
+                - generic [ref=e726]: 管理中心
+            - menuitem "作业中心" [ref=e727] [cursor=pointer]:
+              - generic [ref=e729]:
+                - img [ref=e731]
+                - generic [ref=e733]: 作业中心
+            - menuitem "函证中心" [ref=e734] [cursor=pointer]:
+              - generic [ref=e736]:
+                - img [ref=e738]
+                - generic [ref=e740]: 函证中心
+            - menuitem "档案中心" [active] [ref=e741] [cursor=pointer]:
+              - generic [ref=e743]:
+                - img [ref=e745]
+                - generic [ref=e747]: 档案中心
+            - menuitem "单据中心" [ref=e748] [cursor=pointer]:
+              - generic [ref=e750]:
+                - img [ref=e752]
+                - generic [ref=e754]: 单据中心
+            - menuitem "知识库" [ref=e755] [cursor=pointer]:
+              - generic [ref=e757]:
+                - img [ref=e759]
+                - generic [ref=e761]: 知识库
+          - generic [ref=e130]:
+            - generic [ref=e132] [cursor=pointer]: ...
+            - generic [ref=e134] [cursor=pointer]: 
+            - img [ref=e137] [cursor=pointer]
+            - generic:   
+        - menubar [ref=e764]:
+          - menuitem "工作待办 " [expanded] [ref=e1397]:
+            - generic [ref=e502] [cursor=pointer]:
+              - generic [ref=e767]: 工作待办
+              - generic [ref=e503]: 
+            - menu:
+              - generic [ref=e769]:
+                - menuitem "我的审核" [ref=e1398] [cursor=pointer]
+                - menuitem "抄送我的" [ref=e1399] [cursor=pointer]
+                - menuitem "我发起的" [ref=e1400] [cursor=pointer]
+          - menuitem "档案管理 " [ref=e1401]:
+            - generic [ref=e510] [cursor=pointer]:
+              - generic [ref=e778]: 档案管理
+              - generic [ref=e511]: 
+          - menuitem "档案记录 " [ref=e1402]:
+            - generic [ref=e512] [cursor=pointer]:
+              - generic [ref=e781]: 档案记录
+              - generic [ref=e513]: 
+          - menuitem "日志管理 " [ref=e1403]:
+            - generic [ref=e514] [cursor=pointer]:
+              - generic [ref=e784]: 日志管理
+              - generic [ref=e515]: 
+          - menuitem "设置" [ref=e1405] [cursor=pointer]
+      - generic [ref=e140]:
+        - list [ref=e527]:
+          - listitem [ref=e528] [cursor=pointer]:
+            - link "我的任务" [ref=e529]:
+              - /url: "javascript:"
+            - generic [ref=e530]: 
+          - listitem [ref=e807] [cursor=pointer]:
+            - link "项目运营" [ref=e808]:
+              - /url: "javascript:"
+            - generic [ref=e809]: 
+          - listitem [ref=e1101] [cursor=pointer]:
+            - link "报告信息管理" [ref=e1102]:
+              - /url: "javascript:"
+            - generic [ref=e1103]: 
+          - listitem [ref=e1359] [cursor=pointer]:
+            - link "数据采集" [ref=e1360]:
+              - /url: "javascript:"
+            - generic [ref=e1361]: 
+          - listitem [ref=e1406] [cursor=pointer]:
+            - link "我的审核" [ref=e1407]:
+              - /url: "javascript:"
+            - generic [ref=e1408]: 
+        - generic [ref=e1409]:
+          - generic [ref=e1411]:
+            - generic [ref=e1412]:
+              - generic [ref=e1413]: 工作待办
+              - generic [ref=e1414]: 
+            - generic [ref=e1416]: 我的审核
+          - generic [ref=e1418]:
+            - tablist [ref=e1422]:
+              - tab "档案接收" [selected] [ref=e1424]
+              - tab "借阅申请" [ref=e1425]
+              - tab "销毁申请" [ref=e1426]
+              - tab "退回申请" [ref=e1427]
+            - generic [ref=e1428]:
+              - tabpanel "档案接收" [ref=e1429]:
+                - generic [ref=e1430]:
+                  - generic [ref=e1431]:
+                    - generic [ref=e1433]:
+                      - generic [ref=e1437]:
+                        - generic [ref=e1439]: 档案名称
+                        - textbox "请输入档案名称" [ref=e1443]
+                      - generic [ref=e1447]:
+                        - generic [ref=e1449]: 任务状态
+                        - generic [ref=e1453]:
+                          - textbox "请选择任务状态" [ref=e1454] [cursor=pointer]
+                          - generic [ref=e1456] [cursor=pointer]: 
+                      - generic [ref=e1457]:
+                        - button "查 询" [ref=e1458] [cursor=pointer]
+                        - button "重 置" [ref=e1459] [cursor=pointer]
+                        - button "展开" [ref=e1460] [cursor=pointer]:
+                          - generic [ref=e1461]: 展开
+                    - generic [ref=e1463]:
+                      - generic "字段设置" [ref=e1467] [cursor=pointer]: 
+                      - generic [ref=e1468]:
+                        - table [ref=e1470]:
+                          - rowgroup [ref=e1478]:
+                            - row "档号 归档登记时间 项目经理 任务状态" [ref=e1479]:
+                              - columnheader [ref=e1480]
+                              - columnheader "档号" [ref=e1481]:
+                                - generic [ref=e1482]: 档号
+                              - columnheader "归档登记时间" [ref=e1483]:
+                                - generic [ref=e1484]: 归档登记时间
+                              - columnheader "项目经理" [ref=e1485]:
+                                - generic [ref=e1486]: 项目经理
+                              - columnheader "任务状态" [ref=e1487]:
+                                - generic [ref=e1488]: 任务状态
+                              - columnheader [ref=e1489]
+                        - generic [ref=e1490]:
+                          - table:
+                            - rowgroup
+                        - generic [ref=e1491]:
+                          - table [ref=e1493]:
+                            - rowgroup [ref=e1501]:
+                              - row "档案名称" [ref=e1502]:
+                                - columnheader "档案名称" [ref=e1503]:
+                                  - generic [ref=e1504]: 档案名称
+                                - columnheader [ref=e1505]
+                                - columnheader [ref=e1506]
+                                - columnheader [ref=e1507]
+                                - columnheader [ref=e1508]
+                                - columnheader [ref=e1509]
+                          - generic [ref=e1510]:
+                            - table:
+                              - rowgroup
+                        - generic [ref=e1511]:
+                          - table [ref=e1513]:
+                            - rowgroup [ref=e1521]:
+                              - row "操作" [ref=e1522]:
+                                - columnheader [ref=e1523]
+                                - columnheader [ref=e1524]
+                                - columnheader [ref=e1525]
+                                - columnheader [ref=e1526]
+                                - columnheader [ref=e1527]
+                                - columnheader "操作" [ref=e1528]:
+                                  - generic [ref=e1529]: 操作
+                          - generic [ref=e1530]:
+                            - table:
+                              - rowgroup
+                        - img [ref=e1533]
+                      - generic [ref=e1535]:
+                        - generic [ref=e1536]:
+                          - generic [ref=e1537]: 共0条
+                          - generic [ref=e1542]:
+                            - textbox "请选择" [ref=e1543] [cursor=pointer]: 50条/页
+                            - img [ref=e1545]
+                        - generic [ref=e1547]:
+                          - generic [ref=e1548]:
+                            - generic [ref=e1550]: 
+                            - generic [ref=e1552] [cursor=pointer]: 
+                          - generic [ref=e1553]:
+                            - textbox "请输入" [ref=e1557]: "1"
+                            - text: /0
+                          - button "跳转" [ref=e1558] [cursor=pointer]:
+                            - generic [ref=e1559]: 跳转
+                  - generic: 
+                  - generic: 
+                  - text:  
+              - text:                       

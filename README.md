@@ -1,4 +1,4 @@
-# 知能数字 - 交互式演示系统
+# SpaceX - 交互式演示系统
 
 ## 项目简介
 这是一个基于 Vue 2 + Element UI 的审计作业系统交互演示，包含完整的项目管理、客户管理、合同管理、作业中心等功能模块。
@@ -36,7 +36,7 @@
 
 ## 访问地址
 
-部署后访问：`https://你的用户名.github.io/zhineng-demo/知能数字-交互Demo-最新.html`
+部署后访问：`https://你的用户名.github.io/zhineng-demo/SpaceX-交互Demo.html`
 
 ## 技术栈
 - Vue 2
@@ -45,4 +45,4 @@
 - CSS3
 
 ## 作者
-小刘洋 - 杭州知能财税科技有限公司
+小刘洋 - SpaceX Technologies Corp.

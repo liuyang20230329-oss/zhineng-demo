@@ -1,0 +1,234 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: 
+      - text: SpaceX
+    - generic [ref=e8] [cursor=pointer]:
+      - generic [ref=e9]: 
+      - generic [ref=e10]: 首页
+    - generic [ref=e12] [cursor=pointer]:
+      - generic [ref=e13]: 
+      - generic [ref=e14]: 核算中心
+      - generic [ref=e15]: 
+    - generic [ref=e16]:
+      - generic [ref=e17] [cursor=pointer]:
+        - generic [ref=e18]: 
+        - generic [ref=e19]: 管理中心
+        - generic [ref=e20]: 
+      - generic [ref=e21]:
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: 工作待办
+          - generic [ref=e24]: 
+        - generic [ref=e25]:
+          - generic [ref=e26] [cursor=pointer]:
+            - text: 我的任务
+            - generic [ref=e27]: "2"
+          - generic [ref=e28] [cursor=pointer]:
+            - text: 我的审核
+            - generic [ref=e29]: "16"
+          - generic [ref=e30] [cursor=pointer]:
+            - text: 我的项目
+            - generic [ref=e31]: "38"
+          - generic [ref=e32] [cursor=pointer]: 我发起的
+          - generic [ref=e33] [cursor=pointer]: 抄送我的
+          - generic [ref=e34] [cursor=pointer]: 我的签署
+        - generic [ref=e35] [cursor=pointer]: 业务派工
+        - generic [ref=e36] [cursor=pointer]: 客户管理
+        - generic [ref=e37] [cursor=pointer]: 合同管理
+        - generic [ref=e38] [cursor=pointer]:
+          - generic [ref=e39]: 项目管理
+          - generic [ref=e40]: 
+        - generic [ref=e41] [cursor=pointer]: 财务管理
+        - generic [ref=e42] [cursor=pointer]: 业绩管理
+        - generic [ref=e43] [cursor=pointer]: 行政管理
+        - generic [ref=e44] [cursor=pointer]: 独立性管理
+        - generic [ref=e45] [cursor=pointer]: 设置
+    - generic [ref=e46]:
+      - generic [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]: 
+        - generic [ref=e49]: 作业中心
+        - generic [ref=e50]: 
+      - text:  
+    - generic [ref=e52] [cursor=pointer]:
+      - generic [ref=e53]: 
+      - generic [ref=e54]: 档案中心
+      - generic [ref=e55]: 
+    - generic [ref=e57] [cursor=pointer]:
+      - generic [ref=e58]: 
+      - generic [ref=e59]: 函证中心
+    - generic [ref=e61] [cursor=pointer]:
+      - generic [ref=e62]: 
+      - generic [ref=e63]: 单据中心
+    - generic [ref=e65] [cursor=pointer]:
+      - generic [ref=e66]: 
+      - generic [ref=e67]: 知识库
+  - generic [ref=e68]:
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - generic [ref=e71]: 
+        - generic [ref=e72]: 管理中心 / 工作待办 / 我的项目 / 杭州知能装饰有限公司报表审计 / 底稿编制
+      - generic [ref=e73]:
+        - generic [ref=e74]: SpaceX Technologies Corp.
+        - generic [ref=e76]:
+          - button "" [ref=e77] [cursor=pointer]:
+            - generic [ref=e78]: 
+          - superscript [ref=e79]: "16"
+        - button "" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: 
+        - generic [ref=e84]: 
+        - generic [ref=e85]: 小刘洋
+        - button "" [ref=e87]:
+          - generic [ref=e88]: 
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e113]: 工作中心 > 我的项目 > 详情 > 底稿编制
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - generic [ref=e114] [cursor=pointer]:
+                - generic [ref=e115]: 
+                - generic [ref=e116]: 返回
+              - generic [ref=e117]:
+                - generic [ref=e118]: 杭
+                - generic [ref=e119]:
+                  - heading "杭州知能装饰有限公司报表审计" [level=2] [ref=e120]
+                  - generic [ref=e121]: 编号：XM-2026-001
+              - generic [ref=e122]: 未开始
+            - generic [ref=e97]:
+              - generic [ref=e124] [cursor=pointer]: 
+              - generic [ref=e126] [cursor=pointer]: 
+              - button "提交复核" [ref=e127] [cursor=pointer]
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - generic [ref=e131]: 底稿目录
+                - generic [ref=e132]:
+                  - button " 新增" [ref=e133] [cursor=pointer]:
+                    - generic [ref=e134]: 
+                    - text: 新增
+                  - text:    
+              - generic:
+                - generic:
+                  - generic [ref=e137] [cursor=pointer]:
+                    - generic [ref=e138]: 
+                    - generic [ref=e139]: 
+                    - generic [ref=e140]: 项目底稿
+                    - generic [ref=e141]: "6"
+                  - generic [ref=e142]:
+                    - generic [ref=e144] [cursor=pointer]:
+                      - generic [ref=e145]: 
+                      - generic: 审计计划
+                      - generic [ref=e147]: 
+                    - generic [ref=e149] [cursor=pointer]:
+                      - generic [ref=e150]: 
+                      - generic: 风险评估底稿
+                      - generic [ref=e152]: 
+                    - generic [ref=e154] [cursor=pointer]:
+                      - generic [ref=e155]: 
+                      - generic: 实质性程序底稿
+                      - generic [ref=e157]: 
+                - generic [ref=e159] [cursor=pointer]:
+                  - generic [ref=e160]: 
+                  - generic [ref=e161]: 
+                  - generic [ref=e162]: 项目报告
+                  - generic [ref=e163]: "2"
+                - generic [ref=e165] [cursor=pointer]:
+                  - generic [ref=e166]: 
+                  - generic [ref=e167]: 
+                  - generic [ref=e168]: 证据池
+                  - generic [ref=e169]: "3"
+                - generic [ref=e171] [cursor=pointer]:
+                  - generic [ref=e172]: 
+                  - generic [ref=e173]: 
+                  - generic [ref=e174]: 财务数据
+                  - generic [ref=e175]: "2"
+                - generic [ref=e177] [cursor=pointer]:
+                  - generic [ref=e178]: 
+                  - generic [ref=e179]: 
+                  - generic [ref=e180]: 回收站
+                  - generic [ref=e181]: "0"
+            - generic [ref=e182]:
+              - generic [ref=e186]:
+                - generic [ref=e187]:
+                  - generic [ref=e188]: 
+                  - generic [ref=e189]: 审计计划
+                - button " 删除" [ref=e191] [cursor=pointer]:
+                  - generic [ref=e192]: 
+                  - text: 删除
+              - generic [ref=e193]:
+                - table [ref=e195]:
+                  - rowgroup [ref=e205]:
+                    - row "名称 创建人 大小 关联证据 创建时间 修改时间" [ref=e206]:
+                      - columnheader [ref=e207]:
+                        - generic [ref=e210] [cursor=pointer]:
+                          - checkbox
+                      - columnheader "名称" [ref=e212]:
+                        - generic [ref=e213]: 名称
+                      - columnheader "创建人" [ref=e214]:
+                        - generic [ref=e215]: 创建人
+                      - columnheader "大小" [ref=e216]:
+                        - generic [ref=e217]: 大小
+                      - columnheader "关联证据" [ref=e218]:
+                        - generic [ref=e219]: 关联证据
+                      - columnheader "创建时间" [ref=e220]:
+                        - generic [ref=e221]: 创建时间
+                      - columnheader "修改时间" [ref=e222]:
+                        - generic [ref=e223]: 修改时间
+                      - columnheader [ref=e224]
+                - table [ref=e226]:
+                  - rowgroup [ref=e236]:
+                    - row " 审计计划书.docx 项目底稿/审计计划/ 小刘洋 25 KB 未关联 2026-05-20 10:30:00 2026-05-20 14:20:00" [ref=e237]:
+                      - cell [ref=e238]:
+                        - generic [ref=e241] [cursor=pointer]:
+                          - checkbox
+                      - cell " 审计计划书.docx 项目底稿/审计计划/" [ref=e243]:
+                        - generic [ref=e245] [cursor=pointer]:
+                          - generic [ref=e246]: 
+                          - generic [ref=e247]:
+                            - generic [ref=e248]: 审计计划书.docx
+                            - generic [ref=e249]: 项目底稿/审计计划/
+                      - cell "小刘洋" [ref=e250]:
+                        - generic [ref=e251]: 小刘洋
+                      - cell "25 KB" [ref=e252]:
+                        - generic [ref=e253]: 25 KB
+                      - cell "未关联" [ref=e254]:
+                        - generic [ref=e255]: 未关联
+                      - cell "2026-05-20 10:30:00" [ref=e256]:
+                        - generic [ref=e257]: 2026-05-20 10:30:00
+                      - cell "2026-05-20 14:20:00" [ref=e258]:
+                        - generic [ref=e259]: 2026-05-20 14:20:00
+                      - cell [ref=e260]
+                - generic [ref=e261]:
+                  - table [ref=e263]:
+                    - rowgroup [ref=e273]:
+                      - row "操作" [ref=e274]:
+                        - columnheader [ref=e275]
+                        - columnheader [ref=e276]
+                        - columnheader [ref=e277]
+                        - columnheader [ref=e278]
+                        - columnheader [ref=e279]
+                        - columnheader [ref=e280]
+                        - columnheader [ref=e281]
+                        - columnheader "操作" [ref=e282]:
+                          - generic [ref=e283]: 操作
+                  - table [ref=e285]:
+                    - rowgroup [ref=e295]:
+                      - row "查看 下载 删除 更多 " [ref=e296]:
+                        - cell [ref=e297]
+                        - cell [ref=e298]
+                        - cell [ref=e299]
+                        - cell [ref=e300]
+                        - cell [ref=e301]
+                        - cell [ref=e302]
+                        - cell [ref=e303]
+                        - cell "查看 下载 删除 更多 " [ref=e304]:
+                          - generic [ref=e305]:
+                            - button "查看" [ref=e306] [cursor=pointer]
+                            - button "下载" [ref=e307] [cursor=pointer]
+                            - button "删除" [ref=e308] [cursor=pointer]
+                            - button "更多 " [ref=e310] [cursor=pointer]:
+                              - generic [ref=e311]:
+                                - text: 更多
+                                - generic [ref=e312]: 
+        - text:   
+      - text:   

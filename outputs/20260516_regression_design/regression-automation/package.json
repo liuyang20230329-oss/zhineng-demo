@@ -1,0 +1,28 @@
+{
+  "name": "regression-automation",
+  "version": "1.0.0",
+  "description": "知能系统自动化回归测试方案",
+  "scripts": {
+    "test:smoke": "npx playwright test --project=smoke",
+    "test:p0": "npx playwright test --project=p0",
+    "test:p1": "npx playwright test --project=p1",
+    "test:p2": "npx playwright test --project=p2",
+    "test:all": "npx playwright test --project=regression",
+    "test:performance": "npx playwright test --project=performance",
+    "mock:start": "node mock-server/index.js",
+    "report": "npx playwright show-report reports/html",
+    "report:html": "start reports/report.html",
+    "report:md": "start reports/test-report.md"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@playwright/test": "^1.60.0",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.4.2",
+    "exceljs": "^4.4.0",
+    "playwright": "^1.60.0"
+  }
+}

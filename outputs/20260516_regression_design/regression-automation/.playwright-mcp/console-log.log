@@ -1,0 +1,7 @@
+Total messages: 4 (Errors: 3, Warnings: 0)
+
+[LOG] hashwasm脚本加载成功！ @ http://192.168.1.88/fqtaxsaas/:102
+[ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://ai.zndata.cn/embed.min.js:0
+[ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://192.168.1.88/auth/oauth2/token?grant_type=password&username=wrong_user&password=wrong_pass&scope=server&protocolAgree[]=undefined:0
+TypeError: Cannot read properties of undefined (reading 'userId')
+    at http://192.168.1.88/fqtaxsaas/static/js/chunk-1148.71706dcc.js:1:26169

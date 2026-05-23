@@ -1,0 +1,633 @@
+- generic [active] [ref=e1]:
+  - img:
+    - generic "编组 19备份":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 签发单
+    - generic "Tab":
+      - generic:
+        - generic:
+          - generic: Tab
+    - generic "编组 7"
+    - generic "12px/线性/通用/双箭头_左"
+    - generic "12px/线性/通用/双箭头_左备份"
+    - generic "回到顶部/圆"
+    - generic "xiaogongju_icon"
+    - generic "功能icon/已认证"
+    - generic "编组备份 3"
+    - generic "警告提示/icon-关闭"
+    - generic "点击上传/icon-关闭"
+    - generic "编组 6"
+    - generic "编组 3"
+    - generic "编组 3"
+    - generic "16px/面性/提示/icon-warning-color"
+    - generic "编组 2":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 暂无数据
+    - generic "编组 2"
+    - generic "icon/删除"
+    - generic "删除"
+    - generic "16px/面性/提示/icon-warning-color"
+    - generic "编组 2"
+    - generic "16px/面性/通用/icon-drag-dot"
+    - generic "编组 42"
+    - generic "编组 31":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 暂无 数据
+    - generic "编组 2"
+    - generic "编组 8"
+    - generic "编组"
+    - generic "编组 8"
+    - generic "16px/线性/Input/icon-eye"
+    - generic "Icon/Close备份"
+    - generic "编组 3":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 反馈表
+    - generic "编组 3备份":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 反馈表
+    - generic "编组 19":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 复核表
+    - generic "点击上传/icon-附件"
+    - generic "点击上传/icon-附件"
+    - generic "advanced filtering_icon"
+    - generic "icon/文件夹"
+    - generic "icon/文件夹备份"
+    - generic "icon_suspension_guding"
+    - generic "Icon/Close"
+    - generic "16px/线性/通用/icon-download"
+    - generic "16px/线性/通用/icon-download备份"
+    - generic "文件类型/icon-pdf"
+    - generic "知能SAAS/菜单icon-首页"
+    - generic "知能SAAS/菜单icon-核算中心-default"
+    - generic "知能SAAS/菜单icon-票据中心-default"
+    - generic "知能SAAS/菜单icon-进销存"
+    - generic "知能SAAS/菜单icon-作业中心-default"
+    - generic "知能SAAS/菜单icon-档案中心-default"
+    - generic "知能SAAS/菜单icon-管理中心-default"
+    - generic "编组 3":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 您的收件箱空空如也，没有新消息哦～
+    - generic "编组"
+    - generic "编组 14"
+    - generic "icon-menufold-32-0"
+    - generic "icon-menufold-32-1"
+    - generic "12px/面性/提示/Success_强"
+    - generic "01_Common_Btn/1_Common/common_talk_on"
+    - generic "编组 9"
+    - generic "编组 18"
+    - generic "编组 46":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 暂无权限
+    - generic:
+      - generic:
+        - generic: 当前没有审核要处理，放松一下吧～
+    - generic "功能icon/-认证"
+    - generic "编组 5"
+    - generic "icon/笔"
+    - generic "编组 4":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 您当前没有审核要处理了，开心享受这一天叭～
+    - generic "编组 4":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 您当前没有审核要处理了，开心享受这一天叭～
+    - generic "步骤条/icon-完成"
+    - generic "question-circle"
+    - generic "icon/问号提示"
+    - generic "icon_suspension_quxiao"
+    - generic "刷新备份"
+    - generic "报告盖章信息"
+    - generic "icon-menuunfold-32-0"
+    - generic "icon-menuunfold-32-1"
+    - generic "编组"
+    - generic "编组"
+    - generic "编组 13"
+    - generic "icon-sorting-16-0"
+    - generic "start_icon"
+    - generic "编组"
+    - generic "Icon/Steps-Finished"
+    - generic "stop_icon"
+    - generic "编组"
+    - generic "suji_icon"
+    - generic "Icon/Close备份"
+    - generic "编组 13"
+    - generic "icon-pic-emptu-128"
+    - generic "Icon/Fill/Check-Circle-Fill"
+    - generic "历史"
+    - generic "穿梭框/向右备份"
+    - generic "穿梭框/向右"
+    - generic "16px/面性/通用/icon-plus-color"
+    - generic "16px/面性/通用/icon-minus-color"
+    - generic "选择器/icon-向下"
+    - generic "编组 4"
+    - generic "编组 31备份 2"
+    - generic "编组 2备份"
+    - generic "点击上传/icon-上传"
+    - generic "编组 3"
+    - generic "Icon/Warning"
+    - generic "Icon/Warning"
+    - generic "icon-无权限"
+    - generic "编组 2"
+    - generic "编组 19":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 系 统
+    - generic "编组 19":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 自定义
+    - generic "编组 35"
+    - generic "编组 44"
+    - generic "01_Common_Btn/1_Common/common_export"
+    - generic "01_Common_Btn/1_Common/common_search"
+    - generic "01_Common_Btn/2_Infrequently/common_permit"
+    - generic "编组 47"
+    - generic "编组 31"
+    - generic "编组 32"
+    - generic "编组 29"
+    - generic "编组 39"
+    - generic "编组 36"
+    - generic "编组 43"
+    - generic "审计中心-当前"
+    - generic "审计中心"
+    - generic "01_Common_Btn/1_Common/common_users"
+    - generic "编组 34"
+    - generic "编组 45"
+    - generic "01_Common_Btn/1_Common/common_done"
+    - generic "开票中心-当前"
+    - generic "开票中心"
+    - generic "01_Common_Btn/2_Infrequently/common_subscribed_events"
+    - generic "01_Common_Btn/2_Infrequently/common_record_search"
+    - generic "编组 30"
+    - generic "编组 37"
+    - generic "编组 42"
+    - generic "核算中心-当前"
+    - generic "核算中心"
+    - generic "01_Common_Btn/2_Infrequently/common_event_history"
+    - generic "档案中心-当前"
+    - generic "档案中心"
+    - generic "01_Common_Btn/1_Common/common_folder"
+    - generic "01_Common_Btn/1_Common/common_search_list"
+    - generic "01_Common_Btn/2_Infrequently/common_subscribed_events 2"
+    - generic "01_Common_Btn/1_Common/common_setting"
+    - generic "编组 33"
+    - generic "编组 38"
+    - generic "编组 41"
+    - generic "编组 46"
+    - generic "编组 40"
+    - generic "编组 48"
+    - generic "编组 49"
+    - generic "首页-当前"
+    - generic "首页"
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - menubar [ref=e5]:
+        - generic [ref=e6]:
+          - generic [ref=e8] [cursor=pointer]: SpaceX Technologies Corp.
+          - generic [ref=e9]:
+            - generic [ref=e10]: 正式企业
+            - generic [ref=e11]: 会计师事务所
+            - text: 
+          - button "管理员 " [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: 管理员
+            - generic [ref=e16]: 
+        - generic [ref=e17]:
+          - button "中 " [ref=e19] [cursor=pointer]:
+            - text: 中
+            - generic [ref=e20]: 
+          - generic [ref=e21] [cursor=pointer]: 
+          - generic [ref=e22]:
+            - img [ref=e24] [cursor=pointer]
+            - text:    
+          - generic [ref=e26]:
+            - generic [ref=e28] [cursor=pointer]: 
+            - generic:
+              - text: 
+              - generic: 
+              - text: 
+            - text:  
+            - generic:
+              - text: 
+              - generic: 
+            - generic: 
+            - text:            
+          - generic [ref=e30]:
+            - text:   
+            - generic [ref=e33] [cursor=pointer]: 
+          - generic [ref=e36] [cursor=pointer]: 
+          - generic [ref=e38] [cursor=pointer]: 
+          - generic [ref=e39]:
+            - text: 
+            - generic [ref=e42]: 洋
+      - generic:   
+    - generic [ref=e43]:
+      - generic [ref=e45]:
+        - menubar [ref=e48]:
+          - generic [ref=e51] [cursor=pointer]:
+            - img [ref=e53]
+            - generic [ref=e55]: 首页
+          - menuitem "核算中心" [ref=e57]:
+            - generic [ref=e58] [cursor=pointer]:
+              - generic [ref=e60]:
+                - img [ref=e62]
+                - generic [ref=e64]: 核算中心
+              - text: 
+            - text:            
+          - menuitem "仓储中心" [ref=e66]:
+            - generic [ref=e67] [cursor=pointer]:
+              - generic [ref=e69]:
+                - img [ref=e71]
+                - generic [ref=e73]: 仓储中心
+              - text: 
+            - text:       
+          - menuitem "管理中心" [ref=e75]:
+            - generic [ref=e76] [cursor=pointer]:
+              - generic [ref=e78]:
+                - img [ref=e80]
+                - generic [ref=e82]: 管理中心
+              - text: 
+            - text:         
+          - menuitem "作业中心" [ref=e84]:
+            - generic [ref=e85] [cursor=pointer]:
+              - generic [ref=e87]:
+                - img [ref=e89]
+                - generic [ref=e91]: 作业中心
+              - text: 
+            - text:    
+          - menuitem "函证中心" [ref=e93]:
+            - generic [ref=e94] [cursor=pointer]:
+              - generic [ref=e96]:
+                - img [ref=e98]
+                - generic [ref=e100]: 函证中心
+              - text: 
+            - text: 
+          - menuitem "档案中心" [ref=e102]:
+            - generic [ref=e103] [cursor=pointer]:
+              - generic [ref=e105]:
+                - img [ref=e107]
+                - generic [ref=e109]: 档案中心
+              - text: 
+            - text:    
+          - menuitem "单据中心" [ref=e111]:
+            - generic [ref=e112] [cursor=pointer]:
+              - generic [ref=e114]:
+                - img [ref=e116]
+                - generic [ref=e118]: 单据中心
+              - text: 
+            - text:      
+          - menuitem "知识库" [ref=e120]:
+            - generic [ref=e121] [cursor=pointer]:
+              - generic [ref=e123]:
+                - img [ref=e125]
+                - generic [ref=e127]: 知识库
+              - text: 
+        - generic [ref=e130]:
+          - generic [ref=e132] [cursor=pointer]: ...
+          - generic [ref=e134] [cursor=pointer]: 
+          - img [ref=e137] [cursor=pointer]
+          - generic:   
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - generic [ref=e145]: 小
+            - generic [ref=e146]:
+              - generic [ref=e147]:
+                - generic [ref=e148]: 小刘洋, 上午好！
+                - img [ref=e149]
+              - generic [ref=e150]:
+                - generic [ref=e151]: SpaceX Technologies Corp.
+                - generic [ref=e152]: 审计一部
+          - img [ref=e156] [cursor=pointer]
+        - generic [ref=e158]:
+          - generic [ref=e159]:
+            - generic [ref=e161]:
+              - generic [ref=e162]: 项目数量
+              - button "2026 年 " [ref=e164]:
+                - text: 2026 年
+                - generic [ref=e165]: 
+            - generic [ref=e172]:
+              - generic [ref=e173]: 业务数量
+              - button "2026 年 " [ref=e175]:
+                - text: 2026 年
+                - generic [ref=e176]: 
+            - generic [ref=e179]:
+              - generic [ref=e180]: 我的审核
+              - generic [ref=e181]:
+                - generic [ref=e182] [cursor=pointer]: 一键审
+                - generic [ref=e183]: "|"
+                - generic [ref=e184] [cursor=pointer]:
+                  - generic [ref=e186]: "13"
+                  - text: 一键留
+            - generic [ref=e193]:
+              - generic [ref=e194]: 重点监控
+              - button "2026年 " [ref=e196]:
+                - text: 2026年
+                - generic [ref=e197]: 
+          - generic [ref=e202]:
+            - generic [ref=e203]:
+              - generic [ref=e204]:
+                - generic [ref=e205]:
+                  - text: 项目利润新增排行
+                  - img [ref=e206] [cursor=pointer]
+                - generic [ref=e208]:
+                  - button "切换历史利润排行" [ref=e209] [cursor=pointer]
+                  - button "更多" [ref=e210] [cursor=pointer]
+              - generic [ref=e211]: 0元
+              - generic [ref=e212]:
+                - generic [ref=e213]:
+                  - generic [ref=e214]:
+                    - generic [ref=e215]: "1"
+                    - generic [ref=e216]: 杭州知能装饰有限公司税务
+                  - generic [ref=e217]: 0 元
+                - generic [ref=e218]:
+                  - generic [ref=e219]:
+                    - generic [ref=e220]: "2"
+                    - generic [ref=e221]: 111杭州知能装饰有限公司报表审计
+                  - generic [ref=e222]: 0 元
+                - generic [ref=e223]:
+                  - generic [ref=e224]:
+                    - generic [ref=e225]: "3"
+                    - generic [ref=e226]: 名茶处理前
+                  - generic [ref=e227]: 0 元
+                - generic [ref=e228]:
+                  - generic [ref=e229]:
+                    - generic [ref=e230]: "4"
+                    - generic [ref=e231]: 易斯特新能源报表审计
+                  - generic [ref=e232]: 0 元
+                - generic [ref=e233]:
+                  - generic [ref=e234]:
+                    - generic [ref=e235]: "5"
+                    - generic [ref=e236]: 汇城
+                  - generic [ref=e237]: 0 元
+                - generic [ref=e238]:
+                  - generic [ref=e239]:
+                    - generic [ref=e240]: "6"
+                    - generic [ref=e241]: 名茶处理后
+                  - generic [ref=e242]: 0 元
+                - generic [ref=e243]:
+                  - generic [ref=e244]:
+                    - generic [ref=e245]: "7"
+                    - generic [ref=e246]: 杭州XXX科技有限公司报表审计
+                  - generic [ref=e247]: 0 元
+                - generic [ref=e248]:
+                  - generic [ref=e249]:
+                    - generic [ref=e250]: "8"
+                    - generic [ref=e251]: 开化国创报表审计
+                  - generic [ref=e252]: 0 元
+                - generic [ref=e253]:
+                  - generic [ref=e254]:
+                    - generic [ref=e255]: "9"
+                    - generic [ref=e256]: 2023开化国创报表审计
+                  - generic [ref=e257]: 0 元
+                - generic [ref=e258]:
+                  - generic [ref=e259]:
+                    - generic [ref=e260]: "10"
+                    - generic [ref=e261]: 母公司航中天启（重庆）微电子股份有限公司
+                  - generic [ref=e262]: 0 元
+                - generic [ref=e263]:
+                  - generic [ref=e264]:
+                    - generic [ref=e265]: "11"
+                    - generic [ref=e266]: 航中天启（重庆）微电子股份有限公司北京分公司
+                  - generic [ref=e267]: 0 元
+                - generic [ref=e268]:
+                  - generic [ref=e269]:
+                    - generic [ref=e270]: "12"
+                    - generic [ref=e271]: 航中天启（重庆）微电子股份有限公司上海分公司
+                  - generic [ref=e272]: 0 元
+                - generic [ref=e273]:
+                  - generic [ref=e274]:
+                    - generic [ref=e275]: "13"
+                    - generic [ref=e276]: 航中天启（重庆）微电子股份有限公司海南分公司
+                  - generic [ref=e277]: 0 元
+                - generic [ref=e278]:
+                  - generic [ref=e279]:
+                    - generic [ref=e280]: "14"
+                    - generic [ref=e281]: 【合并报表】航中天启（重庆）微电子股份有限公司
+                  - generic [ref=e282]: 0 元
+                - generic [ref=e283]:
+                  - generic [ref=e284]:
+                    - generic [ref=e285]: "15"
+                    - generic [ref=e286]: B航中天启（重庆）微电子股份有限公司海南分公司报表审计
+                  - generic [ref=e287]: 0 元
+                - generic [ref=e288]:
+                  - generic [ref=e289]:
+                    - generic [ref=e290]: "16"
+                    - generic [ref=e291]: C航中天启（重庆）微电子股份有限公司海南分公司
+                  - generic [ref=e292]: 0 元
+                - generic [ref=e293]:
+                  - generic [ref=e294]:
+                    - generic [ref=e295]: "17"
+                    - generic [ref=e296]: 航中天启（重庆）微电子股份有限公司报表审计
+                  - generic [ref=e297]: 0 元
+                - generic [ref=e298]:
+                  - generic [ref=e299]:
+                    - generic [ref=e300]: "18"
+                    - generic [ref=e301]: （测试）航中天启（重庆）微电子股份有限公司报表审计
+                  - generic [ref=e302]: 0 元
+                - generic [ref=e303]:
+                  - generic [ref=e304]:
+                    - generic [ref=e305]: "19"
+                    - generic [ref=e306]: 勉县向阳花开鲜花店报表审计
+                  - generic [ref=e307]: 0 元
+                - generic [ref=e308]:
+                  - generic [ref=e309]:
+                    - generic [ref=e310]: "20"
+                    - generic [ref=e311]: 浙江云澎科技有限公司报表审计
+                  - generic [ref=e312]: 0 元
+                - generic [ref=e313]:
+                  - generic [ref=e314]:
+                    - generic [ref=e315]: "21"
+                    - generic [ref=e316]: 浙江启超电缆股份有限公司
+                  - generic [ref=e317]: 0 元
+                - generic [ref=e318]:
+                  - generic [ref=e319]:
+                    - generic [ref=e320]: "22"
+                    - generic [ref=e321]: 浙江意瑞薄膜科技有限公司报表审计
+                  - generic [ref=e322]: 0 元
+                - generic [ref=e323]:
+                  - generic [ref=e324]:
+                    - generic [ref=e325]: "23"
+                    - generic [ref=e326]: 浙江军创数字产业发展有限公司报表审计
+                  - generic [ref=e327]: 0 元
+                - generic [ref=e328]:
+                  - generic [ref=e329]:
+                    - generic [ref=e330]: "24"
+                    - generic [ref=e331]: 浙江弘锦教育发展有限公司
+                  - generic [ref=e332]: 0 元
+                - generic [ref=e333]:
+                  - generic [ref=e334]:
+                    - generic [ref=e335]: "25"
+                    - generic [ref=e336]: 衢州华卿美术职业高中有限公司报表审计
+                  - generic [ref=e337]: 0 元
+                - generic [ref=e338]:
+                  - generic [ref=e339]:
+                    - generic [ref=e340]: "26"
+                    - generic [ref=e341]: 衢州中央美术学院附属中学有限公司报表审计
+                  - generic [ref=e342]: 0 元
+                - generic [ref=e343]:
+                  - generic [ref=e344]:
+                    - generic [ref=e345]: "27"
+                    - generic [ref=e346]: 期初不影响期末浙江中瑞农业发展有限公司报表审计
+                  - generic [ref=e347]: 0 元
+                - generic [ref=e348]:
+                  - generic [ref=e349]:
+                    - generic [ref=e350]: "28"
+                    - generic [ref=e351]: 期初影响期末浙江中瑞农业发展有限公司报表审计
+                  - generic [ref=e352]: 0 元
+                - generic [ref=e353]:
+                  - generic [ref=e354]:
+                    - generic [ref=e355]: "29"
+                    - generic [ref=e356]: 期初不影响期末南核安全装备（浙江）有限公司报表审计
+                  - generic [ref=e357]: 0 元
+                - generic [ref=e358]:
+                  - generic [ref=e359]:
+                    - generic [ref=e360]: "30"
+                    - generic [ref=e361]: 衢州宙石天启股权投资合伙企业（有限合伙）报表审计
+                  - generic [ref=e362]: 0 元
+                - generic [ref=e363]:
+                  - generic [ref=e364]:
+                    - generic [ref=e365]: "31"
+                    - generic [ref=e366]: AAA航中天启（重庆）微电子股份有限公司财务收支专项审计
+                  - generic [ref=e367]: 0 元
+                - generic [ref=e368]:
+                  - generic [ref=e369]:
+                    - generic [ref=e370]: "32"
+                    - generic [ref=e371]: 测试航中天启（重庆）微电子股份有限公司报表审计
+                  - generic [ref=e372]: 0 元
+                - generic [ref=e373]:
+                  - generic [ref=e374]:
+                    - generic [ref=e375]: "33"
+                    - generic [ref=e376]: 德诚航中天启（重庆）微电子股份有限公司报表审计
+                  - generic [ref=e377]: 0 元
+                - generic [ref=e378]:
+                  - generic [ref=e379]:
+                    - generic [ref=e380]: "34"
+                    - generic [ref=e381]: 演示SpaceX Technologies Corp.报表审计
+                  - generic [ref=e382]: 0 元
+                - generic [ref=e383]:
+                  - generic [ref=e384]:
+                    - generic [ref=e385]: "35"
+                    - generic [ref=e386]: 勉县向阳花开鲜花店专项审计
+                  - generic [ref=e387]: 0 元
+                - generic [ref=e388]:
+                  - generic [ref=e389]:
+                    - generic [ref=e390]: "36"
+                    - generic [ref=e391]: 扬子
+                  - generic [ref=e392]: 0 元
+                - generic [ref=e393]:
+                  - generic [ref=e394]:
+                    - generic [ref=e395]: "37"
+                    - generic [ref=e396]: 宁夏
+                  - generic [ref=e397]: 0 元
+                - generic [ref=e398]:
+                  - generic [ref=e399]:
+                    - generic [ref=e400]: "38"
+                    - generic [ref=e401]: 新疆
+                  - generic [ref=e402]: 0 元
+                - generic [ref=e403]:
+                  - generic [ref=e404]:
+                    - generic [ref=e405]: "39"
+                    - generic [ref=e406]: 测试客户AI科技有限公司报表审计
+                  - generic [ref=e407]: 0 元
+                - generic [ref=e408]:
+                  - generic [ref=e409]:
+                    - generic [ref=e410]: "40"
+                    - generic [ref=e411]: 华辰控股有限公司报表审计
+                  - generic [ref=e412]: 0 元
+                - generic [ref=e413]:
+                  - generic [ref=e414]:
+                    - generic [ref=e415]: "41"
+                    - generic [ref=e416]: 华辰智能科技（东莞）有限公司报表审计
+                  - generic [ref=e417]: 0 元
+                - generic [ref=e418]:
+                  - generic [ref=e419]:
+                    - generic [ref=e420]: "42"
+                    - generic [ref=e421]: 华辰制造有限公司报表审计
+                  - generic [ref=e422]: 0 元
+            - generic [ref=e423]:
+              - generic [ref=e424]:
+                - generic [ref=e425]: 客户/合同统计
+                - button "2026 年 " [ref=e427]:
+                  - text: 2026 年
+                  - generic [ref=e428]: 
+              - generic [ref=e429]:
+                - generic [ref=e430]:
+                  - generic [ref=e431] [cursor=pointer]:
+                    - generic [ref=e432]:
+                      - img [ref=e433]
+                      - generic [ref=e434]: 续约客户
+                    - generic [ref=e435]: "0"
+                  - generic [ref=e436] [cursor=pointer]:
+                    - generic [ref=e437]:
+                      - img [ref=e438]
+                      - generic [ref=e439]: 新增客户
+                    - generic [ref=e440]: "11"
+                  - generic [ref=e441] [cursor=pointer]:
+                    - generic [ref=e442]:
+                      - img [ref=e443]
+                      - generic [ref=e444]: 流失客户
+                    - generic [ref=e445]: "14"
+                - generic [ref=e446]:
+                  - generic [ref=e447] [cursor=pointer]:
+                    - generic [ref=e448]:
+                      - img [ref=e449]
+                      - generic [ref=e450]: 续约合同金额
+                    - generic [ref=e451]: "--"
+                  - generic [ref=e452] [cursor=pointer]:
+                    - generic [ref=e453]:
+                      - img [ref=e454]
+                      - generic [ref=e455]: 新增合同金额
+                    - generic [ref=e456]: 126,107,676.00
+                  - generic [ref=e457] [cursor=pointer]:
+                    - generic [ref=e458]:
+                      - img [ref=e459]
+                      - generic [ref=e460]: 流失合同金额
+                    - generic [ref=e461]: 102,870,000.00
+          - generic [ref=e463]:
+            - generic [ref=e464]: 员工情况
+            - generic [ref=e465]:
+              - generic [ref=e467]: 证书情况
+              - generic [ref=e472]:
+                - generic [ref=e473]: 项目数量Top10
+                - generic [ref=e474]:
+                  - generic [ref=e477]: 税务师
+                  - generic [ref=e480]: 注册会计师
+                  - generic [ref=e483]: 评估师
+                  - generic [ref=e486]: 高级职称
+                  - generic [ref=e489]: 其他
+              - generic [ref=e493]:
+                - generic [ref=e494]: 各证书男女比例
+                - generic [ref=e495]:
+                  - generic [ref=e496]: 注册会计师
+                  - generic [ref=e497]:
+                    - generic [ref=e498]: 男3
+                    - generic [ref=e499]: 女0
+        - text: 

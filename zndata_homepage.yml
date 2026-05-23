@@ -1,0 +1,197 @@
+- generic [active] [ref=e1]:
+  - img:
+    - generic "编组 24备份"
+    - generic "编组 24"
+    - generic "bg-关于我们"
+    - generic "功能icon/已认证"
+    - generic "编组 3":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 创建人
+    - generic "编组 2"
+    - generic "编组 31":
+      - generic:
+        - generic:
+          - generic:
+            - generic: 暂无 数据
+    - generic "编组 8"
+    - generic "icon-核算中心"
+    - generic "icon-管理中心"
+    - generic "icon-menufold-32-0"
+    - generic "icon-menufold-32-1"
+    - generic "编组 46":
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 暂无权限
+    - generic "功能icon/-认证"
+    - generic "编组"
+    - generic "icon-menuunfold-32-0"
+    - generic "icon-menuunfold-32-1"
+    - generic "输入框/icon-搜索"
+    - generic "icon-sorting-16-0"
+    - generic "编组"
+    - generic "编组备份 3"
+    - generic "Icon/Warning"
+    - generic "Icon/Warning"
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e7]:
+        - generic [ref=e8] [cursor=pointer]: 首页
+        - generic [ref=e9]:
+          - text:   
+          - generic [ref=e11] [cursor=pointer]: 事务所产品
+        - generic [ref=e12]:
+          - text:    
+          - generic [ref=e14] [cursor=pointer]: 企业产品
+        - generic [ref=e15] [cursor=pointer]: 关于我们
+        - generic [ref=e16] [cursor=pointer]: 联系我们
+      - generic [ref=e17]:
+        - generic [ref=e18] [cursor=pointer]: 登录
+        - generic [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]: 
+          - text: 注册
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]: 知能解决方案提供商
+          - generic [ref=e26]: 一家以创新财务服务为核心的高新技术企业
+          - button "立即试用 " [ref=e27] [cursor=pointer]:
+            - text: 立即试用
+            - generic [ref=e28]: 
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - text: 加入我们的社交活动了解更多咨询
+            - img [ref=e33]
+          - img [ref=e39]
+          - generic [ref=e44]: 
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - generic [ref=e47]: 01 —— 事务所产品
+          - generic [ref=e48]: 我们以提升用户的数据生产力为中心
+          - generic [ref=e49]:
+            - generic [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]: 作业中心
+              - generic [ref=e55]: 通过构建标准化数据治理体系，打通多源异构数据的采集、清洗、存储及权限管控链路，形成全生命周期追溯于一体的大数据审计数据中心。在此基础上，搭建支持智能…
+              - generic [ref=e57]: 
+            - generic [ref=e58]:
+              - generic [ref=e61] [cursor=pointer]:
+                - generic [ref=e62]: 管理中心
+                - generic [ref=e63]: 以事务所流程管理为核心，依托全流程数字化解决方案，深度整合客户管理、合同…
+                - generic [ref=e65]: 
+              - generic [ref=e68] [cursor=pointer]:
+                - generic [ref=e69]: 档案数字化
+                - generic [ref=e70]: 严格遵循行业检查标准，构建覆盖档案采集、分…
+                - generic [ref=e72]: 
+        - generic [ref=e73]:
+          - generic [ref=e74]: 02 —— 企业产品
+          - generic [ref=e75]: 提供财务的专业解决方案
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e80] [cursor=pointer]:
+                - generic [ref=e81]: 票据中心
+                - generic [ref=e82]: 实时获取采购、销售发票数据，自动实现数据结构化，提供数电发票环境下业财税数…
+                - generic [ref=e84]: 
+              - generic [ref=e87] [cursor=pointer]:
+                - generic [ref=e88]: 仓储中心
+                - generic [ref=e89]: 通过提供物资流转、库存控制、自动核算和智能盘…
+                - generic [ref=e91]: 
+            - generic [ref=e92]:
+              - generic [ref=e95] [cursor=pointer]:
+                - generic [ref=e96]: 核算中心
+                - generic [ref=e97]: 通过内置核算引擎和提供专家服务团队，让财务工…
+                - generic [ref=e99]: 
+              - generic [ref=e102] [cursor=pointer]:
+                - generic [ref=e103]: 会计档案
+                - generic [ref=e104]: 内置多维穿透模型，实现会计档案从数据获取、存储、加工到应用的全链条管理，实…
+                - generic [ref=e106]: 
+        - generic [ref=e107]:
+          - generic [ref=e108]: 03 —— 关于我们
+          - generic [ref=e109]: 帮助企业增收节支，提供数字化专业解决方案
+          - generic [ref=e111]:
+            - generic [ref=e112]: 知能的解决方案将逐步覆盖企业和事务所日常经营活动的各个方面，将信息化与专业化的理念带给广大企业和事务所
+            - generic [ref=e113]:
+              - generic [ref=e115]:
+                - generic [ref=e116]: "+100"
+                - generic [ref=e117]: 会计事务所
+              - generic [ref=e120]:
+                - generic [ref=e121]: "+500"
+                - generic [ref=e122]: 受托财务服务客户
+              - generic [ref=e125]:
+                - generic [ref=e126]: "+30"
+                - generic [ref=e127]: 软件著作权
+              - generic [ref=e130]:
+                - generic [ref=e131]: +5000 w
+                - generic [ref=e132]: 帮助企业节省的成本
+        - generic [ref=e135]:
+          - generic [ref=e136]: 04 —— 我们的服务
+          - generic [ref=e137]: 作为一个专业的团队，知能将提供数字化的服务
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - img [ref=e140]
+              - generic [ref=e141]: 行业专家
+              - generic [ref=e142]:
+                - generic [ref=e143]: 根据您的需求
+                - generic [ref=e144]: 制定解决方案
+            - generic [ref=e145]:
+              - img [ref=e146]
+              - generic [ref=e147]: 数据专家
+              - generic [ref=e148]:
+                - generic [ref=e149]: 数据分析
+                - generic [ref=e150]: 数据管理
+            - generic [ref=e151]:
+              - img [ref=e152]
+              - generic [ref=e153]: 技术支持、人工服务
+              - generic [ref=e154]:
+                - generic [ref=e155]: 工作时间
+                - generic [ref=e156]: 1v1 在线支持
+      - generic [ref=e157]:
+        - generic [ref=e158]: 了解知能可以为您做什么。
+        - generic [ref=e159]: 点击免费咨询，了解知能如何帮助您更清晰地了解您的业务
+        - generic [ref=e160] [cursor=pointer]: 免费咨询
+      - text: 
+      - generic [ref=e161]:
+        - generic [ref=e162]:
+          - generic [ref=e163]:
+            - img [ref=e164]
+            - generic [ref=e165]: 知能微信
+          - generic [ref=e166]:
+            - generic [ref=e167]:
+              - generic [ref=e168]: 产品咨询热线
+              - generic [ref=e169]: 0571-85154553
+            - generic [ref=e170]:
+              - generic [ref=e171]: 业务合作热线
+              - generic [ref=e172]: 0571-85159108
+            - generic [ref=e173]:
+              - generic [ref=e174]: 咨询邮箱
+              - generic [ref=e175]: zndata@dccpa.ltd
+            - generic [ref=e176]:
+              - generic [ref=e177]: 公司地址
+              - generic [ref=e178]: 杭州市上城区解放东路33号财富金融中心405
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - generic [ref=e181]: 事务所产品
+              - generic [ref=e183] [cursor=pointer]: 管理中心
+              - generic [ref=e185] [cursor=pointer]: 作业中心
+              - generic [ref=e187] [cursor=pointer]: 档案数字化
+            - generic [ref=e188]:
+              - generic [ref=e189]: 业务产品
+              - generic [ref=e191] [cursor=pointer]: 仓储中心
+              - generic [ref=e193] [cursor=pointer]: 票据中心
+              - generic [ref=e195] [cursor=pointer]: 核算中心
+              - generic [ref=e197] [cursor=pointer]: 会计档案
+            - generic [ref=e198]:
+              - generic [ref=e199]: 关于我们
+              - generic [ref=e201] [cursor=pointer]: 公司简介
+              - generic [ref=e203] [cursor=pointer]: 软件能力
+              - generic [ref=e205] [cursor=pointer]: 用户规模
+              - generic [ref=e207] [cursor=pointer]: 未来发展方向
+        - generic [ref=e208]:
+          - generic [ref=e209]: © 2021 SpaceX Technologies Corp.
+          - link "浙公网安备33010202004715" [ref=e211] [cursor=pointer]:
+            - /url: https://beian.mps.gov.cn/#/query/webSearch?code=33010202004715\
+          - link "浙ICP备15006498号-1" [ref=e213] [cursor=pointer]:
+            - /url: https://beian.miit.gov.cn/
