@@ -36,7 +36,7 @@
 
 ## 访问地址
 
-部署后访问：`https://你的用户名.github.io/zhineng-demo/SpaceX-交互Demo.html`
+部署后访问：`https://你的用户名.github.io/zhineng-demo/SpaceX-Demo.html`
 
 ## 技术栈
 - Vue 2
