@@ -1,0 +1,306 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]: 
+        - text: SpaceX
+      - generic [ref=e8] [cursor=pointer]:
+        - generic [ref=e9]: 
+        - generic [ref=e10]: 首页
+      - generic [ref=e12] [cursor=pointer]:
+        - generic [ref=e13]: 
+        - generic [ref=e14]: 核算中心
+        - generic [ref=e15]: 
+      - generic [ref=e16]:
+        - generic [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]: 
+          - generic [ref=e19]: 管理中心
+          - generic [ref=e20]: 
+        - generic [ref=e21]:
+          - generic [ref=e22] [cursor=pointer]:
+            - generic [ref=e23]: 工作待办
+            - generic [ref=e24]: 
+          - generic [ref=e25]:
+            - generic [ref=e26] [cursor=pointer]:
+              - text: 我的任务
+              - generic [ref=e27]: "2"
+            - generic [ref=e28] [cursor=pointer]:
+              - text: 我的审核
+              - generic [ref=e29]: "16"
+            - generic [ref=e30] [cursor=pointer]:
+              - text: 我的项目
+              - generic [ref=e31]: "38"
+            - generic [ref=e32] [cursor=pointer]: 我发起的
+            - generic [ref=e33] [cursor=pointer]: 抄送我的
+            - generic [ref=e34] [cursor=pointer]: 我的签署
+          - generic [ref=e35] [cursor=pointer]: 业务派工
+          - generic [ref=e36] [cursor=pointer]: 客户管理
+          - generic [ref=e37] [cursor=pointer]: 合同管理
+          - generic [ref=e38] [cursor=pointer]:
+            - generic [ref=e39]: 项目管理
+            - generic [ref=e40]: 
+          - generic [ref=e41] [cursor=pointer]: 财务管理
+          - generic [ref=e42] [cursor=pointer]: 业绩管理
+          - generic [ref=e43] [cursor=pointer]: 行政管理
+          - generic [ref=e44] [cursor=pointer]: 独立性管理
+          - generic [ref=e45] [cursor=pointer]: 设置
+      - generic [ref=e46]:
+        - generic [ref=e47] [cursor=pointer]:
+          - generic [ref=e48]: 
+          - generic [ref=e49]: 作业中心
+          - generic [ref=e50]: 
+        - text:  
+      - generic [ref=e52] [cursor=pointer]:
+        - generic [ref=e53]: 
+        - generic [ref=e54]: 档案中心
+        - generic [ref=e55]: 
+      - generic [ref=e57] [cursor=pointer]:
+        - generic [ref=e58]: 
+        - generic [ref=e59]: 函证中心
+      - generic [ref=e61] [cursor=pointer]:
+        - generic [ref=e62]: 
+        - generic [ref=e63]: 单据中心
+      - generic [ref=e65] [cursor=pointer]:
+        - generic [ref=e66]: 
+        - generic [ref=e67]: 知识库
+    - generic [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: 
+          - generic [ref=e72]: 首页
+        - generic [ref=e73]:
+          - generic [ref=e74]: SpaceX Technologies Corp.
+          - generic [ref=e76]:
+            - button "" [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: 
+            - superscript [ref=e79]: "16"
+          - button "" [ref=e80] [cursor=pointer]:
+            - generic [ref=e81]: 
+          - generic [ref=e84]: 
+          - generic [ref=e85]: 小刘洋
+          - generic [ref=e87]: 管理员
+          - generic [ref=e88]:
+            - button "" [ref=e89]:
+              - generic [ref=e90] [cursor=pointer]: 
+            - text:   
+          - button "" [ref=e93]:
+            - generic [ref=e94]: 
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - img [ref=e100]
+          - generic [ref=e101]:
+            - generic [ref=e102]: 刘洋, 傍晚好!
+            - generic [ref=e103]: 杭州知能财税科技有限公司
+        - generic [ref=e104]:
+          - generic [ref=e105]:
+            - generic [ref=e107]: 
+            - generic [ref=e108]:
+              - generic [ref=e109]: "16"
+              - generic [ref=e110]: 我的审核
+          - generic [ref=e111]:
+            - generic [ref=e113]: 
+            - generic [ref=e114]:
+              - generic [ref=e115]: "38"
+              - generic [ref=e116]: 我的项目
+          - generic [ref=e117]:
+            - generic [ref=e119]: 
+            - generic [ref=e120]:
+              - generic [ref=e121]: "0"
+              - generic [ref=e122]: 我发起的
+          - generic [ref=e123]:
+            - generic [ref=e125]: 
+            - generic [ref=e126]:
+              - generic [ref=e127]: "31"
+              - generic [ref=e128]: 抄送我的
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - generic [ref=e132]: 项目数量
+              - generic [ref=e134]:
+                - textbox "请选择" [ref=e135] [cursor=pointer]: 2026年
+                - generic [ref=e137] [cursor=pointer]: 
+            - generic [ref=e139]:
+              - generic [ref=e141]: "38"
+              - generic [ref=e142]:
+                - generic [ref=e143]: 其他 (6)
+                - generic [ref=e145]: 编制底稿 (30)
+                - generic [ref=e147]: 项目完成 (6)
+                - generic [ref=e149]: 质控复核 (10)
+          - generic [ref=e151]:
+            - generic [ref=e153]: 我的审核
+            - generic [ref=e155]:
+              - generic [ref=e157]: "16"
+              - generic [ref=e158]:
+                - generic [ref=e159]: 报告报备 (0)
+                - generic [ref=e161]: 报告签发 (0)
+                - generic [ref=e163]: 组内审核 (0)
+                - generic [ref=e165]: 质控复核 (26)
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - generic [ref=e169]: 重点监控
+              - generic [ref=e171]:
+                - textbox "请选择" [ref=e172] [cursor=pointer]: 2026年
+                - generic [ref=e174] [cursor=pointer]: 
+            - generic [ref=e176]:
+              - generic [ref=e178]: "343"
+              - generic [ref=e179]:
+                - generic [ref=e180]: 档案未归还 (0)
+                - generic [ref=e182]: 纸质档案借阅 (0)
+                - generic [ref=e184]: 上链数量 (343)
+                - generic [ref=e186]: 项目延期 (0)
+        - generic [ref=e188]:
+          - generic [ref=e189]:
+            - generic [ref=e190]: 客户/合同统计
+            - generic [ref=e192]:
+              - textbox "请选择" [ref=e193] [cursor=pointer]: 2026年
+              - generic [ref=e195] [cursor=pointer]: 
+          - generic [ref=e196]:
+            - generic [ref=e197]:
+              - generic [ref=e199]: 
+              - generic [ref=e200]:
+                - generic [ref=e201]: 续约客户
+                - generic [ref=e202]: "0"
+            - generic [ref=e203]:
+              - generic [ref=e205]: 
+              - generic [ref=e206]:
+                - generic [ref=e207]: 续约合同金额
+                - generic [ref=e208]: "0"
+            - generic [ref=e209]:
+              - generic [ref=e211]: 
+              - generic [ref=e212]:
+                - generic [ref=e213]: 新增客户
+                - generic [ref=e214]: "11"
+            - generic [ref=e215]:
+              - generic [ref=e217]: 
+              - generic [ref=e218]:
+                - generic [ref=e219]: 新增合同金额
+                - generic [ref=e220]: 126,107,676
+            - generic [ref=e221]:
+              - generic [ref=e223]: 
+              - generic [ref=e224]:
+                - generic [ref=e225]: 流失客户
+                - generic [ref=e226]: "14"
+            - generic [ref=e227]:
+              - generic [ref=e229]: 
+              - generic [ref=e230]:
+                - generic [ref=e231]: 流失合同金额
+                - generic [ref=e232]: 102,870,000
+        - generic [ref=e233]:
+          - generic [ref=e234]:
+            - generic [ref=e235]: 项目利润新增排行
+            - generic [ref=e236]:
+              - button "切换历史利润排行" [ref=e237] [cursor=pointer]
+              - button "更多" [ref=e238] [cursor=pointer]
+          - generic [ref=e239]:
+            - generic [ref=e240]:
+              - generic [ref=e241]: "25"
+              - generic [ref=e242]: 衢州中央美术学院附属中学有限公司报表审计
+              - generic [ref=e243]: 0元
+            - generic [ref=e244]:
+              - generic [ref=e245]: "26"
+              - generic [ref=e246]: 衢州中央美术学院附属中学有限公司报表审计
+              - generic [ref=e247]: 0元
+            - generic [ref=e248]:
+              - generic [ref=e249]: "27"
+              - generic [ref=e250]: 期初不影响期末浙江中瑞农业发展有限公司报表审计
+              - generic [ref=e251]: 0元
+            - generic [ref=e252]:
+              - generic [ref=e253]: "28"
+              - generic [ref=e254]: 期初影响期末浙江中瑞农业发展有限公司报表审计
+              - generic [ref=e255]: 0元
+            - generic [ref=e256]:
+              - generic [ref=e257]: "29"
+              - generic [ref=e258]: 期初不影响期末南核安全装备（浙江）有限公司报表审计
+              - generic [ref=e259]: 0元
+            - generic [ref=e260]:
+              - generic [ref=e261]: "30"
+              - generic [ref=e262]: 衢州宙石天启股权投资合伙企业（有限合伙）报表审计
+              - generic [ref=e263]: 0元
+        - generic [ref=e264]:
+          - generic [ref=e266]: 员工情况
+          - generic [ref=e267]:
+            - generic [ref=e268]:
+              - generic [ref=e269]: 证书情况
+              - generic [ref=e271]: "34"
+              - generic [ref=e272]:
+                - generic [ref=e273]: 离职 (9)
+                - generic [ref=e275]: 在职 (8)
+                - generic [ref=e277]: 注册会计师 (5)
+                - generic [ref=e279]: 其他 (12)
+            - generic [ref=e281]:
+              - generic [ref=e282]: 项目数量Top10
+              - generic [ref=e283]:
+                - generic [ref=e284]:
+                  - generic [ref=e285]: 刘洋
+                  - generic [ref=e288]: "268"
+                - generic [ref=e289]:
+                  - generic [ref=e290]: 小刘洋
+                  - generic [ref=e293]: "23"
+                - generic [ref=e294]:
+                  - generic [ref=e295]: 李振江
+                  - generic [ref=e298]: "20"
+                - generic [ref=e299]:
+                  - generic [ref=e300]: 兰慧祥
+                  - generic [ref=e303]: "12"
+                - generic [ref=e304]:
+                  - generic [ref=e305]: JoeyYang
+                  - generic [ref=e308]: "7"
+                - generic [ref=e309]:
+                  - generic [ref=e310]: 高亦然
+                  - generic [ref=e313]: "3"
+                - generic [ref=e314]:
+                  - generic [ref=e315]: 胡思怡
+                  - generic [ref=e318]: "3"
+                - generic [ref=e319]:
+                  - generic [ref=e320]: 陈洁琦
+                  - generic [ref=e323]: "2"
+        - generic [ref=e324]:
+          - button " 进入我的项目" [ref=e325] [cursor=pointer]:
+            - generic [ref=e326]: 
+            - text: 进入我的项目
+          - button " 进入我的审核" [ref=e327] [cursor=pointer]:
+            - generic [ref=e328]: 
+            - text: 进入我的审核
+        - generic [ref=e329]:
+          - generic [ref=e330]:
+            - generic [ref=e331]:
+              - generic [ref=e332]: 
+              - text: 功能需求说明
+            - generic [ref=e333]: 点击标签查看完整功能说明
+          - generic [ref=e334]:
+            - generic [ref=e335] [cursor=pointer]:
+              - generic [ref=e336]: 
+              - generic [ref=e337]: 首页欢迎区
+              - generic [ref=e338]: "4"
+            - generic [ref=e339] [cursor=pointer]:
+              - generic [ref=e340]: 
+              - generic [ref=e341]: 快捷统计卡片
+              - generic [ref=e342]: "6"
+            - generic [ref=e343] [cursor=pointer]:
+              - generic [ref=e344]: 
+              - generic [ref=e345]: 项目数量图表
+              - generic [ref=e346]: "6"
+            - generic [ref=e347] [cursor=pointer]:
+              - generic [ref=e348]: 
+              - generic [ref=e349]: 我的审核图表
+              - generic [ref=e350]: "6"
+            - generic [ref=e351] [cursor=pointer]:
+              - generic [ref=e352]: 
+              - generic [ref=e353]: 重点监控
+              - generic [ref=e354]: "6"
+            - generic [ref=e355] [cursor=pointer]:
+              - generic [ref=e356]: 
+              - generic [ref=e357]: 客户/合同统计
+              - generic [ref=e358]: "7"
+            - generic [ref=e359] [cursor=pointer]:
+              - generic [ref=e360]: 
+              - generic [ref=e361]: 项目利润排行
+              - generic [ref=e362]: "6"
+            - generic [ref=e363] [cursor=pointer]:
+              - generic [ref=e364]: 
+              - generic [ref=e365]: 员工情况
+              - generic [ref=e366]: "6"
+        - generic [ref=e367]:   
+  - alert [ref=e368]:
+    - generic [ref=e369]: 
+    - paragraph [ref=e370]: 欢迎使用SpaceX！已加载 38 个项目，覆盖全部38种状态

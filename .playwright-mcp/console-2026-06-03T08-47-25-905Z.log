@@ -1,0 +1,1139 @@
+[      31ms] [INFO] Download the Vue Devtools extension for a better development experience:
+https://github.com/vuejs/vue-devtools @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:9098
+[      31ms] [INFO] You are running Vue in development mode.
+Make sure to turn on production mode when deploying for production.
+See more tips at https://vuejs.org/guide/deployment.html @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:9107
+[    9199ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9201ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9203ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9204ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9206ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9208ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9212ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9217ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9222ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9225ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9227ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9229ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9231ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9237ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9239ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9240ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9242ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9243ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9244ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9245ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9246ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9247ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9248ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9249ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9250ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9251ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9252ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9253ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9255ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9256ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9258ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9259ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9260ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9261ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9262ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9262ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9263ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9263ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9264ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9264ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9265ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9265ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9268ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9269ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9270ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9271ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9273ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9274ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9275ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9276ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9277ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9279ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9280ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9281ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9282ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9283ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9284ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9285ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9286ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9287ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9289ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9290ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9291ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9292ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9293ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9294ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9295ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9296ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9297ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9298ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9299ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9300ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9303ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9305ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9306ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9306ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9307ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9307ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9308ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9309ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9310ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9310ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9311ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9311ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9315ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9316ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9318ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9319ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9320ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9321ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9322ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9323ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9325ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9326ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9327ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9328ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9329ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9330ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9332ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9333ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9334ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9335ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9336ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9337ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9338ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9339ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9340ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9342ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9343ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9344ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9345ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9346ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9352ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9353ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9355ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9356ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9357ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9357ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9359ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9359ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9360ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9360ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9361ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9361ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9363ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "percentage".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633
+[    9363ms] [ERROR] [Vue warn]: Invalid prop: custom validator check failed for prop "status".
+
+found in
+
+---> <ElProgress> at packages/progress/src/progress.vue
+       <ElTableRow>
+         <ElTableBody>
+           <ElTable> at packages/table/src/table.vue
+             <Root> @ https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js:633

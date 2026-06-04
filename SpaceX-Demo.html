@@ -219,15 +219,122 @@
         .el-button+.el-button { margin-left: 0; }
         
         .tag-group { display: flex; gap: 6px; flex-wrap: wrap; }
+
+        /* 功能需求标签 */
+        .feature-tags-bar { background: #fff; border-radius: 6px; padding: 12px 20px; margin-bottom: 12px; border: 1px solid #e8e8e8; }
+        .feature-tags-bar .bar-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+        .feature-tags-bar .bar-title { font-size: 14px; font-weight: 600; color: #333; display: flex; align-items: center; gap: 6px; }
+        .feature-tags-bar .bar-title i { color: #1890ff; }
+        .feature-tags-bar .bar-hint { font-size: 12px; color: #999; }
+        .feature-tags-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+        .feature-tag { display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.25s; position: relative; white-space: nowrap; border: 1px solid transparent; user-select: none; }
+        .feature-tag:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,0.12); }
+        .feature-tag .tag-icon { font-size: 13px; }
+        .feature-tag .tag-label { font-weight: 500; }
+        .feature-tag .tag-count { background: rgba(255,255,255,0.5); border-radius: 8px; padding: 0 6px; font-size: 11px; min-width: 18px; text-align: center; }
+        .ft-new { background: #e6f7ff; color: #1890ff; border-color: #91d5ff; }
+        .ft-new:hover { background: #bae7ff; border-color: #69c0ff; }
+        .ft-search { background: #f6ffed; color: #52c41a; border-color: #b7eb8f; }
+        .ft-search:hover { background: #d9f7be; border-color: #95de64; }
+        .ft-filter { background: #fff7e6; color: #fa8c16; border-color: #ffd591; }
+        .ft-filter:hover { background: #ffe7ba; border-color: #ffc069; }
+        .ft-export { background: #f9f0ff; color: #722ed1; border-color: #d3adf7; }
+        .ft-export:hover { background: #efdbff; border-color: #b37feb; }
+        .ft-crud { background: #e6fffb; color: #13c2c2; border-color: #87e8de; }
+        .ft-crud:hover { background: #b5f5ec; border-color: #5cdbd3; }
+        .ft-flow { background: #fff0f6; color: #eb2f96; border-color: #ffadd2; }
+        .ft-flow:hover { background: #ffd6e7; border-color: #ff85c0; }
+        .ft-team { background: #fcffe6; color: #a0d911; border-color: #d3adf7; }
+        .ft-team:hover { background: #f4ffb8; border-color: #bae637; }
+        .ft-import { background: #fff1f0; color: #f5222d; border-color: #ffa39e; }
+        .ft-import:hover { background: #ffccc7; border-color: #ff7875; }
+        .ft-detail { background: #f0f5ff; color: #2f54eb; border-color: #adc6ff; }
+        .ft-detail:hover { background: #d6e4ff; border-color: #85a5ff; }
+        .ft-batch { background: #fffbe6; color: #d4b106; border-color: #ffe58f; }
+        .ft-batch:hover { background: #fff1b8; border-color: #ffd666; }
+
+        /* 功能详情弹窗 */
+        .feature-detail-dialog .el-dialog { border-radius: 10px; overflow: hidden; }
+        .feature-detail-dialog .el-dialog__header { padding: 0; }
+        .feature-detail-dialog .el-dialog__body { padding: 0; max-height: 72vh; overflow-y: auto; }
+        .fd-banner { padding: 24px 28px 20px; display: flex; align-items: center; gap: 16px; }
+        .fd-banner-icon { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+        .fd-banner-info { flex: 1; }
+        .fd-banner-title { font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+        .fd-banner-meta { display: flex; gap: 10px; flex-wrap: wrap; }
+        .fd-meta-tag { font-size: 11px; padding: 2px 10px; border-radius: 10px; display: inline-flex; align-items: center; gap: 4px; }
+        .fd-meta-tag.green { background: #f6ffed; color: #52c41a; border: 1px solid #b7eb8f; }
+        .fd-meta-tag.blue { background: #e6f7ff; color: #1890ff; border: 1px solid #91d5ff; }
+        .fd-meta-tag.orange { background: #fff7e6; color: #fa8c16; border: 1px solid #ffd591; }
+        .fd-close-btn { width: 32px; height: 32px; border-radius: 50%; border: none; background: #f5f5f5; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #999; transition: all 0.2s; }
+        .fd-close-btn:hover { background: #e8e8e8; color: #333; }
+        .fd-body { padding: 0 28px 28px; }
+        .fd-section { margin-bottom: 22px; }
+        .fd-section-title { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+        .fd-section-title i { color: #1890ff; }
+        .fd-desc { font-size: 13px; color: #555; line-height: 1.8; margin: 0; }
+        .fd-points-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; }
+        .fd-point { font-size: 12px; color: #555; padding: 6px 10px; background: #fafafa; border-radius: 6px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; border: 1px solid #f0f0f0; }
+        .fd-point i { color: #52c41a; margin-top: 2px; flex-shrink: 0; }
+        .fd-points-full .fd-point { grid-column: 1 / -1; }
+        .fd-edge-cases { margin-top: 8px; }
+        .fd-edge-item { font-size: 12px; color: #8c8c8c; padding: 4px 10px; background: #fffbe6; border-radius: 4px; border: 1px solid #ffe58f; display: inline-flex; align-items: center; gap: 4px; margin: 2px 4px 2px 0; }
+        .fd-edge-item i { font-size: 12px; color: #faad14; }
+        .fd-footer { padding: 16px 28px; background: #fafafa; border-top: 1px solid #f0f0f0; display: flex; align-items: center; justify-content: space-between; }
+        .fd-footer-left { display: flex; gap: 16px; }
+        .fd-footer-item { font-size: 12px; color: #8c8c8c; display: flex; align-items: center; gap: 4px; }
+        .fd-footer-item i { color: #bfbfbf; }
+        .fd-route { font-family: 'Courier New', monospace; background: #f0f0f0; padding: 2px 8px; border-radius: 4px; font-size: 11px; }
+
+        /* 激活态标签 */
+        .feature-tag.active { box-shadow: 0 0 0 2px rgba(24,144,255,0.3); transform: translateY(-1px); }
         
-        /* 首页欢迎 */
-        .welcome-page { text-align: center; padding: 100px 20px; }
-        .welcome-page h1 { font-size: 36px; color: #1890ff; margin-bottom: 20px; }
-        .welcome-page p { font-size: 16px; color: #666; margin-bottom: 40px; }
-        .welcome-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 800px; margin: 0 auto; }
-        .welcome-stat { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
-        .welcome-stat .number { font-size: 36px; font-weight: bold; color: #1890ff; }
-        .welcome-stat .label { font-size: 14px; color: #666; margin-top: 8px; }
+        /* 首页仪表盘 */
+        .home-dashboard { padding: 0; background: #f5f7fa; min-height: calc(100vh - 104px); overflow-y: auto; }
+        .home-welcome-bar { display: flex; align-items: center; gap: 12px; padding: 16px 24px; background: #fff; border-bottom: 1px solid #e8e8e8; }
+        .home-greeting-name { font-size: 16px; font-weight: 600; color: #333; }
+        .home-greeting-company { font-size: 12px; color: #999; margin-top: 2px; }
+        .home-quick-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 20px 24px; background: #fff; margin-bottom: 12px; }
+        .home-stat-card { display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fafafa; border-radius: 8px; border: 1px solid #f0f0f0; }
+        .home-stat-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+        .home-stat-value { font-size: 24px; font-weight: 700; color: #333; }
+        .home-stat-label { font-size: 13px; color: #999; margin-top: 2px; }
+        .home-panels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 0 24px 16px; }
+        .home-panel { background: #fff; border-radius: 8px; padding: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .home-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+        .home-panel-title { font-size: 14px; font-weight: 600; color: #333; }
+        .home-chart-placeholder { display: flex; align-items: center; gap: 20px; }
+        .home-donut { width: 100px; height: 100px; border-radius: 50%; border: 12px solid #e8e8e8; border-top-color: #1890ff; border-right-color: #52c41a; position: relative; display: flex; align-items: center; justify-content: center; }
+        .home-donut-inner { font-size: 22px; font-weight: 700; color: #333; }
+        .home-legend { flex: 1; }
+        .home-legend-item { font-size: 12px; color: #666; display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+        .home-legend-dot { width: 8px; height: 8px; border-radius: 2px; }
+        .home-section { background: #fff; margin: 0 24px 16px; padding: 16px 20px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .home-section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+        .home-section-title { font-size: 14px; font-weight: 600; color: #333; }
+        .home-contract-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .home-contract-card { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: #fafafa; border-radius: 8px; }
+        .home-contract-icon { font-size: 24px; color: #bfbfbf; }
+        .home-contract-label { font-size: 12px; color: #999; }
+        .home-contract-value { font-size: 18px; font-weight: 600; color: #333; margin-top: 2px; }
+        .home-ranking-list { max-height: 240px; overflow-y: auto; }
+        .home-ranking-item { display: flex; align-items: center; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+        .home-ranking-item:last-child { border-bottom: none; }
+        .home-ranking-num { width: 28px; font-size: 13px; font-weight: 600; color: #999; }
+        .home-ranking-name { flex: 1; font-size: 13px; color: #333; }
+        .home-ranking-value { font-size: 13px; font-weight: 600; color: #f5222d; }
+        .home-employee-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .home-employee-chart { text-align: center; }
+        .home-employee-chart-title { font-size: 13px; font-weight: 600; color: #333; margin-bottom: 12px; }
+        .home-donut-small { width: 80px; height: 80px; border-radius: 50%; border: 10px solid #e8e8e8; border-top-color: #1890ff; border-right-color: #52c41a; position: relative; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+        .home-donut-inner-small { font-size: 18px; font-weight: 700; color: #333; }
+        .home-employee-legend { text-align: left; display: inline-block; }
+        .home-bar-chart { padding: 0 20px; }
+        .home-bar-item { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+        .home-bar-name { width: 80px; font-size: 12px; color: #666; text-align: right; flex-shrink: 0; }
+        .home-bar-track { flex: 1; height: 16px; background: #f0f0f0; border-radius: 8px; overflow: hidden; }
+        .home-bar-fill { height: 100%; border-radius: 8px; transition: width 0.5s; }
+        .home-bar-value { width: 40px; font-size: 12px; font-weight: 600; color: #333; text-align: right; }
         
         /* 设置中心 */
         .setting-center { display: flex; height: calc(100vh - 104px); background: #fff; border-radius: 4px; overflow: hidden; }
@@ -443,6 +550,20 @@
                         <el-divider direction="vertical"></el-divider>
                         <el-avatar size="small" icon="el-icon-user-solid"></el-avatar>
                         <span>小刘洋</span>
+                        <!-- 角色切换 -->
+                        <el-divider direction="vertical"></el-divider>
+                        <span style="font-size: 12px; color: #666;">{{ currentRole.name }}</span>
+                        <el-dropdown @command="switchRole" trigger="click">
+                            <span class="el-dropdown-link">
+                                <i class="el-icon-refresh" style="cursor: pointer; color: #1890ff;"></i>
+                            </span>
+                            <el-dropdown-menu slot="dropdown">
+                                <el-dropdown-item v-for="role in viewRoles" :key="role.key" :command="role.key" :disabled="currentRole.key === role.key">
+                                    <i :class="role.icon" style="margin-right: 4px;"></i>{{ role.name }}
+                                </el-dropdown-item>
+                            </el-dropdown-menu>
+                        </el-dropdown>
+                        <el-divider direction="vertical"></el-divider>
                         <el-dropdown>
                             <span class="el-dropdown-link">
                                 <i class="el-icon-arrow-down el-icon--right"></i>
@@ -456,41 +577,316 @@
                     </div>
                 </div>
 
+                <!-- 全局功能需求标签（所有页面共享，位于header下方） -->
+                <div class="feature-tags-bar" v-if="currentFeatures.length > 0">
+                    <div class="bar-header">
+                        <span class="bar-title"><i class="el-icon-s-operation"></i> 功能需求说明</span>
+                        <span class="bar-hint">点击标签查看完整功能说明</span>
+                    </div>
+                    <div class="feature-tags-wrap">
+                        <span v-for="feat in currentFeatures" :key="feat.key"
+                            class="feature-tag"
+                            :class="[feat.tagClass, { active: featureDialogVisible && currentFeatureKey === feat.key }]"
+                            @click="openFeatureDialog(feat)">
+                            <i class="tag-icon" :class="feat.icon"></i>
+                            <span class="tag-label">{{ feat.label }}</span>
+                            <span class="tag-count" v-if="feat.count">{{ feat.count }}</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 功能需求详情弹窗 -->
+                <el-dialog :visible.sync="featureDialogVisible" width="680px" :show-close="true" :close-on-click-modal="true" custom-class="feature-detail-dialog" :title="currentFeature ? currentFeature.label + ' - 功能需求说明' : '功能需求说明'">
+                    <div v-if="currentFeature">
+                        <div class="fd-banner" :style="{ background: currentFeature.bannerBg }">
+                            <div class="fd-banner-icon" :style="{ background: currentFeature.iconBg, color: currentFeature.iconColor }">
+                                <i :class="currentFeature.icon"></i>
+                            </div>
+                            <div class="fd-banner-info">
+                                <div class="fd-banner-title">{{ currentFeature.label }}</div>
+                                <div class="fd-banner-meta">
+                                    <span class="fd-meta-tag blue">{{ currentFeature.module }}</span>
+                                    <span class="fd-meta-tag green">{{ currentFeature.priority }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fd-body">
+                            <div class="fd-section">
+                                <div class="fd-section-title"><i class="el-icon-info"></i> 功能概述</div>
+                                <p class="fd-desc">{{ currentFeature.desc }}</p>
+                            </div>
+                            <div class="fd-section">
+                                <div class="fd-section-title"><i class="el-icon-s-operation"></i> 功能要点</div>
+                                <div class="fd-points-grid">
+                                    <div v-for="(pt, idx) in currentFeature.points" :key="idx" class="fd-point">
+                                        <i class="el-icon-check"></i>
+                                        <span>{{ pt }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fd-section">
+                                <div class="fd-section-title"><i class="el-icon-warning"></i> 边界/异常场景</div>
+                                <div class="fd-edge-cases">
+                                    <span v-for="(ec, idx) in currentFeature.edgeCases" :key="idx" class="fd-edge-item">
+                                        <i class="el-icon-warning-outline"></i> {{ ec }}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="fd-section">
+                                <div class="fd-section-title"><i class="el-icon-check"></i> 校验规则</div>
+                                <div class="fd-edge-cases">
+                                    <span v-for="(vl, idx) in currentFeature.validations" :key="idx" class="fd-edge-item" style="background: #f6ffed; border-color: #b7eb8f; color: #389e0d;">
+                                        <i class="el-icon-success" style="color: #52c41a;"></i> {{ vl }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fd-footer">
+                            <div class="fd-footer-left">
+                                <span class="fd-footer-item"><i class="el-icon-position"></i> 路由：<span class="fd-route">{{ currentFeature.route }}</span></span>
+                            </div>
+                            <span class="fd-footer-item"><i class="el-icon-s-grid"></i> 要点数：{{ currentFeature.points.length }}</span>
+                        </div>
+                    </div>
+                </el-dialog>
+
                 <div class="content-area">
                     
                     <!-- 首页 -->
                     <div v-if="currentMenu === 'home'">
-                        <div class="welcome-page">
-                            <h1>欢迎使用SpaceX</h1>
-                            <p>会计师事务所数字化管理平台 - 项目状态与操作管理</p>
-                            <div class="welcome-stats">
-                                <div class="welcome-stat">
-                                    <div class="number">{{ projects.length }}</div>
-                                    <div class="label">我的项目</div>
+                        <div class="home-dashboard">
+                            <!-- 顶部欢迎区 -->
+                            <div class="home-welcome-bar">
+                                <div class="home-avatar">
+                                    <img src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" style="width: 48px; height: 48px; border-radius: 50%;" />
                                 </div>
-                                <div class="welcome-stat">
-                                    <div class="number">{{ pendingCount }}</div>
-                                    <div class="label">待处理</div>
-                                </div>
-                                <div class="welcome-stat">
-                                    <div class="number">{{ completedCount }}</div>
-                                    <div class="label">已完成</div>
-                                </div>
-                                <div class="welcome-stat">
-                                    <div class="number">{{ archivedCount }}</div>
-                                    <div class="label">已归档</div>
+                                <div class="home-greeting">
+                                    <div class="home-greeting-name">刘洋, 傍晚好!</div>
+                                    <div class="home-greeting-company">杭州知能财税科技有限公司</div>
                                 </div>
                             </div>
-                            <div style="margin-top: 40px;">
+
+                            <!-- 快捷统计卡片 -->
+                            <div class="home-quick-stats">
+                                <div class="home-stat-card">
+                                    <div class="home-stat-icon" style="background: #fff0f6; color: #eb2f96;"><i class="el-icon-s-check"></i></div>
+                                    <div class="home-stat-info">
+                                        <div class="home-stat-value">{{ approvalCount }}</div>
+                                        <div class="home-stat-label">我的审核</div>
+                                    </div>
+                                </div>
+                                <div class="home-stat-card">
+                                    <div class="home-stat-icon" style="background: #e6f7ff; color: #1890ff;"><i class="el-icon-s-order"></i></div>
+                                    <div class="home-stat-info">
+                                        <div class="home-stat-value">{{ projects.length }}</div>
+                                        <div class="home-stat-label">我的项目</div>
+                                    </div>
+                                </div>
+                                <div class="home-stat-card">
+                                    <div class="home-stat-icon" style="background: #f6ffed; color: #52c41a;"><i class="el-icon-s-promotion"></i></div>
+                                    <div class="home-stat-info">
+                                        <div class="home-stat-value">{{ initiatedCount }}</div>
+                                        <div class="home-stat-label">我发起的</div>
+                                    </div>
+                                </div>
+                                <div class="home-stat-card">
+                                    <div class="home-stat-icon" style="background: #fff7e6; color: #fa8c16;"><i class="el-icon-s-comment"></i></div>
+                                    <div class="home-stat-info">
+                                        <div class="home-stat-value">{{ ccCount }}</div>
+                                        <div class="home-stat-label">抄送我的</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 数据面板区 -->
+                            <div class="home-panels">
+                                <!-- 项目数量 -->
+                                <div class="home-panel">
+                                    <div class="home-panel-header">
+                                        <span class="home-panel-title">项目数量</span>
+                                        <el-select v-model="homeYear" size="mini" style="width: 80px;">
+                                            <el-option label="2026年" value="2026"></el-option>
+                                            <el-option label="2025年" value="2025"></el-option>
+                                        </el-select>
+                                    </div>
+                                    <div class="home-panel-body">
+                                        <div class="home-chart-placeholder">
+                                            <div class="home-donut">
+                                                <div class="home-donut-inner">{{ projects.length }}</div>
+                                            </div>
+                                            <div class="home-legend">
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #1890ff;"></span>其他 ({{ otherProjectCount }})</div>
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #52c41a;"></span>编制底稿 ({{ draftCount }})</div>
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #faad14;"></span>项目完成 ({{ completedCount }})</div>
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #f5222d;"></span>质控复核 ({{ reviewCount }})</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 我的审核 -->
+                                <div class="home-panel">
+                                    <div class="home-panel-header">
+                                        <span class="home-panel-title">我的审核</span>
+                                    </div>
+                                    <div class="home-panel-body">
+                                        <div class="home-chart-placeholder">
+                                            <div class="home-donut">
+                                                <div class="home-donut-inner">{{ approvalCount }}</div>
+                                            </div>
+                                            <div class="home-legend">
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #1890ff;"></span>报告报备 ({{ reportFilingCount }})</div>
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #52c41a;"></span>报告签发 ({{ reportIssueCount }})</div>
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #faad14;"></span>组内审核 ({{ teamReviewCount }})</div>
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #f5222d;"></span>质控复核 ({{ qualityReviewCount }})</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 重点监控 -->
+                                <div class="home-panel">
+                                    <div class="home-panel-header">
+                                        <span class="home-panel-title">重点监控</span>
+                                        <el-select v-model="homeYear" size="mini" style="width: 80px;">
+                                            <el-option label="2026年" value="2026"></el-option>
+                                        </el-select>
+                                    </div>
+                                    <div class="home-panel-body">
+                                        <div class="home-chart-placeholder">
+                                            <div class="home-donut">
+                                                <div class="home-donut-inner">{{ monitorCount }}</div>
+                                            </div>
+                                            <div class="home-legend">
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #1890ff;"></span>档案未归还 ({{ archiveUnreturned }})</div>
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #52c41a;"></span>纸质档案借阅 ({{ paperBorrowCount }})</div>
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #faad14;"></span>上链数量 ({{ blockchainCount }})</div>
+                                                <div class="home-legend-item"><span class="home-legend-dot" style="background: #f5222d;"></span>项目延期 ({{ delayedCount }})</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 客户/合同统计 -->
+                            <div class="home-section">
+                                <div class="home-section-header">
+                                    <span class="home-section-title">客户/合同统计</span>
+                                    <el-select v-model="homeYear" size="mini" style="width: 80px;">
+                                        <el-option label="2026年" value="2026"></el-option>
+                                    </el-select>
+                                </div>
+                                <div class="home-contract-stats">
+                                    <div class="home-contract-card">
+                                        <div class="home-contract-icon"><i class="el-icon-user-solid"></i></div>
+                                        <div class="home-contract-info">
+                                            <div class="home-contract-label">续约客户</div>
+                                            <div class="home-contract-value">{{ renewalCustomerCount }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="home-contract-card">
+                                        <div class="home-contract-icon"><i class="el-icon-s-data"></i></div>
+                                        <div class="home-contract-info">
+                                            <div class="home-contract-label">续约合同金额</div>
+                                            <div class="home-contract-value">{{ formatAmount(renewalAmount) }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="home-contract-card">
+                                        <div class="home-contract-icon"><i class="el-icon-circle-plus-outline"></i></div>
+                                        <div class="home-contract-info">
+                                            <div class="home-contract-label">新增客户</div>
+                                            <div class="home-contract-value">{{ newCustomerCount }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="home-contract-card">
+                                        <div class="home-contract-icon"><i class="el-icon-s-flag"></i></div>
+                                        <div class="home-contract-info">
+                                            <div class="home-contract-label">新增合同金额</div>
+                                            <div class="home-contract-value">{{ formatAmount(newContractAmount) }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="home-contract-card">
+                                        <div class="home-contract-icon"><i class="el-icon-remove-outline"></i></div>
+                                        <div class="home-contract-info">
+                                            <div class="home-contract-label">流失客户</div>
+                                            <div class="home-contract-value">{{ lostCustomerCount }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="home-contract-card">
+                                        <div class="home-contract-icon"><i class="el-icon-s-release"></i></div>
+                                        <div class="home-contract-info">
+                                            <div class="home-contract-label">流失合同金额</div>
+                                            <div class="home-contract-value">{{ formatAmount(lostContractAmount) }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 项目利润排行 -->
+                            <div class="home-section">
+                                <div class="home-section-header">
+                                    <span class="home-section-title">项目利润新增排行</span>
+                                    <div>
+                                        <el-button type="text" size="mini">切换历史利润排行</el-button>
+                                        <el-button type="text" size="mini">更多</el-button>
+                                    </div>
+                                </div>
+                                <div class="home-ranking-list">
+                                    <div v-for="(item, index) in projectProfitRank" :key="index" class="home-ranking-item">
+                                        <span class="home-ranking-num">{{ item.rank }}</span>
+                                        <span class="home-ranking-name">{{ item.name }}</span>
+                                        <span class="home-ranking-value">{{ item.profit }}元</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 员工情况 -->
+                            <div class="home-section">
+                                <div class="home-section-header">
+                                    <span class="home-section-title">员工情况</span>
+                                </div>
+                                <div class="home-employee-stats">
+                                    <div class="home-employee-chart">
+                                        <div class="home-employee-chart-title">证书情况</div>
+                                        <div class="home-donut-small">
+                                            <div class="home-donut-inner-small">{{ totalEmployeeCount }}</div>
+                                        </div>
+                                        <div class="home-employee-legend">
+                                            <div class="home-legend-item"><span class="home-legend-dot" style="background: #1890ff;"></span>离职 ({{ resignedCount }})</div>
+                                            <div class="home-legend-item"><span class="home-legend-dot" style="background: #52c41a;"></span>在职 ({{ activeEmployeeCount }})</div>
+                                            <div class="home-legend-item"><span class="home-legend-dot" style="background: #faad14;"></span>注册会计师 ({{ cpaCount }})</div>
+                                            <div class="home-legend-item"><span class="home-legend-dot" style="background: #f5222d;"></span>其他 ({{ otherCertCount }})</div>
+                                        </div>
+                                    </div>
+                                    <div class="home-employee-chart">
+                                        <div class="home-employee-chart-title">项目数量Top10</div>
+                                        <div class="home-bar-chart">
+                                            <div v-for="(emp, idx) in employeeProjectTop10" :key="idx" class="home-bar-item">
+                                                <span class="home-bar-name">{{ emp.name }}</span>
+                                                <div class="home-bar-track">
+                                                    <div class="home-bar-fill" :style="{ width: emp.percent + '%', background: emp.color }"></div>
+                                                </div>
+                                                <span class="home-bar-value">{{ emp.count }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 快捷入口 -->
+                            <div style="text-align: center; padding: 30px 0;">
                                 <el-button type="primary" size="large" icon="el-icon-s-order" @click="goPage('my-project', '管理中心 / 工作待办 / 我的项目')">
                                     进入我的项目
                                 </el-button>
-                            </div>
-                        </div>
-                    </div>
+                                <el-button type="success" size="large" icon="el-icon-s-check" @click="goPage('my-approval', '管理中心 / 工作待办 / 我的审核')" style="margin-left: 16px;">
+                                    进入我的审核
+                                </el-button>
+                </div>
 
+
+                    
                     <!-- 我的项目列表 -->
-                    <div v-if="currentMenu === 'my-project' || currentMenu === 'project-operation'">
+                    <div v-if="currentMenu === 'my-project'">
                         <div class="stat-cards">
                             <div class="stat-card blue">
                                 <div class="title">我的项目</div>
@@ -561,7 +957,7 @@
 
                     <!-- 新建项目弹窗 -->
                     <el-dialog title="新建项目" :visible.sync="dialogVisible" width="800px" :close-on-click-modal="false" custom-class="add-project-dialog"
-                        v-if="currentMenu === 'my-project' || currentMenu === 'project-operation'"
+                        v-if="currentMenu === 'my-project'"
                     >
                         <el-form :model="form" label-width="120px" :rules="formRules" ref="projectForm"
                             style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px;"
@@ -4060,8 +4456,8 @@
 
                 </div>
             </div>
+        </div>
     </div>
-</div>
 
     <script>
         const STATUS_CONFIG = {
@@ -4152,6 +4548,29 @@
             data: {
                 currentMenu: 'home',
                 breadcrumb: '首页',
+                currentRole: { key: 'admin', name: '管理员', icon: 'el-icon-s-custom' },
+                viewRoles: [
+                    { key: 'admin', name: '管理员', icon: 'el-icon-s-custom' },
+                    { key: 'partner', name: '合伙人', icon: 'el-icon-s-cooperation' },
+                    { key: 'pm', name: '项目经理', icon: 'el-icon-s-management' }
+                ],
+                roleData: {
+                    admin: {
+                        homeStats: { projects: 46, pending: 35, completed: 0, archived: 0, approval: 31, monitor: 343 },
+                        showPanels: ['project-count', 'approval', 'monitor', 'profit-rank', 'contract-stats', 'employee'],
+                        quickStats: { approval: 35, projects: 265, initiated: 0, cc: 31 }
+                    },
+                    partner: {
+                        homeStats: { projects: 268, pending: 0, completed: 0, archived: 0, approval: 0, monitor: 0 },
+                        showPanels: ['work-stats', 'contract-amount', 'customer-overview', 'employee'],
+                        quickStats: { approval: 0, projects: 268, initiated: 0, cc: 0 }
+                    },
+                    pm: {
+                        homeStats: { projects: 265, pending: 35, completed: 0, archived: 0, approval: 35, monitor: 0 },
+                        showPanels: ['quick-stats', 'contract-stats', 'annual-report', 'document-issuance', 'commission'],
+                        quickStats: { approval: 35, projects: 265, initiated: 0, cc: 31 }
+                    }
+                },
                 currentProjectId: 1,
                 expandedMenus: {
                     accounting: false,
@@ -4436,7 +4855,422 @@
                 projectOpsPage: 1,
                 projectOpsPageSize: 10,
 
-                // 导入弹窗
+                // 功能需求标签
+                featureDialogVisible: false,
+                currentFeatureKey: '',
+                currentFeature: null,
+                projectOpFeatures: [
+                    {
+                        key: 'new-project',
+                        label: '新建项目',
+                        icon: 'el-icon-plus',
+                        tagClass: 'ft-new',
+                        iconBg: '#e6f7ff',
+                        iconColor: '#1890ff',
+                        bannerBg: 'linear-gradient(135deg, #e6f7ff 0%, #f0f5ff 100%)',
+                        module: '项目管理',
+                        desc: '通过弹窗表单创建新项目，需选择关联合同（支持快捷新建合同），填写项目名称、业务类型、项目类型、风险等级、项目经理、项目成员、时间范围、所属期间等多项信息。系统自动生成项目编号，支持"保存并新建"连续操作。',
+                        points: [
+                            '弹窗表单（800px宽），字段联动校验',
+                            '合同选择器，支持"新建合同"快捷入口跳转',
+                            '项目名称要求与报告名称保持一致（前端提示）',
+                            '业务类型下拉：报表审计/税务审计/专项审计/验资/咨询',
+                            '项目类型：年报/半年报/季报等',
+                            '风险等级：高/中/低，影响后续质控复核流程配置',
+                            '项目经理/项目成员人员选择器（支持搜索）',
+                            '所属期间选择、起止日期范围',
+                            '保存后自动生成项目编号（规则可配置）',
+                            '"保存并新建"按钮支持连续创建'
+                        ],
+                        edgeCases: ['合同未选择时禁用提交', '项目名称重复校验', '日期范围不合法提示', '风险等级为高时需二次确认'],
+                        validations: ['合同必填校验', '项目名称必填且≤100字符', '日期范围：开始≤结束', '业务类型必选', '项目经理必选'],
+                        route: '/myExamine/projectOperation → 新建项目弹窗',
+                        priority: 'P0 · 核心功能',
+                        count: '10'
+                    },
+                    {
+                        key: 'import-project',
+                        label: '批量导入',
+                        icon: 'el-icon-upload2',
+                        tagClass: 'ft-import',
+                        iconBg: '#fff1f0',
+                        iconColor: '#f5222d',
+                        bannerBg: 'linear-gradient(135deg, #fff1f0 0%, #fff2e8 100%)',
+                        module: '项目管理',
+                        desc: '支持通过Excel模板批量导入项目数据，包含下载模板→上传文件→进度条→结果展示的完整流程。导入失败时支持下载错误文件查看具体原因并修正后重试。',
+                        points: [
+                            '下载标准导入模板（.xlsx格式）',
+                            '上传Excel文件，支持拖拽上传',
+                            '实时进度条展示导入进度（WebSocket）',
+                            '导入结果汇总：成功数/失败数/跳过数',
+                            '错误数据可下载错误文件查看明细行号及原因',
+                            '支持重复导入和数据覆盖策略选择（覆盖/跳过/报错）',
+                            '导入上限5000条/次'
+                        ],
+                        edgeCases: ['文件格式非xlsx拒绝上传', '文件大小超过10MB限制', '空文件校验', '重复项目编号处理策略', '部分行失败时已成功行不入库'],
+                        validations: ['文件类型校验(.xlsx)', '文件大小≤10MB', '必填列非空校验', '数据格式校验（日期/数字/枚举）'],
+                        route: '/myExamine/projectOperation → 导入弹窗',
+                        priority: 'P1 · 重要功能',
+                        count: '7'
+                    },
+                    {
+                        key: 'search-filter',
+                        label: '搜索筛选',
+                        icon: 'el-icon-search',
+                        tagClass: 'ft-search',
+                        iconBg: '#f6ffed',
+                        iconColor: '#52c41a',
+                        bannerBg: 'linear-gradient(135deg, #f6ffed 0%, #fcffe6 100%)',
+                        module: '项目管理',
+                        desc: '支持多维度组合筛选，包括关键字模糊搜索、业务类型下拉、项目状态下拉（覆盖全部38种业务流程状态）、日期范围选择，所有筛选条件可组合使用，支持一键重置。',
+                        points: [
+                            '关键字模糊搜索：项目名称/编号/客户名称',
+                            '业务类型筛选：报表审计/税务审计/专项审计/验资/咨询',
+                            '项目状态筛选：覆盖全部38种业务流程状态',
+                            '日期范围选择器：支持起止日期精确筛选',
+                            '一键重置所有筛选条件',
+                            '筛选结果实时更新统计卡片数据',
+                            '多条件组合AND逻辑'
+                        ],
+                        edgeCases: ['搜索关键字前后空格自动去除', '日期范围跨年查询', '状态筛选为空时默认显示全部', '筛选结果为空时展示空状态'],
+                        validations: ['关键字长度限制50字符', '日期范围≤3年', '搜索频率节流（300ms）'],
+                        route: '/myExamine/projectOperation → 搜索区域',
+                        priority: 'P0 · 核心功能',
+                        count: '7'
+                    },
+                    {
+                        key: 'field-setting',
+                        label: '字段设置',
+                        icon: 'el-icon-setting',
+                        tagClass: 'ft-filter',
+                        iconBg: '#fff7e6',
+                        iconColor: '#fa8c16',
+                        bannerBg: 'linear-gradient(135deg, #fff7e6 0%, #fffbe6 100%)',
+                        module: '项目管理',
+                        desc: '用户可自定义表格显示列，通过勾选控制列的显示隐藏，支持拖拽排序调整列顺序，设置持久化保存到用户偏好。提供恢复默认设置功能。',
+                        points: [
+                            '弹窗列设置面板，所有可用列展示',
+                            '勾选/取消控制列显示隐藏',
+                            '拖拽排序调整列顺序',
+                            '设置项持久化到localStorage',
+                            '一键恢复默认设置',
+                            '固定列（序号/操作列）不可隐藏'
+                        ],
+                        edgeCases: ['最少保留3列不可全部隐藏', '列顺序保存冲突处理', '多终端设置同步'],
+                        validations: ['至少3列可见', '固定列不可操作'],
+                        route: '/myExamine/projectOperation → 字段设置',
+                        priority: 'P2 · 体验优化',
+                        count: '6'
+                    },
+                    {
+                        key: 'export',
+                        label: '导出Excel',
+                        icon: 'el-icon-download',
+                        tagClass: 'ft-export',
+                        iconBg: '#f9f0ff',
+                        iconColor: '#722ed1',
+                        bannerBg: 'linear-gradient(135deg, #f9f0ff 0%, #f0f5ff 100%)',
+                        module: '项目管理',
+                        desc: '将当前筛选后的项目列表导出为Excel文件(.xlsx)，包含所有当前可见列数据。支持大数据量分批导出，导出过程有进度提示。',
+                        points: [
+                            '导出当前筛选结果（非全量）',
+                            '支持自定义导出列选择',
+                            'Excel格式(.xlsx)输出',
+                            '大数据量（>1000条）分批导出',
+                            '导出进度条提示',
+                            '文件名自动带时间戳'
+                        ],
+                        edgeCases: ['空数据导出提示', '超10000条分Sheet', '导出超时处理（5分钟）', '浏览器不支持自动下载提示'],
+                        validations: ['导出数据量>0', '文件名合法性校验'],
+                        route: '/myExamine/projectOperation → 导出按钮',
+                        priority: 'P1 · 重要功能',
+                        count: '6'
+                    },
+                    {
+                        key: 'project-list',
+                        label: '项目列表',
+                        icon: 'el-icon-s-grid',
+                        tagClass: 'ft-crud',
+                        iconBg: '#e6fffb',
+                        iconColor: '#13c2c2',
+                        bannerBg: 'linear-gradient(135deg, #e6fffb 0%, #e6f7ff 100%)',
+                        module: '项目管理',
+                        desc: '展示项目运营完整列表，包含项目编号、名称、客户信息、信用代码、业务类型、关联合同、合同金额、当前状态（38种）、流程进度条、项目经理、成员、时间信息、报告文号、报告类型、风险等级、优先级、创建/更新时间等20+字段。固定首尾列支持横向滚动浏览。',
+                        points: [
+                            '20+字段完整展示（可自定义显隐）',
+                            '项目编号列、操作列固定，中间列横向滚动',
+                            '38种业务流程状态彩色标签展示',
+                            '流程进度条（7步主流程）百分比可视化',
+                            '合同金额红色高亮、千分位格式化',
+                            '风险等级/优先级彩色Tag标签',
+                            '项目名称/编号可点击跳转详情页',
+                            '分页器：支持10/20/50条/页切换',
+                            '行hover高亮、当前行标记',
+                            '文本超长自动省略+tooltip显示全文本'
+                        ],
+                        edgeCases: ['分页切换后滚动条回到顶部', '排序与筛选条件联动', '数据更新后保持当前分页', '空数据表格展示空状态图'],
+                        validations: ['分页参数合法性', '排序字段白名单校验'],
+                        route: '/myExamine/projectOperation → 表格区域',
+                        priority: 'P0 · 核心功能',
+                        count: '20+'
+                    },
+                    {
+                        key: 'project-detail',
+                        label: '项目详情',
+                        icon: 'el-icon-view',
+                        tagClass: 'ft-detail',
+                        iconBg: '#f0f5ff',
+                        iconColor: '#2f54eb',
+                        bannerBg: 'linear-gradient(135deg, #f0f5ff 0%, #e6f7ff 100%)',
+                        module: '项目管理',
+                        desc: '点击项目名称或编号进入详情页，包含8个子Tab页签，覆盖项目全生命周期管理：资料库、知识库、取证、任务、团队、变更、复核日志、操作日志。',
+                        points: [
+                            '项目资料库：上传/下载/预览/删除/移动/复制/回收站/二维码传输',
+                            '知识库：项目组知识库文件浏览与检索',
+                            '取证管理：外部取证发起、导入取证上传',
+                            '任务管理：卡片/分组视图切换、创建/编辑任务、工时记录',
+                            '项目团队：成员列表、角色分配、权限管理',
+                            '项目变更：变更记录时间线查看',
+                            '复核日志：质控复核流程详细记录',
+                            '操作日志：用户操作轨迹审计追踪'
+                        ],
+                        edgeCases: ['无权限Tab隐藏而非禁用', '大量文件加载性能优化（分页）', '日志数据按时间倒序分页', '项目已终止时详情只读'],
+                        validations: ['项目ID有效性校验', '权限校验决定Tab可见性'],
+                        route: '/myExamine/projectDetailV2',
+                        priority: 'P0 · 核心功能',
+                        count: '8'
+                    },
+                    {
+                        key: 'edit-project',
+                        label: '编辑项目',
+                        icon: 'el-icon-edit',
+                        tagClass: 'ft-crud',
+                        iconBg: '#e6fffb',
+                        iconColor: '#13c2c2',
+                        bannerBg: 'linear-gradient(135deg, #e6fffb 0%, #f6ffed 100%)',
+                        module: '项目管理',
+                        desc: '行内编辑项目信息，通过弹窗修改项目基本字段、状态、成员等。编辑操作自动记录到操作日志，部分关键字段（如合同金额）修改需要二次确认。',
+                        points: [
+                            '编辑弹窗预填当前值',
+                            '修改项目基本信息和状态',
+                            '变更项目经理和项目成员',
+                            '操作日志自动记录修改前后对比',
+                            '关键字段修改需二次确认弹窗',
+                            '保存失败时保留用户填写内容不丢失'
+                        ],
+                        edgeCases: ['并发编辑冲突提示', '项目状态流转合法性校验', '已归档项目禁止编辑', '编辑中断（网络异常）恢复'],
+                        validations: ['修改字段必填校验', '状态流转规则校验', '权限校验（非项目经理不可编辑）'],
+                        route: '/myExamine/projectOperation → 编辑操作',
+                        priority: 'P1 · 重要功能',
+                        count: '6'
+                    },
+                    {
+                        key: 'team-setup',
+                        label: '团队设置',
+                        icon: 'el-icon-user',
+                        tagClass: 'ft-team',
+                        iconBg: '#fcffe6',
+                        iconColor: '#a0d911',
+                        bannerBg: 'linear-gradient(135deg, #fcffe6 0%, #f6ffed 100%)',
+                        module: '项目管理',
+                        desc: '通过弹窗管理项目团队组织架构，树形结构展示岗位-人员关系，支持添加/编辑/删除岗位节点，委派员工到指定岗位，一人可兼任多个岗位。',
+                        points: [
+                            '树形结构：岗位→人员层级展示',
+                            '添加/编辑/删除岗位节点',
+                            '委派/移除员工到指定岗位',
+                            '一人可兼任多个岗位',
+                            '岗位排序（拖拽）',
+                            '组织架构实时同步到项目成员列表'
+                        ],
+                        edgeCases: ['删除有子岗位的节点需先移除子节点', '移除项目经理岗位需先指定继任者', '至少保留一个项目经理'],
+                        validations: ['岗位名称唯一性校验', '人员在职状态校验', '项目经理岗位不可为空'],
+                        route: '/myExamine/projectOperation → 团队设置弹窗(614px)',
+                        priority: 'P1 · 重要功能',
+                        count: '6'
+                    },
+                    {
+                        key: 'flow-status',
+                        label: '流程状态管理',
+                        icon: 'el-icon-s-flag',
+                        tagClass: 'ft-flow',
+                        iconBg: '#fff0f6',
+                        iconColor: '#eb2f96',
+                        bannerBg: 'linear-gradient(135deg, #fff0f6 0%, #f9f0ff 100%)',
+                        module: '项目管理',
+                        desc: '覆盖38种业务流程状态，包含完整的7步主流程（未开始→编制底稿→质控复核→报告签发→报告领号/盖章/报备→归档登记→项目档案），以及多种异常流程状态（已终止/报告修改/底稿修改/补充资料/报告作废等），每种状态有独立颜色标签和操作权限。',
+                        points: [
+                            '7步标准主流程管理（线性推进）',
+                            '38种细化状态全覆盖（含审核子状态）',
+                            '状态颜色标签区分（8种颜色映射）',
+                            '流程进度条百分比可视化展示',
+                            '支持异常流程：终止/修改/作废/补充',
+                            '每种状态对应独立操作权限和可用按钮',
+                            '状态变更记录到操作日志',
+                            '流程节点可回退（如复核拒绝退回编制）'
+                        ],
+                        edgeCases: ['异常状态（终止/作废）不影响统计', '状态回退后流程进度同步更新', '并发状态变更冲突处理', '终止项目不可恢复需二次确认'],
+                        validations: ['状态流转路径合法性（不可跳跃）', '操作权限与当前状态匹配', '审核人不可审核自己提交的流程'],
+                        route: '/myExamine/projectOperation → 状态列',
+                        priority: 'P0 · 核心功能',
+                        count: '38'
+                    },
+                    {
+                        key: 'batch-op',
+                        label: '批量操作',
+                        icon: 'el-icon-s-operation',
+                        tagClass: 'ft-batch',
+                        iconBg: '#fffbe6',
+                        iconColor: '#d4b106',
+                        bannerBg: 'linear-gradient(135deg, #fffbe6 0%, #fff7e6 100%)',
+                        module: '项目管理',
+                        desc: '支持多选项目后执行批量操作，包括批量删除、批量修改项目经理、批量启动/终止等。批量操作前展示影响范围确认弹窗。',
+                        points: [
+                            '表格多选（Checkbox列）',
+                            '批量删除项目（二次确认）',
+                            '批量修改项目经理',
+                            '批量启动/终止项目',
+                            '操作前展示影响范围和数量确认弹窗',
+                            '批量操作结果汇总（成功/失败数）'
+                        ],
+                        edgeCases: ['已归档项目不可批量操作', '跨状态批量操作需分类提示', '批量操作部分失败回滚策略'],
+                        validations: ['至少选择1条记录', '操作权限校验', '状态合法性校验（已终止不可启动）'],
+                        route: '/myExamine/projectOperation → 批量操作',
+                        priority: 'P2 · 体验优化',
+                        count: '6'
+                    },
+                    {
+                        key: 'contract-link',
+                        label: '合同关联',
+                        icon: 'el-icon-document',
+                        tagClass: 'ft-detail',
+                        iconBg: '#f0f5ff',
+                        iconColor: '#2f54eb',
+                        bannerBg: 'linear-gradient(135deg, #f0f5ff 0%, #e6f7ff 100%)',
+                        module: '项目管理',
+                        desc: '每个项目关联合同，支持查看合同详情弹窗（合同金额/签约方/有效期等），合同金额在列表中格式化展示。新建项目时可快捷新建合同，操作列提供合同查看入口。',
+                        points: [
+                            '项目-合同一对一关联绑定',
+                            '合同金额展示与千分位格式化',
+                            '新建项目时快捷创建合同（弹窗内跳转）',
+                            '操作列查看合同详情（抽屉/弹窗）',
+                            '合同到期自动提醒',
+                            '合同编号点击跳转合同管理页面'
+                        ],
+                        edgeCases: ['合同被其他项目关联时的提示', '合同过期后项目仍可关联', '合同金额为0的展示'],
+                        validations: ['合同有效性校验（未过期）', '合同归属校验（所属客户匹配）'],
+                        route: '/myExamine/projectOperation → 合同操作',
+                        priority: 'P1 · 重要功能',
+                        count: '6'
+                    }
+                ],
+
+                // 页面功能需求汇总
+                pageFeatures: {
+                    'my-project': [
+                        { key: 'mp-list', label: '我的项目列表', icon: 'el-icon-s-order', tagClass: 'ft-crud', iconBg: '#e6fffb', iconColor: '#13c2c2', bannerBg: 'linear-gradient(135deg, #e6fffb 0%, #e6f7ff 100%)', module: '工作待办', desc: '展示当前用户参与的全部项目列表，支持按关键字、项目状态筛选，点击项目名称可进入项目详情页查看完整信息。表格固定首尾列支持横向滚动。', points: ['统计卡片：项目总数/待处理/已完成/已归档实时统计', '关键字模糊搜索（项目名称/编号/委托方）', '项目状态下拉筛选（覆盖全部38+种状态）', '表格展示：项目名称/合同名称/委托方/业务类型/项目类型/状态/经理/编号/风险等级', '项目名称可点击跳转项目详情页', '38+种状态颜色标签映射（8种颜色）', '风险等级文字展示', '超长文本自动省略+tooltip显示全文本', '分页：支持10/20/50条/页切换'], edgeCases: ['无项目时展示空状态图', '项目状态颜色映射：未开始=灰/待处理=橙/进行中=蓝/复核=紫/完成=绿/拒绝=红/归档=青/终止=灰', '超长文本省略+tooltip', '分页切换后滚动条回到顶部'], validations: ['关键字长度限制50字符', '分页参数合法性', '搜索频率节流（300ms）'], route: '/myExamine/myProject', priority: 'P0 · 核心功能', count: '9' },
+                        { key: 'mp-search', label: '列表搜索', icon: 'el-icon-search', tagClass: 'ft-search', iconBg: '#f6ffed', iconColor: '#52c41a', bannerBg: 'linear-gradient(135deg, #f6ffed 0%, #fcffe6 100%)', module: '工作待办', desc: '支持关键字模糊搜索和项目状态下拉组合筛选，搜索结果实时更新列表和统计卡片。', points: ['关键字输入框（placeholder: 项目名称/编号/委托方）', '前缀搜索图标', '实时模糊匹配（无需点击查询即可筛选）', '搜索结果实时更新统计卡片数据', '一键重置所有筛选条件', '搜索输入300ms节流防抖', '空搜索展示全部数据'], edgeCases: ['关键字前后空格自动去除', '特殊字符转义处理', '搜索无结果展示空状态提示', '中英文混合搜索'], validations: ['关键字长度≤50字符', '防注入处理'], route: '/myExamine/myProject → 搜索区域', priority: 'P0 · 核心功能', count: '7' },
+                        { key: 'mp-status-filter', label: '项目状态筛选', icon: 'el-icon-finished', tagClass: 'ft-flow', iconBg: '#fff0f6', iconColor: '#eb2f96', bannerBg: 'linear-gradient(135deg, #fff0f6 0%, #f9f0ff 100%)', module: '工作待办', desc: '通过下拉选择器筛选项目状态，覆盖全部38+种业务流程状态，包含7步主流程状态和多种异常状态，支持一键清除筛选。', points: ['下拉选择器展示全部38+种状态', '支持clearable一键清除', '状态选项列表按流程阶段分组展示', '包含7步主流程：未开始→编制底稿→质控复核→报告签发→报告领号/盖章/报备→归档登记→项目档案', '包含异常状态：已终止/报告修改/底稿修改/补充资料/报告作废', '与关键字搜索组合AND逻辑', '筛选后统计卡片数据同步更新', '表格标题显示总条数（实时计算）'], edgeCases: ['状态列表动态加载（接口获取）', '选择状态后无匹配数据展示空状态', '清除筛选恢复全量数据', '新增状态类型时下拉自动更新'], validations: ['状态值合法性（枚举白名单）', '不合法状态值容错处理'], route: '/myExamine/myProject → 状态筛选', priority: 'P0 · 核心功能', count: '8' },
+                        { key: 'mp-export', label: '导出Excel', icon: 'el-icon-download', tagClass: 'ft-export', iconBg: '#f9f0ff', iconColor: '#722ed1', bannerBg: 'linear-gradient(135deg, #f9f0ff 0%, #f0f5ff 100%)', module: '工作待办', desc: '将当前筛选后的项目列表导出为Excel文件(.xlsx)，包含所有当前可见列数据。导出按钮位于表格标题栏右侧。', points: ['导出当前筛选结果（非全量数据）', '包含所有可见列字段', 'Excel格式(.xlsx)输出', '导出按钮位于表格标题栏右侧', '大数据量（>1000条）分批导出', '文件名自动带时间戳（如：项目列表_20260603.xlsx）'], edgeCases: ['空数据导出提示"暂无数据可导出"', '超10000条自动分Sheet', '导出超时处理（5分钟）', '浏览器不支持自动下载时提示手动保存'], validations: ['导出数据量>0', '文件名合法性校验（不含特殊字符）'], route: '/myExamine/myProject → 导出按钮', priority: 'P1 · 重要功能', count: '6' },
+                        { key: 'mp-edit', label: '编辑项目', icon: 'el-icon-edit', tagClass: 'ft-crud', iconBg: '#e6fffb', iconColor: '#13c2c2', bannerBg: 'linear-gradient(135deg, #e6fffb 0%, #f6ffed 100%)', module: '工作待办', desc: '操作列"编辑"按钮，点击后可修改项目基本信息（弹窗或行内编辑），编辑操作记录到操作日志。', points: ['操作列"编辑"文字按钮（mini尺寸）', '点击弹出消息提示或编辑弹窗', '支持修改项目基本信息', '修改项目状态和流程进度', '变更项目经理和项目成员', '操作日志自动记录修改内容', '关键字段修改需二次确认'], edgeCases: ['已归档/已终止项目禁止编辑', '并发编辑冲突提示"数据已被他人修改"', '编辑中断（网络异常）保留填写内容', '无编辑权限时按钮隐藏或禁用'], validations: ['编辑权限校验（项目经理/管理员）', '必填字段校验', '状态流转合法性校验'], route: '/myExamine/myProject → 编辑操作', priority: 'P1 · 重要功能', count: '7' },
+                        { key: 'mp-handover', label: '项目交接', icon: 'el-icon-sort', tagClass: 'ft-detail', iconBg: '#f0f5ff', iconColor: '#2f54eb', bannerBg: 'linear-gradient(135deg, #f0f5ff 0%, #e6f7ff 100%)', module: '工作待办', desc: '操作列"项目交接"按钮，将项目从当前负责人交接给其他人员，需经过交接审核流程（在我的审核-项目交接Tab中审批）。', points: ['操作列"项目交接"文字按钮（mini尺寸）', '点击发起交接流程', '选择交接目标人员（人员选择器）', '填写交接原因和说明', '发起后进入"我的审核-项目交接"Tab等待审批', '交接审核通过后项目自动变更负责人', '交接记录写入操作日志和项目变更记录', '交接期间项目状态冻结不可操作'], edgeCases: ['交接目标人员不可为当前负责人', '交接目标人员需有项目权限', '交接被拒绝后可重新发起', '多个项目同时交接互不影响', '交接期间原负责人仍可查看但不可编辑'], validations: ['交接目标人员必选', '交接原因必填（≤500字）', '交接目标人员在职状态校验', '项目状态允许交接校验（已终止不可交接）'], route: '/myExamine/myProject → 项目交接操作 → 审核路径: /myExamine/toBeReviewed(项目交接Tab)', priority: 'P1 · 重要功能', count: '8' },
+                        { key: 'mp-add', label: '新建项目', icon: 'el-icon-plus', tagClass: 'ft-new', iconBg: '#e6f7ff', iconColor: '#1890ff', bannerBg: 'linear-gradient(135deg, #e6f7ff 0%, #f0f5ff 100%)', module: '工作待办', desc: '通过弹窗表单创建新项目，两列布局表单，支持选择合同、填写项目基本信息、设置风险等级和项目成员。弹窗800px宽。', points: ['弹窗800px宽，两列grid布局', '合同名称选择（下拉搜索）', '被服务单位/业务类型/项目经理选择', '项目名称全宽输入（与报告名称一致）', '项目编号支持自动生成按钮', '时间范围/所属行业/行业明细', '分配金额/经理提成(%)', '项目类型/风险等级/合作方选择', '是否出具报告单选', '"保存并新增"连续创建', '表单校验（必填项红星标记）'], edgeCases: ['合同未选择时禁用保存', '项目名称重复校验', '金额输入仅允许数字和小数点', '日期选择范围限制（不可选过去日期）', '风险等级选择"高"时二次确认提示'], validations: ['合同必填', '项目名称必填≤100字', '日期范围合法（开始≤结束）', '金额≥0', '提成比例0-100%'], route: '/myExamine/myProject → 新建项目弹窗(800px)', priority: 'P0 · 核心功能', count: '11' }
+                    ],
+                    'my-approval': [
+                        { key: 'ma-tabs', label: '审核类型Tab', icon: 'el-icon-menu', tagClass: 'ft-flow', iconBg: '#fff0f6', iconColor: '#eb2f96', bannerBg: 'linear-gradient(135deg, #fff0f6 0%, #f9f0ff 100%)', module: '工作待办', desc: '9个审核类型Tab动态切换（质控复核/报告签发/报告报备/报告修改/归档登记/补充资料/底稿修改/项目交接/用章申请），每个Tab显示待处理数量角标。', points: ['9个审核类型Tab动态渲染', '每个Tab显示待处理数量badge', 'Tab切换保留各自筛选条件', '质控复核Tab支持进入项目复核/查看项目信息', '报告报备Tab支持新旧两种审核弹窗', '用章申请Tab按印章类型分子Tab切换'], edgeCases: ['无待审核数据时badge隐藏', 'Tab切换时重置分页到第1页', '多个Tab共用审核列表但字段不同'], validations: ['Tab索引合法性校验'], route: '/myExamine/toBeReviewed', priority: 'P0 · 核心功能', count: '6' },
+                        { key: 'ma-list', label: '审核列表', icon: 'el-icon-s-grid', tagClass: 'ft-crud', iconBg: '#e6fffb', iconColor: '#13c2c2', bannerBg: 'linear-gradient(135deg, #e6fffb 0%, #f6ffed 100%)', module: '工作待办', desc: '展示各类审核任务列表，支持多维度筛选（关键字/业务类型/复核状态/日期范围），操作列根据审核状态动态显示通过/拒绝/审核中按钮。', points: ['统计卡片：待审核/审核中/已通过/已拒绝', '关键字+业务类型+复核状态+日期范围组合筛选', '20+字段表格（项目名称/委托方/业务类型/复核状态等）', '操作列按钮根据状态动态显示', '项目信息抽屉/合同信息抽屉/客户信息抽屉', '审核流程弹窗（展示审核步骤）', '历史记录切换', '字段设置（自定义列）', '分页：10/20/50条/页'], edgeCases: ['审核已完成不可再次操作', '审核拒绝需填写原因', '审核人与申请人不可为同一人'], validations: ['审核操作权限校验', '必填审核意见校验'], route: '/myExamine/toBeReviewed', priority: 'P0 · 核心功能', count: '9' }
+                    ],
+                    'customer': [
+                        { key: 'cu-list', label: '客户列表', icon: 'el-icon-s-custom', tagClass: 'ft-crud', iconBg: '#e6fffb', iconColor: '#13c2c2', bannerBg: 'linear-gradient(135deg, #e6fffb 0%, #e6f7ff 100%)', module: '客户管理', desc: '展示全部客户信息列表，20+字段完整展示，支持多维度筛选和CRUD操作。', points: ['统计卡片：客户总数/活跃客户/潜在客户/本月新增', '关键字模糊搜索（名称/统一社会信用代码）', '客户类型/状态下拉筛选', '20+字段表格（名称/信用代码/类型/行业/规模/注册资本/法人等）', '操作列：查看/编辑/合同/删除', '客户详情弹窗（el-descriptions组件）', '新增/编辑客户弹窗（双列表单）', '导出Excel', '分页：10/20/50条/页'], edgeCases: ['删除客户前校验是否有关联合同/项目', '信用代码格式校验（18位）', '客户名称唯一性校验'], validations: ['客户名称必填', '信用代码格式18位', '联系电话格式', '邮箱格式', '注册资本≥0'], route: '/myExamine/customerInfo', priority: 'P0 · 核心功能', count: '9' },
+                        { key: 'cu-detail', label: '客户详情', icon: 'el-icon-view', tagClass: 'ft-detail', iconBg: '#f0f5ff', iconColor: '#2f54eb', bannerBg: 'linear-gradient(135deg, #f0f5ff 0%, #e6f7ff 100%)', module: '客户管理', desc: '点击查看客户完整信息，以el-descriptions组件双列展示全部字段，支持快捷编辑。', points: ['el-descriptions双列边框布局', '展示全部20+客户字段', '底部按钮：关闭/编辑（跳转编辑弹窗）', '客户状态颜色标签'], edgeCases: ['客户被删除后详情页提示失效', '并发编辑冲突提示'], validations: ['客户ID有效性校验'], route: '/myExamine/customerInfo → 客户详情弹窗', priority: 'P1 · 重要功能', count: '4' }
+                    ],
+                    'contract': [
+                        { key: 'ct-list', label: '合同列表', icon: 'el-icon-notebook-2', tagClass: 'ft-crud', iconBg: '#e6fffb', iconColor: '#13c2c2', bannerBg: 'linear-gradient(135deg, #e6fffb 0%, #f6ffed 100%)', module: '合同管理', desc: '展示全部合同信息列表，支持多维度筛选，展示合同金额/大写金额/收付款信息等。', points: ['统计卡片：合同总数/执行中/待签订/本月到期', '关键字搜索（合同名称/编号/客户名称）', '合同类型/状态下拉筛选', '25+字段（合同编号/名称/客户/类型/金额/大写金额/付款方式等）', '合同金额千分位格式化', '金额大写自动转换', '收款/未收款金额统计', '操作列：查看/编辑/项目（跳转关联合同项目）', '分页：10/20/50条/页'], edgeCases: ['合同到期自动提醒', '合同金额为0的展示', '合同编号自动生成规则'], validations: ['合同名称必填', '金额≥0', '日期范围合法（开始≤结束）', '合同编号唯一性'], route: '/myExamine/contract', priority: 'P0 · 核心功能', count: '9' }
+                    ],
+                    'data-collect': [
+                        { key: 'dc-entry', label: '数据采集入口', icon: 'el-icon-folder-opened', tagClass: 'ft-new', iconBg: '#e6f7ff', iconColor: '#1890ff', bannerBg: 'linear-gradient(135deg, #e6f7ff 0%, #f0f5ff 100%)', module: '数据准备', desc: '数据采集功能入口页，以3张卡片展示三种数据类型（财务数据/发票数据/资金流水），点击进入对应采集子页面。', points: ['3张卡片入口（财务数据/发票数据/资金流水）', '每张卡片展示已导入账套数量', '卡片点击跳转子页面', '卡片hover动效（上浮+阴影）', '不同颜色区分数据类型'], edgeCases: ['无数据时卡片展示0', '网络异常时加载状态提示'], validations: [], route: '/dataReady/dataCollect', priority: 'P1 · 重要功能', count: '5' },
+                        { key: 'dc-finance', label: '财务数据采集', icon: 'el-icon-coin', tagClass: 'ft-search', iconBg: '#f6ffed', iconColor: '#52c41a', bannerBg: 'linear-gradient(135deg, #f6ffed 0%, #fcffe6 100%)', module: '数据准备', desc: '导入财务账套数据，配置会计期间和会计制度，管理已导入的账套列表。', points: ['账套信息设置面板（启用日期/会计制度/纳税性质）', '导入方式：导入表格/导入ECPA', '已导入账套列表（账套/会计制度/期间/状态/时间）', '操作列：删除账套', '刷新按钮同步最新状态', '编辑配置信息'], edgeCases: ['导入失败展示错误原因', '重复账套导入提示', '删除账套二次确认'], validations: ['文件格式校验', '会计制度枚举校验', '期间格式校验'], route: '/dataReady/dataCollect → 财务数据', priority: 'P1 · 重要功能', count: '6' }
+                    ],
+                    'data-init': [
+                        { key: 'di-entry', label: '数据初始化入口', icon: 'el-icon-setting', tagClass: 'ft-filter', iconBg: '#fff7e6', iconColor: '#fa8c16', bannerBg: 'linear-gradient(135deg, #fff7e6 0%, #fffbe6 100%)', module: '数据准备', desc: '数据初始化功能入口页，4张卡片对应4个初始化子功能，展示匹配/配置进度。', points: ['4张卡片（标准科目对应/底稿数据源/关联方/数据处理）', '每张卡片展示进度指标（已匹配数/已配置数）', '卡片点击跳转子页面', '不同颜色区分功能类型'], edgeCases: ['无数据时展示0/X', '未导入数据时功能不可用提示'], validations: [], route: '/dataReady/dataInit', priority: 'P1 · 重要功能', count: '4' },
+                        { key: 'di-standard', label: '标准科目对应', icon: 'el-icon-connection', tagClass: 'ft-detail', iconBg: '#f0f5ff', iconColor: '#2f54eb', bannerBg: 'linear-gradient(135deg, #f0f5ff 0%, #e6f7ff 100%)', module: '数据准备', desc: '将客户科目映射到标准科目，支持时间选择和批量映射操作，左右对照表展示。', points: ['年度时间选择器', '科目映射对照表（标准科目↔客户科目）', '支持单条映射和批量映射', '映射状态标记（已映射/未映射）', '搜索筛选科目', '映射进度统计'], edgeCases: ['一对多科目映射', '无法映射的科目标记说明', '映射覆盖确认'], validations: ['科目代码唯一性', '映射关系有效性'], route: '/dataReady/dataInit → 标准科目对应', priority: 'P1 · 重要功能', count: '6' }
+                    ],
+                    'data-verify': [
+                        { key: 'dv-list', label: '数据校验', icon: 'el-icon-circle-check', tagClass: 'ft-search', iconBg: '#f6ffed', iconColor: '#52c41a', bannerBg: 'linear-gradient(135deg, #f6ffed 0%, #fcffe6 100%)', module: '数据准备', desc: '自动/手动触发数据校验，按科目/凭证/账簿/试算平衡分类展示校验结果，支持待审和审定Tab切换。', points: ['待审/审定双Tab（带数量badge）', '年度筛选（2026/2025）', '手动校验触发按钮', '关键字搜索（校验对象/错误说明）', '分类标签（科目/凭证/账簿/试算平衡）', '状态标签（通过/未通过）颜色区分', '操作列：查看/审定（条件显示）', '导出校验结果', '分页：10/20/50条/页'], edgeCases: ['校验进行中不可重复触发', '全部通过时展示空状态', '审定操作需二次确认'], validations: ['校验规则配置完整性', '校验结果数据类型校验'], route: '/dataReady/dataVerify', priority: 'P1 · 重要功能', count: '9' }
+                    ],
+                    'account-info': [
+                        { key: 'ai-list', label: '账套信息管理', icon: 'el-icon-office-building', tagClass: 'ft-crud', iconBg: '#e6fffb', iconColor: '#13c2c2', bannerBg: 'linear-gradient(135deg, #e6fffb 0%, #e6f7ff 100%)', module: '数据准备', desc: '管理全部账套信息，展示账套基本信息、数据量统计、采集和校验状态，支持新增/编辑/启停操作。', points: ['统计卡片：账套总数/已启用/未启用/本月新增', '关键字搜索（账套名称/编码/客户名称）', '账套状态/数据来源下拉筛选', '20+字段（账套名称/编码/客户/数据来源/会计准则/年度/期间/币种/科目数/凭证数等）', '操作列：查看/编辑/启用/停用（条件显示）', '新增/编辑账套弹窗', '导出Excel', '分页：10/20/50条/页'], edgeCases: ['已启用账套不可删除', '停用前校验是否有关联项目', '账套编码自动生成规则'], validations: ['账套名称必填', '编码唯一性', '会计准则枚举校验', '期间格式校验'], route: '/dataReady/financialAccountDetails', priority: 'P1 · 重要功能', count: '8' }
+                    ],
+                    'risk-assess': [
+                        { key: 'ra-list', label: '风险评估列表', icon: 'el-icon-warning', tagClass: 'ft-flow', iconBg: '#fff0f6', iconColor: '#eb2f96', bannerBg: 'linear-gradient(135deg, #fff0f6 0%, #f9f0ff 100%)', module: '风险评估', desc: '管理项目风险评估项，支持按风险等级和评估状态筛选，展示评估详情和操作按钮。', points: ['项目切换选择器', '新增评估按钮', '关键字搜索（评估名称/风险类型）', '风险等级/评估状态筛选', '表格（评估名称/风险类型/等级/影响领域/概率/程度/状态/评估人/时间）', '风险等级彩色Tag（高=红/中=橙/低=绿）', '操作列：查看/编辑/评估（条件显示）', '分页：10/20/50条/页'], edgeCases: ['高风险项需复核确认', '评估已完成不可修改', '风险等级变更触发通知'], validations: ['风险名称必填', '概率0-100%', '影响程度枚举校验'], route: '/riskAssessment', priority: 'P1 · 重要功能', count: '8' }
+                    ],
+                    'work-tools': [
+                        { key: 'wt-grid', label: '作业工具入口', icon: 'el-icon-s-tools', tagClass: 'ft-filter', iconBg: '#fff7e6', iconColor: '#fa8c16', bannerBg: 'linear-gradient(135deg, #fff7e6 0%, #fffbe6 100%)', module: '作业工具', desc: '以卡片网格展示所有可用作业工具，按类别分组，每个工具显示图标/名称/描述/状态，点击"使用工具"进入。', points: ['自适应卡片网格布局（min 280px）', '每张卡片：图标/工具名称/类别/描述/状态标签', '状态标签（可用/其他）颜色区分', '"使用工具"按钮', '项目切换选择器', '卡片hover动效'], edgeCases: ['工具不可用时按钮禁用', '无权限工具隐藏', '工具加载失败展示错误状态'], validations: ['工具可用性校验', '使用权限校验'], route: '/workTool/auditAnalysis', priority: 'P1 · 重要功能', count: '6' }
+                    ],
+                    'manuscript': [
+                        { key: 'ms-list', label: '底稿列表', icon: 'el-icon-document', tagClass: 'ft-crud', iconBg: '#e6fffb', iconColor: '#13c2c2', bannerBg: 'linear-gradient(135deg, #e6fffb 0%, #f6ffed 100%)', module: '底稿管理', desc: '管理项目底稿列表，展示底稿编号/名称/类型/科目/编制人/复核人/状态/进度，支持新建和批量导入。', points: ['项目切换选择器', '新增底稿/批量导入按钮', '关键字搜索（底稿名称/编号）', '底稿类型/状态筛选', '表格（编号/名称/类型/对应科目/编制人/复核人/状态/进度/时间）', '状态彩色标签（未开始/编制中/已完成/已复核）', '进度条可视化', '操作列：查看/编辑/提交（条件显示）', '分页：10/20/50条/页'], edgeCases: ['已复核底稿不可编辑', '提交前校验编制完成', '批量导入格式校验'], validations: ['底稿名称必填', '类型枚举校验', '编制人必选'], route: '/scriptManage/scriptEdit', priority: 'P1 · 重要功能', count: '9' }
+                    ],
+                    'project-detail': [
+                        { key: 'pd-header', label: '项目详情头部', icon: 'el-icon-info', tagClass: 'ft-detail', iconBg: '#f0f5ff', iconColor: '#2f54eb', bannerBg: 'linear-gradient(135deg, #f0f5ff 0%, #e6f7ff 100%)', module: '项目详情', desc: '项目详情页顶部信息区，展示项目基本信息、流程步骤进度、快捷操作按钮。', points: ['返回按钮+项目头像+名称+编号+状态标签', '快捷图标按钮（文档/刷新）', '下拉菜单（项目设置/导出数据/打印报告）', '7步流程步骤条可视化（圆点+连线+标签）', '当前步骤高亮，已完成步骤标绿', '查看底稿快捷按钮'], edgeCases: ['异常状态流程步骤展示', '已终止项目头部灰色展示'], validations: ['项目ID有效性', '流程步骤数据完整性'], route: '/myExamine/projectDetailV2', priority: 'P0 · 核心功能', count: '6' },
+                        { key: 'pd-tabs', label: '详情Tab内容', icon: 'el-icon-s-operation', tagClass: 'ft-flow', iconBg: '#fff0f6', iconColor: '#eb2f96', bannerBg: 'linear-gradient(135deg, #fff0f6 0%, #f9f0ff 100%)', module: '项目详情', desc: '项目详情页包含4个Tab页签：团队管理/知识库/任务管理/操作日志，覆盖项目协作全场景。', points: ['团队管理：成员卡片列表（头像/姓名/角色）', '知识库：文件卡片网格（图标/标题/描述）', '任务管理：任务列表（复选框/标题/负责人/截止日期/状态标签）', '任务完成状态切换', '操作日志：时间线视图（标题/描述/时间）', '日志类型颜色区分（操作/审核/系统）'], edgeCases: ['无团队成员时展示空状态', '任务全部完成时展示祝贺提示', '日志数据量大时虚拟滚动'], validations: ['Tab切换数据刷新', '权限控制Tab可见性'], route: '/myExamine/projectDetailV2 → Tab内容', priority: 'P0 · 核心功能', count: '6' }
+                    ],
+                    'home': [
+                        { key: 'home-welcome', label: '首页欢迎区', icon: 'el-icon-s-home', tagClass: 'ft-new', iconBg: '#e6f7ff', iconColor: '#1890ff', bannerBg: 'linear-gradient(135deg, #e6f7ff 0%, #f0f5ff 100%)', module: '首页', desc: '展示用户头像、问候语和公司信息，根据时间显示"早上好/中午好/下午好/傍晚好"动态问候。', points: ['用户头像展示（圆形）', '动态时间问候语（早上好/中午好/下午好/傍晚好）', '公司名称展示', '右上角通知角标'], edgeCases: ['无头像时展示默认头像', '节假日特殊问候语'], validations: ['用户信息有效性校验'], route: '/home', priority: 'P0 · 核心功能', count: '4' },
+                        { key: 'home-quick-stats', label: '快捷统计卡片', icon: 'el-icon-s-data', tagClass: 'ft-crud', iconBg: '#e6fffb', iconColor: '#13c2c2', bannerBg: 'linear-gradient(135deg, #e6fffb 0%, #f6ffed 100%)', module: '首页', desc: '4张快捷统计卡片展示我的审核/我的项目/我发起的/抄送我的数量，点击可快速跳转对应页面。', points: ['我的审核卡片（粉色图标）+ 数量统计', '我的项目卡片（蓝色图标）+ 数量统计', '我发起的卡片（绿色图标）+ 数量统计', '抄送我的卡片（橙色图标）+ 数量统计', '点击卡片快速跳转对应页面', '实时数据更新（WebSocket推送）'], edgeCases: ['数量为0时正常展示0', '数据加载中展示骨架屏', '网络异常展示缓存数据+提示'], validations: ['数值≥0', '数据权限校验（只统计有权限的数据）'], route: '/home → 快捷统计区', priority: 'P0 · 核心功能', count: '6' },
+                        { key: 'home-project-chart', label: '项目数量图表', icon: 'el-icon-pie-chart', tagClass: 'ft-search', iconBg: '#f6ffed', iconColor: '#52c41a', bannerBg: 'linear-gradient(135deg, #f6ffed 0%, #fcffe6 100%)', module: '首页', desc: '环形图展示项目数量分布，按状态分类（编制底稿/项目完成/质控复核/其他），支持年度筛选。', points: ['环形图（donut chart）展示项目数量', '图例展示各状态数量', '年度筛选下拉（2026/2025年）', '中心显示总数', '状态颜色映射（编制底稿=绿/完成=黄/复核=红/其他=蓝）', '点击图例可筛选显示'], edgeCases: ['无项目时展示空状态', '数据为0的状态隐藏或显示0', '切换年度时图表动画过渡'], validations: ['年度参数合法性', '数据范围校验'], route: '/home → 项目数量面板', priority: 'P1 · 重要功能', count: '6' },
+                        { key: 'home-approval-chart', label: '我的审核图表', icon: 'el-icon-s-check', tagClass: 'ft-flow', iconBg: '#fff0f6', iconColor: '#eb2f96', bannerBg: 'linear-gradient(135deg, #fff0f6 0%, #f9f0ff 100%)', module: '首页', desc: '环形图展示待审核任务分布，按审核类型分类（报告报备/报告签发/组内审核/质控复核），中心显示总数。', points: ['环形图展示待审核任务分布', '按审核类型分类图例', '中心显示总待审核数', '报告报备=蓝/报告签发=绿/组内审核=黄/质控复核=红', '点击跳转我的审核对应Tab', '实时badge角标更新'], edgeCases: ['无待审核时展示"暂无待审"', '审核完成自动刷新图表', '类型颜色固定映射'], validations: ['审核类型枚举校验', '待审状态有效性'], route: '/home → 我的审核面板', priority: 'P1 · 重要功能', count: '6' },
+                        { key: 'home-monitor', label: '重点监控', icon: 'el-icon-warning', tagClass: 'ft-filter', iconBg: '#fff7e6', iconColor: '#fa8c16', bannerBg: 'linear-gradient(135deg, #fff7e6 0%, #fffbe6 100%)', module: '首页', desc: '环形图展示需要重点关注的项目/档案监控指标，包括档案未归还、纸质档案借阅、上链数量、项目延期等。', points: ['档案未归还数量监控', '纸质档案借阅数量监控', '上链数量（区块链存证）监控', '项目延期数量监控', '年度筛选', '异常指标红色高亮', '点击跳转对应管理页面'], edgeCases: ['监控项为0时正常展示', '超过阈值时红色警告+通知', '权限控制（非管理员隐藏部分监控项）'], validations: ['监控项数值≥0', '阈值配置有效性'], route: '/home → 重点监控面板', priority: 'P1 · 重要功能', count: '6' },
+                        { key: 'home-contract-stats', label: '客户/合同统计', icon: 'el-icon-s-flag', tagClass: 'ft-export', iconBg: '#f9f0ff', iconColor: '#722ed1', bannerBg: 'linear-gradient(135deg, #f9f0ff 0%, #f0f5ff 100%)', module: '首页', desc: '6张统计卡片展示客户和合同的核心指标：续约客户、续约合同金额、新增客户、新增合同金额、流失客户、流失合同金额。', points: ['续约客户数量统计卡片', '续约合同金额统计（格式化）', '新增客户数量统计卡片', '新增合同金额统计（格式化）', '流失客户数量统计卡片', '流失合同金额统计（格式化）', '年度筛选', '金额千分位格式化'], edgeCases: ['金额为0时展示"--"或"0"', '负数金额（退款）红色展示', '年度切换数据动画过渡'], validations: ['金额数值校验', '客户数量≥0', '年度参数合法性'], route: '/home → 客户/合同统计区', priority: 'P1 · 重要功能', count: '7' },
+                        { key: 'home-profit-rank', label: '项目利润排行', icon: 'el-icon-trophy', tagClass: 'ft-detail', iconBg: '#f0f5ff', iconColor: '#2f54eb', bannerBg: 'linear-gradient(135deg, #f0f5ff 0%, #e6f7ff 100%)', module: '首页', desc: '展示项目利润新增排行Top列表，支持切换历史利润排行，点击"更多"查看完整排行。', points: ['项目利润新增排行Top30列表', '排名序号展示', '项目名称+利润金额', '切换历史利润排行按钮', '更多按钮跳转完整排行页', '利润金额红色高亮', '滚动条查看更多'], edgeCases: ['无利润数据时展示空状态', '利润为负数时红色展示', '排行数据实时更新'], validations: ['利润金额数值校验', '排名数据权限校验'], route: '/home → 项目利润排行区', priority: 'P2 · 体验优化', count: '6' },
+                        { key: 'home-employee', label: '员工情况', icon: 'el-icon-s-custom', tagClass: 'ft-team', iconBg: '#fcffe6', iconColor: '#a0d911', bannerBg: 'linear-gradient(135deg, #fcffe6 0%, #f6ffed 100%)', module: '首页', desc: '展示员工证书情况（环形图）和项目数量Top10柱状图，帮助管理层了解团队 workload 分布。', points: ['证书情况环形图（离职/在职/注册会计师/其他）', '中心显示员工总数', '项目数量Top10柱状图', '员工姓名+项目数+占比条形', '条形颜色区分（税务师/注册会计师/评估师/高级职称/其他）', '图例展示各证书类型数量'], edgeCases: ['无员工数据时展示空状态', 'Top10不足10人时按实际展示', '条形图最大值为第1名'], validations: ['员工数据权限校验（只展示有权限查看的）', '项目数量≥0'], route: '/home → 员工情况区', priority: 'P2 · 体验优化', count: '6' }
+                    ]
+                },
+
+                // 首页数据
+                homeYear: '2026',
+                initiatedCount: 0,
+                ccCount: 31,
+                otherProjectCount: 6,
+                draftCount: 30,
+                reviewCount: 10,
+                reportFilingCount: 0,
+                reportIssueCount: 0,
+                teamReviewCount: 0,
+                qualityReviewCount: 26,
+                monitorCount: 343,
+                archiveUnreturned: 0,
+                paperBorrowCount: 0,
+                blockchainCount: 343,
+                delayedCount: 0,
+                renewalCustomerCount: 0,
+                renewalAmount: 0,
+                newCustomerCount: 11,
+                newContractAmount: 126107676,
+                lostCustomerCount: 14,
+                lostContractAmount: 102870000,
+                totalEmployeeCount: 34,
+                resignedCount: 9,
+                activeEmployeeCount: 8,
+                cpaCount: 5,
+                otherCertCount: 12,
+                projectProfitRank: [
+                    { rank: 25, name: '衢州中央美术学院附属中学有限公司报表审计', profit: 0 },
+                    { rank: 26, name: '衢州中央美术学院附属中学有限公司报表审计', profit: 0 },
+                    { rank: 27, name: '期初不影响期末浙江中瑞农业发展有限公司报表审计', profit: 0 },
+                    { rank: 28, name: '期初影响期末浙江中瑞农业发展有限公司报表审计', profit: 0 },
+                    { rank: 29, name: '期初不影响期末南核安全装备（浙江）有限公司报表审计', profit: 0 },
+                    { rank: 30, name: '衢州宙石天启股权投资合伙企业（有限合伙）报表审计', profit: 0 }
+                ],
+                employeeProjectTop10: [
+                    { name: '刘洋', count: 268, percent: 100, color: '#faad14' },
+                    { name: '小刘洋', count: 23, percent: 8.6, color: '#52c41a' },
+                    { name: '李振江', count: 20, percent: 7.5, color: '#1890ff' },
+                    { name: '兰慧祥', count: 12, percent: 4.5, color: '#eb2f96' },
+                    { name: 'JoeyYang', count: 7, percent: 2.6, color: '#13c2c2' },
+                    { name: '高亦然', count: 3, percent: 1.1, color: '#722ed1' },
+                    { name: '胡思怡', count: 3, percent: 1.1, color: '#fa8c16' },
+                    { name: '陈洁琦', count: 2, percent: 0.7, color: '#f5222d' }
+                ],
+
                 importDialogVisible: false,
                 importStep: 1,
                 importFileList: [],
@@ -5148,6 +5982,33 @@
             },
             
             computed: {
+                currentFeatures() {
+                    if (this.currentMenu === 'project-operation') return this.projectOpFeatures;
+                    var map = {
+                        'home': 'home',
+                        'my-project': 'my-project',
+                        'my-approval': 'my-approval',
+                        'customer': 'customer',
+                        'contract': 'contract',
+                        'data-collect': 'data-collect',
+                        'data-collect-finance': 'data-collect',
+                        'data-collect-invoice': 'data-collect',
+                        'data-collect-fund': 'data-collect',
+                        'data-init': 'data-init',
+                        'data-init-standard': 'data-init',
+                        'data-init-source': 'data-init',
+                        'data-init-related': 'data-init',
+                        'data-init-process': 'data-init',
+                        'data-verify': 'data-verify',
+                        'account-info': 'account-info',
+                        'risk-assess': 'risk-assess',
+                        'work-tools': 'work-tools',
+                        'manuscript': 'manuscript',
+                        'project-detail': 'project-detail'
+                    };
+                    var key = map[this.currentMenu];
+                    return key && this.pageFeatures[key] ? this.pageFeatures[key] : [];
+                },
                 isDataCollectPage() {
                     return ['data-collect', 'data-collect-finance', 'data-collect-invoice', 'data-collect-fund', 
                             'data-init', 'data-init-standard', 'data-init-standard-detail', 'data-init-source', 'data-init-related', 'data-init-process',
@@ -5803,6 +6664,29 @@
                 goHome() {
                     this.currentMenu = 'home';
                     this.breadcrumb = '首页';
+                },
+                switchRole(roleKey) {
+                    const role = this.viewRoles.find(r => r.key === roleKey);
+                    if (role) {
+                        this.currentRole = role;
+                        this.$message.success('已切换为：' + role.name);
+                        // 刷新首页数据
+                        if (this.currentMenu === 'home') {
+                            this.updateHomeData();
+                        }
+                    }
+                },
+                updateHomeData() {
+                    const data = this.roleData[this.currentRole.key];
+                    if (data) {
+                        if (data.quickStats) {
+                            this.initiatedCount = data.quickStats.initiated;
+                            this.ccCount = data.quickStats.cc;
+                        }
+                        if (data.homeStats) {
+                            this.monitorCount = data.homeStats.monitor;
+                        }
+                    }
                 },
                 goPage(menu, breadcrumb) {
                     this.currentMenu = menu;
@@ -6595,6 +7479,13 @@
                 handleProjectOpsPageChange(page) { this.projectOpsPage = page; },
                 editProject(row) { this.$message.info('编辑项目：' + row.name); },
                 viewProjectContract(row) { this.$message.info('查看项目合同：' + row.name); },
+
+                // 功能需求标签方法
+                openFeatureDialog(feat) {
+                    this.currentFeature = feat;
+                    this.currentFeatureKey = feat.key;
+                    this.featureDialogVisible = true;
+                },
 
                 // 数据采集方法
                 searchCollectTasks() { this.$message.success('采集任务查询成功'); },
